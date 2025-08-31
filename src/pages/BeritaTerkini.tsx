@@ -97,25 +97,16 @@ const BeritaTerkini = () => {
                     <h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
                       {newsData.featured_post.title}
                     </h2>
-                    <div className="prose prose-invert max-w-none mb-6">
-                      <ReactMarkdown className="text-red-100">
+                    <div className="prose prose-invert max-w-none mb-6 text-red-100">
+                      <ReactMarkdown>
                         {newsData.featured_post.headline}
                       </ReactMarkdown>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center">
                       <div className="flex items-center text-red-200">
                         <Calendar className="h-4 w-4 mr-2" />
                         <span className="text-sm">{newsData.featured_post.pusblised_at}</span>
                       </div>
-                      <a
-                        href={newsData.featured_post.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg font-semibold transition-colors duration-300 flex items-center"
-                      >
-                        Baca Selengkapnya
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -145,25 +136,16 @@ const BeritaTerkini = () => {
                     <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
                       {post.title}
                     </h3>
-                    <div className="prose prose-sm max-w-none mb-4">
-                      <ReactMarkdown className="text-gray-600">
+                    <div className="prose prose-sm max-w-none mb-4 text-gray-600">
+                      <ReactMarkdown>
                         {post.headline}
                       </ReactMarkdown>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center">
                       <div className="flex items-center text-gray-500">
                         <Calendar className="h-4 w-4 mr-2" />
                         <span className="text-sm">{post.pusblised_at}</span>
                       </div>
-                      <a
-                        href={post.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-red-600 hover:text-red-700 font-semibold text-sm flex items-center transition-colors duration-300"
-                      >
-                        Baca
-                        <ExternalLink className="ml-1 h-3 w-3" />
-                      </a>
                     </div>
                   </div>
                 </article>
@@ -171,28 +153,6 @@ const BeritaTerkini = () => {
             </div>
           </>
         )}
-
-        {/* Newsletter Subscription */}
-        <div className="mt-16 bg-gradient-to-r from-yellow-50 to-red-50 rounded-2xl p-8 text-center">
-          <Newspaper className="h-12 w-12 text-red-600 mx-auto mb-6" />
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Dapatkan Update Berita Budaya
-          </h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Berlangganan newsletter kami untuk mendapatkan berita seni dan budaya terbaru 
-            langsung di email Anda setiap minggunya.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Masukkan email Anda"
-              className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent flex-1"
-            />
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
-              Berlangganan
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

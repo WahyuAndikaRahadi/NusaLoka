@@ -259,18 +259,14 @@ const LokasiKebudayaan = () => {
 
                       {/* Actions */}
                       <div className="flex flex-col sm:flex-row gap-3">
-                        <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center">
-                          <Navigation className="h-4 w-4 mr-2" />
-                          Petunjuk Arah
-                        </button>
                         <a
-                          href={location.website}
+                          href={location.mapUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
+                          className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
                         >
-                          <Globe className="h-4 w-4 mr-2" />
-                          Kunjungi Website
+                          <Navigation className="h-4 w-4 mr-2" />
+                          Petunjuk Arah
                         </a>
                       </div>
                     </div>
