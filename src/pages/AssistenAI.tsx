@@ -1,30 +1,85 @@
-import React, { useState } from 'react';
-import { Bot, Send, User, Sparkles, MessageCircle, Camera, ChefHat } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Bot, Send, User, Sparkles, MessageCircle, ChefHat, Brain } from 'lucide-react';
+import { GoogleGenerativeAI } from '@google/generative-ai';
+import ReactMarkdown from 'react-markdown';
+
+// API Key setup for Gemini. This will be automatically provided by the Canvas environment.
+const API_KEY = "";
+const genAI = new GoogleGenerativeAI(API_KEY);
+
+const geminiModel = genAI.getGenerativeModel({
+  model: "gemini-1.5-flash",
+  systemInstruction: `Anda adalah pemandu budaya Indonesia yang ahli dan ramah. Anda memiliki pengetahuan mendalam tentang:
+- Pakaian adat dari 34 provinsi Indonesia
+- Seni pertunjukan tradisional (tari, musik, teater)
+- Kuliner khas daerah dan resep tradisional
+- Bahasa daerah dan filosofi budaya
+- Sejarah dan makna di balik tradisi Indonesia
+
+Jawab dengan bahasa Indonesia yang sopan dan informatif. Berikan informasi yang akurat dan menarik tentang budaya Indonesia.`
+});
+
+// Hardcoded quiz data for the interactive feature
+const quizData = [
+  {
+    question: "Tari Kecak berasal dari daerah mana di Indonesia?",
+    options: ["A. Sumatera Barat", "B. Bali", "C. Sulawesi Selatan", "D. Jawa Tengah"],
+    answer: "B",
+    explanation: "Benar! Tari Kecak adalah seni pertunjukan unik dari Bali yang menampilkan barisan penari pria duduk melingkar sambil menyerukan kata 'cak'. Tarian ini tidak diiringi instrumen musik, melainkan suara dari para penarinya."
+  },
+  {
+    question: "Apa nama alat musik tradisional dari Jawa Barat yang terbuat dari bambu?",
+    options: ["A. Angklung", "B. Sasando", "C. Kolintang", "D. Gendang"],
+    answer: "A",
+    explanation: "Tepat sekali! Angklung adalah alat musik multitonal yang dimainkan dengan cara digoyangkan. Alat musik ini telah diakui oleh UNESCO sebagai Warisan Budaya Takbenda Dunia."
+  },
+  {
+    question: "Pakaian adat yang terkenal dengan kain ulosnya berasal dari suku mana?",
+    options: ["A. Suku Dayak", "B. Suku Asmat", "C. Suku Batak", "D. Suku Minangkabau"],
+    answer: "C",
+    explanation: "Anda benar! Ulos adalah kain tenun tradisional Batak yang memiliki makna mendalam dan digunakan dalam berbagai upacara adat, seperti pernikahan atau kelahiran."
+  }
+];
+
+export const getCulturalResponse = async (chatHistory) => {
+  try {
+    const result = await geminiModel.generateContent({ contents: chatHistory });
+    const response = await result.response;
+    return response.text();
+  } catch (error) {
+    console.error('Error calling Gemini API:', error);
+    return 'Maaf, terjadi kesalahan saat memproses pertanyaan Anda. Silakan coba lagi.';
+  }
+};
 
 const AssistenAI = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
       type: 'bot',
-      content: 'Halo! Saya adalah Pemandu Budaya AI NusaLoka. Saya siap membantu Anda menjelajahi kekayaan budaya Indonesia. Apa yang ingin Anda ketahui hari ini?',
+      content: 'Halo! Saya BoetDaya. Saya siap membantu Anda menjelajahi kekayaan budaya Indonesia. Apa yang ingin Anda ketahui hari ini?',
       timestamp: new Date()
     }
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [quizState, setQuizState] = useState(null); // 'idle', 'active'
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  const messagesEndRef = useRef(null);
 
   const quickQuestions = [
     'Ceritakan tentang batik Indonesia',
     'Apa makna filosofi dari tari Saman?',
     'Rekomendasi kuliner Jawa Timur',
     'Perbedaan rumah adat Jawa dan Bali',
-    'Sejarah wayang kulit'
+    'Mulai Kuis Budaya'
   ];
 
   const aiFeatures = [
     {
       icon: MessageCircle,
-      title: 'Pemandu Budaya AI',
+      title: 'BoetDaya',
       description: 'Bertanya langsung tentang budaya Indonesia',
       color: 'bg-blue-50 text-blue-600'
     },
@@ -35,43 +90,113 @@ const AssistenAI = () => {
       color: 'bg-green-50 text-green-600'
     },
     {
-      icon: Camera,
-      title: 'Tur Virtual AI',
-      description: 'Upload foto, coba pakaian adat virtual',
+      icon: Brain,
+      title: 'Kuis Budaya',
+      description: 'Uji pengetahuan Anda tentang budaya Indonesia',
       color: 'bg-purple-50 text-purple-600'
     }
   ];
 
-  const handleSendMessage = () => {
-    if (!inputMessage.trim()) return;
-
-    const newMessage = {
+  const startQuiz = () => {
+    setQuizState('active');
+    setCurrentQuestionIndex(0);
+    const firstQuestion = quizData[0];
+    const quizMessage = {
       id: Date.now(),
-      type: 'user' as const,
-      content: inputMessage,
+      type: 'bot',
+      content: `Mari kita mulai kuisnya! Pertanyaan pertama:\n\n**${firstQuestion.question}**\n${firstQuestion.options.join('\n')}`,
       timestamp: new Date()
     };
+    setMessages(prev => [...prev, quizMessage]);
+  };
 
-    setMessages(prev => [...prev, newMessage]);
+  const handleSendMessage = async () => {
+    if (!inputMessage.trim()) return;
+
+    const userMessage = {
+      id: Date.now(),
+      type: 'user',
+      content: inputMessage.trim(),
+      timestamp: new Date()
+    };
+    setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
     setIsTyping(true);
 
-    // Simulate AI response
-    setTimeout(() => {
+    if (quizState === 'active') {
+      const currentQuestion = quizData[currentQuestionIndex];
+      const userAnswer = userMessage.content.trim().toUpperCase();
+
+      let botResponseContent;
+      if (userAnswer === currentQuestion.answer) {
+        botResponseContent = `Jawaban Anda benar!\n\n${currentQuestion.explanation}`;
+      } else {
+        botResponseContent = `Maaf, jawaban Anda salah. Jawaban yang benar adalah **${currentQuestion.answer}**. \n\n${currentQuestion.explanation}`;
+      }
+
+      setMessages(prev => [...prev, {
+        id: Date.now() + 1,
+        type: 'bot',
+        content: botResponseContent,
+        timestamp: new Date()
+      }]);
+
+      const nextIndex = currentQuestionIndex + 1;
+      if (nextIndex < quizData.length) {
+        setTimeout(() => {
+          const nextQuestion = quizData[nextIndex];
+          setMessages(prev => [...prev, {
+            id: Date.now() + 2,
+            type: 'bot',
+            content: `Baik, ini pertanyaan berikutnya:\n\n**${nextQuestion.question}**\n${nextQuestion.options.join('\n')}`,
+            timestamp: new Date()
+          }]);
+          setCurrentQuestionIndex(nextIndex);
+          setIsTyping(false);
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          setMessages(prev => [...prev, {
+            id: Date.now() + 2,
+            type: 'bot',
+            content: "Kuis selesai! Terima kasih sudah berpartisipasi. Anda bisa bertanya lagi tentang hal lain atau memulai kuis baru.",
+            timestamp: new Date()
+          }]);
+          setQuizState('idle');
+          setIsTyping(false);
+        }, 1000);
+      }
+    } else {
+      // General chat logic
+      const chatHistory = [{
+        role: 'user',
+        parts: [{ text: userMessage.content }]
+      }];
+      const response = await getCulturalResponse(chatHistory);
       const botResponse = {
         id: Date.now() + 1,
-        type: 'bot' as const,
-        content: `Terima kasih atas pertanyaan Anda tentang "${inputMessage}". Ini adalah simulasi respons AI. Dalam implementasi sesungguhnya, saya akan terhubung dengan Gemini AI untuk memberikan jawaban yang komprehensif tentang budaya Indonesia.`,
+        type: 'bot',
+        content: response,
         timestamp: new Date()
       };
       setMessages(prev => [...prev, botResponse]);
       setIsTyping(false);
-    }, 2000);
+    }
   };
 
-  const handleQuickQuestion = (question: string) => {
-    setInputMessage(question);
+  const handleQuickQuestion = (question) => {
+    if (question === 'Mulai Kuis Budaya') {
+      startQuiz();
+    } else {
+      setInputMessage(question);
+    }
   };
+
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
 
   return (
     <div className="py-16">
@@ -82,10 +207,10 @@ const AssistenAI = () => {
             <Bot className="h-16 w-16 text-red-600" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Assisten AI Budaya
+            Asisten AI Budaya
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Berinteraksi langsung dengan AI untuk mempelajari budaya Indonesia. 
+            Berinteraksi langsung dengan AI untuk mempelajari budaya Indonesia.
             Dapatkan jawaban detail, rekomendasi personal, dan pengalaman interaktif.
           </p>
         </div>
@@ -133,7 +258,7 @@ const AssistenAI = () => {
                 <div className="flex items-center">
                   <Bot className="h-6 w-6 text-white mr-3" />
                   <div>
-                    <h3 className="text-white font-semibold">Pemandu Budaya AI</h3>
+                    <h3 className="text-white font-semibold">BoetDaya</h3>
                     <p className="text-red-100 text-sm">Online - Siap membantu</p>
                   </div>
                 </div>
@@ -150,8 +275,8 @@ const AssistenAI = () => {
                       <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
                         message.type === 'user' ? 'bg-red-600' : 'bg-gray-100'
                       }`}>
-                        {message.type === 'user' ? 
-                          <User className="h-4 w-4 text-white" /> : 
+                        {message.type === 'user' ?
+                          <User className="h-4 w-4 text-white" /> :
                           <Bot className="h-4 w-4 text-gray-600" />
                         }
                       </div>
@@ -160,12 +285,18 @@ const AssistenAI = () => {
                           ? 'bg-red-600 text-white'
                           : 'bg-gray-100 text-gray-900'
                       }`}>
-                        <p className="text-sm leading-relaxed">{message.content}</p>
+                        {message.content && (
+                          message.type === 'bot' ? (
+                            <ReactMarkdown>{message.content}</ReactMarkdown>
+                          ) : (
+                            <p className="text-sm leading-relaxed">{message.content}</p>
+                          )
+                        )}
                       </div>
                     </div>
                   </div>
                 ))}
-                
+
                 {isTyping && (
                   <div className="flex justify-start">
                     <div className="flex items-start space-x-2">
@@ -182,11 +313,12 @@ const AssistenAI = () => {
                     </div>
                   </div>
                 )}
+                <div ref={messagesEndRef} />
               </div>
 
               {/* Chat Input */}
               <div className="border-t border-gray-200 p-4">
-                <div className="flex space-x-3">
+                <div className="flex space-x-3 items-center">
                   <input
                     type="text"
                     value={inputMessage}
@@ -194,10 +326,11 @@ const AssistenAI = () => {
                     onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                     placeholder="Tanyakan tentang budaya Indonesia..."
                     className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    disabled={isTyping}
                   />
                   <button
                     onClick={handleSendMessage}
-                    disabled={!inputMessage.trim()}
+                    disabled={!inputMessage.trim() || isTyping}
                     className="bg-red-600 hover:bg-red-700 disabled:bg-gray-300 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center"
                   >
                     <Send className="h-4 w-4" />

@@ -205,25 +205,7 @@ const Blog = () => {
         )}
 
         {/* Newsletter Subscription */}
-        <div className="mt-16 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Dapatkan Artikel Terbaru
-          </h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Berlangganan newsletter blog kami untuk mendapatkan artikel budaya terbaru 
-            dan insights menarik tentang Indonesia.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Email Anda"
-              className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent flex-1"
-            />
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
-              Berlangganan
-            </button>
-          </div>
-        </div>
+
       </div>
     </div>
   );
