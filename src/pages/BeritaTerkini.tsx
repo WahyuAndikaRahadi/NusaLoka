@@ -97,8 +97,8 @@ const BeritaTerkini = () => {
                     <h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
                       {newsData.featured_post.title}
                     </h2>
-                    <div className="prose prose-invert max-w-none mb-6">
-                      <ReactMarkdown className="text-red-100">
+                    <div className="prose prose-invert max-w-none mb-6 text-red-100">
+                      <ReactMarkdown>
                         {newsData.featured_post.headline}
                       </ReactMarkdown>
                     </div>
@@ -125,7 +125,10 @@ const BeritaTerkini = () => {
             {/* News Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsData.posts.map((post, index) => (
-                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <article
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                >
                   <img
                     src={post.image}
                     alt={post.title}
@@ -145,8 +148,8 @@ const BeritaTerkini = () => {
                     <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
                       {post.title}
                     </h3>
-                    <div className="prose prose-sm max-w-none mb-4">
-                      <ReactMarkdown className="text-gray-600">
+                    <div className="prose prose-sm max-w-none mb-4 text-gray-600">
+                      <ReactMarkdown>
                         {post.headline}
                       </ReactMarkdown>
                     </div>
