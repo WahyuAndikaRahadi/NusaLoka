@@ -99,7 +99,7 @@ const BahasaDaerah = () => {
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai batamu', pronunciation: 'sam-pai ba-ta-mu' }
       ],
       videoUrl: 'https://www.youtube.com/embed/DFbnaN6dnOw',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://static.vecteezy.com/system/resources/previews/021/637/964/large_2x/malay-riau-batik-songket-weaving-corak-motif-pucuk-rebung-melayu-patterns-red-silky-background-traditional-classic-handwoven-black-with-gold-threads-vector.jpg',
       description: 'Bahasa Minangkabau mencerminkan budaya matrilineal yang unik dan kaya akan tradisi lisan berupa pepatah-petitih yang sarat makna.'
     },
     {
@@ -119,8 +119,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/OgwiAc7P9YA',
+      image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMOWA7ko_NX62mCqyVIvoQWOfCZ3gXO9B81jdUdAXeBeyk35tnCVUrqdqgApzRi6Jq7Sywq86zcxiQgPoSpaifo8y0EMKSpoireXgPgLMZkW8Uz6Q2Yqn2noZkN8hg-nBx7qX89ZOqzjdQosTpJFyEHwwwpkSbomIVrBn-hmaj94yE6c1MaYX0x0vi/w1200-h630-p-k-no-nu/mengenal%20motif%20batik%20khas%20kabupaten%20batang%20rifaiyah.webp',
       description: 'Bahasa Mentawai adalah bahasa Austronesia purba yang masih mempertahankan tradisi animisme dan kearifan lokal Kepulauan Mentawai.'
     },
     {
@@ -140,8 +140,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa khabar?', pronunciation: 'a-pa kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai berjumpa', pronunciation: 'sam-pai ber-jum-pa' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/w2mKrsN5mYM',
+      image: 'https://static.vecteezy.com/system/resources/previews/021/042/416/original/malay-riau-batik-songket-weaving-corak-motif-pucuk-rebung-melayu-patterns-on-green-background-traditional-classic-handwoven-with-gold-threads-vector.jpg',
       description: 'Bahasa Melayu Riau adalah akar dari bahasa Indonesia dan memiliki tradisi sastra Melayu yang sangat kaya dan berpengaruh.'
     },
     {
@@ -161,8 +161,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa khabar?', pronunciation: 'a-pa kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai jumpa', pronunciation: 'sam-pai jum-pa' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/uqv08jNGbss',
+      image: 'https://static.vecteezy.com/system/resources/previews/000/127/794/original/songket-pandai-pattern-free-vector.jpg',
       description: 'Bahasa Melayu Kepri berkembang di kepulauan dengan pengaruh perdagangan internasional dan komunitas Tionghoa yang besar.'
     },
     {
@@ -182,8 +182,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apo khabar?', pronunciation: 'a-po kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/dA6lmcDa4fw',
+      image: 'https://i.pinimg.com/1200x/6e/bf/9a/6ebf9a024699eaad0b52d5f0678f0528.jpg',
       description: 'Bahasa Jambi adalah dialek Melayu yang berkembang di Jambi dengan pengaruh dari bahasa Minangkabau dan tradisi adat setempat.'
     },
     {
@@ -203,8 +203,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apo kabar?', pronunciation: 'a-po ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/5Q2GzXSX0KE',
+      image: 'https://i.pinimg.com/736x/10/9c/75/109c75c2796fff0b139aa0c3504b159f.jpg',
       description: 'Bahasa Palembang berkembang dari tradisi Kerajaan Sriwijaya dan menjadi lingua franca di wilayah Sumatera Selatan.'
     },
     {
@@ -224,8 +224,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apo khabar?', pronunciation: 'a-po kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/Ft-S7m-hsK8',
+      image: 'https://i.pinimg.com/1200x/bf/f7/ae/bff7ae8cfa4c60e4710d3317fa30fb25.jpg',
       description: 'Bahasa Bengkulu adalah dialek Melayu pesisir yang berkembang dengan pengaruh dari bahasa Rejang dan tradisi lokal Bengkulu.'
     },
     {
@@ -245,8 +245,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apo khabar?', pronunciation: 'a-po kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/Kfe-f02-Ihk?',
+      image: 'https://i.pinimg.com/1200x/33/7a/67/337a67e8e6136c13cc5ca38e0541bae9.jpg',
       description: 'Bahasa Rejang memiliki aksara yang unik dan mencerminkan tradisi megalitik serta sistem adat yang masih kuat di masyarakat Rejang.'
     },
     {
@@ -266,8 +266,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Napi khabar?', pronunciation: 'na-pi kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/3XIOBztaAjE',
+      image: 'https://i.pinimg.com/736x/41/b2/00/41b2008ca017730091e5755b453da48e.jpg',
       description: 'Bahasa Lampung memiliki aksara Had Lampung yang unik dan mencerminkan perpaduan budaya dari berbagai suku yang bermukim di Lampung.'
     },
     {
@@ -287,8 +287,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apo khabar?', pronunciation: 'a-po kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai jumpa', pronunciation: 'sam-pai jum-pa' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/nbqSq0Esy2U',
+      image: 'https://i.pinimg.com/1200x/a5/cf/e5/a5cfe55c96ace9974eb07671d88fb43b.jpg',
       description: 'Bahasa Melayu Bangka berkembang di kepulauan dengan pengaruh komunitas Tionghoa dan tradisi pertambangan timah.'
     },
 
@@ -310,8 +310,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Ape kabar?', pronunciation: 'a-pe ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu lagi', pronunciation: 'sam-pai ke-te-mu la-gi' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/1Kp7tS_qYxw',
+      image: 'https://i.pinimg.com/1200x/ff/9c/55/ff9c5540e0ac3b2f3177d80aed1900e8.jpg',
       description: 'Bahasa Betawi adalah hasil perpaduan berbagai bahasa yang mencerminkan keberagaman etnis di Jakarta sebagai kota metropolitan.'
     },
     {
@@ -331,8 +331,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Kumaha damang?', pronunciation: 'ku-ma-ha da-mang' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Dugi ka tepang deui', pronunciation: 'du-gi ka te-pang de-ui' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/I-0-4bJ7h9o',
+      image: 'https://i.pinimg.com/1200x/fb/72/2d/fb722d15f7fabacb2d418954dde415bd.jpg',
       description: 'Bahasa Sunda dikenal dengan kelembutan intonasi dan kehalusannya. Banyak digunakan di Jawa Barat dan memiliki tradisi sastra yang kaya.'
     },
     {
@@ -352,8 +352,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Pripun kabare?', pronunciation: 'pri-pun ka-ba-re' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sugeng tindak', pronunciation: 'su-geng tin-dak' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/PswP87LUYiw',
+      image: 'https://i.pinimg.com/736x/81/63/b3/8163b376e52c556c2d9deee3df4e8079.jpg',
       description: 'Bahasa Jawa adalah salah satu bahasa daerah dengan jumlah penutur terbanyak di Indonesia. Memiliki sistem tingkatan bahasa yang mencerminkan struktur sosial masyarakat Jawa.'
     },
     {
@@ -373,8 +373,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Pripun kabare?', pronunciation: 'pri-pun ka-ba-re' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sugeng kondur', pronunciation: 'su-geng kon-dur' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/hnbZa-n2XN8',
+      image: 'https://i.pinimg.com/736x/14/e8/ce/14e8ce30f8bdc09fd996e120082e8255.jpg',
       description: 'Bahasa Jawa Yogyakarta adalah dialek Jawa yang sangat halus dengan pengaruh kuat dari tradisi keraton dan budaya istana.'
     },
     {
@@ -394,8 +394,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Piye kabare?', pronunciation: 'pi-ye ka-ba-re' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampek ketemu', pronunciation: 'sam-pek ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/9RtHzH6DHTc',
+      image: 'https://i.pinimg.com/1200x/86/41/78/8641781ef60a3a2eea7307c9dda1a8d1.jpg',
       description: 'Bahasa Jawa Timur memiliki dialek yang khas dengan pengaruh dari bahasa Madura dan tradisi pesantren yang kuat.'
     },
     {
@@ -415,8 +415,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampek ketemo', pronunciation: 'sam-pek ke-te-mo' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/51wf1YWvz_s',
+      image: 'https://i.pinimg.com/1200x/a5/cf/e5/a5cfe55c96ace9974eb07671d88fb43b.jpg',
       description: 'Bahasa Madura memiliki sistem tingkatan yang sangat ketat dan mencerminkan budaya masyarakat Madura yang menjunjung tinggi sopan santun.'
     },
     {
@@ -436,8 +436,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Kumaha kabar?', pronunciation: 'ku-ma-ha ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Dugi ka tepang', pronunciation: 'du-gi ka te-pang' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/gexVE3B-Y9A',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756868565/1763ff29c4770d879db4a42eca81cc56_wzjocs.jpg',
       description: 'Bahasa Banten memiliki kesamaan dengan bahasa Sunda namun dengan ciri khas dialek pesisir yang mencerminkan budaya maritim masyarakat Banten.'
     },
 
@@ -459,8 +459,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa khabar?', pronunciation: 'a-pa kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai jumpa', pronunciation: 'sam-pai jum-pa' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/efE3JXvjLow',
+      image: 'https://i.pinimg.com/1200x/00/4f/98/004f98bf90af3ae1124126ae1368fcaa.jpg',
       description: 'Bahasa Melayu Pontianak mencerminkan keberagaman etnis di Kalimantan Barat dengan pengaruh Tionghoa, Dayak, dan Melayu.'
     },
     {
@@ -480,8 +480,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Napa kabar?', pronunciation: 'na-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/o2-S2vZ2ujk',
+      image: 'https://i.pinimg.com/736x/0a/f8/59/0af8593574fe56177597f24748245783.jpg',
       description: 'Bahasa Dayak Ngaju kaya akan kosakata yang berkaitan dengan alam dan hutan, mencerminkan kehidupan masyarakat Dayak yang dekat dengan alam.'
     },
     {
@@ -501,8 +501,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa khabar?', pronunciation: 'a-pa kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai bejumpa', pronunciation: 'sam-pai be-jum-pa' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/14ZHairaK3g',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756872383/60d8db571619c131294de75942487dbd_ierzo7.jpg',
       description: 'Bahasa Banjar berkembang di sepanjang sungai-sungai Kalimantan Selatan dan mencerminkan budaya perdagangan serta tradisi Islam yang kuat.'
     },
     {
@@ -510,7 +510,7 @@ const BahasaDaerah = () => {
       name: 'Bahasa Kutai',
       province: 'Kalimantan Timur',
       speakers: '300 ribu',
-      characteristics: [
+      characteristics: [  
         'Pengaruh bahasa Melayu',
         'Tradisi kerajaan',
         'Dialek sungai',
@@ -522,8 +522,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa khabar?', pronunciation: 'a-pa kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai jumpa', pronunciation: 'sam-pai jum-pa' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/4EwbU-XMDvw',
+      image: 'https://i.pinimg.com/1200x/59/d5/38/59d538bfbf7e13d6313ff2063583d242.jpg',
       description: 'Bahasa Kutai berkembang di wilayah bekas Kerajaan Kutai dan memiliki pengaruh kuat dari tradisi kerajaan Melayu.'
     },
     {
@@ -543,8 +543,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa khabar?', pronunciation: 'a-pa kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai bejumpa', pronunciation: 'sam-pai be-jum-pa' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/MJt5Rt1F2l0',
+      image: 'https://i.pinimg.com/736x/be/56/da/be56dae92e2a1a19ce1b3d3ea81833d8.jpg',
       description: 'Bahasa Banjar Utara adalah varian bahasa Banjar yang berkembang di Kalimantan Utara dengan pengaruh dari bahasa-bahasa Dayak setempat.'
     },
 
@@ -566,8 +566,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Aga kabare?', pronunciation: 'a-ga ka-ba-re' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/KIwhvpUYgjs',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756873637/945906a7d61327fcf210da8b006eabcd_g5mxra.jpg',
       description: 'Bahasa Bugis memiliki aksara Lontara dan tradisi sastra epik yang terkenal, mencerminkan budaya pelayaran dan perdagangan masyarakat Bugis.'
     },
     {
@@ -587,8 +587,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabare?', pronunciation: 'a-pa ka-ba-re' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai bertemu', pronunciation: 'sam-pai ber-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/GxH-D324aPI',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756873944/6451d5c611b78f83ad466a73ba6d6a63_gsmjfr.jpg',
       description: 'Bahasa Makassar adalah bahasa yang berkembang di wilayah perkotaan Makassar dengan pengaruh kuat dari budaya maritim dan perdagangan.'
     },
     {
@@ -608,8 +608,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Umba kabar?', pronunciation: 'um-ba ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/pXbq-cz_KQ8',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756874077/af1963f007f424e3ebc869b52c9eb2cd_hnvqhp.jpg',
       description: 'Bahasa Toraja kaya akan kosakata ritual dan mencerminkan tradisi megalitik serta sistem kepercayaan Aluk Todolo yang unik.'
     },
     {
@@ -629,8 +629,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/hcJtVky0IzA',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756874464/eb04cf890f902e42ad1ba0a2132109cb_zjcvpy.jpg',
       description: 'Bahasa Mandar berkembang di kalangan pelaut Mandar yang terkenal dengan tradisi pelayaran dan perdagangan di Nusantara.'
     },
     {
@@ -650,8 +650,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/sTdYVhj7ywA',
+      image: 'https://i.pinimg.com/1200x/71/b9/65/71b9656efbded8b3fcb9c510995214c9.jpg',
       description: 'Bahasa Kaili adalah bahasa yang digunakan di Sulawesi Tengah dengan dialek yang beragam dan tradisi lisan yang masih terjaga.'
     },
     {
@@ -671,8 +671,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/b-lCFbKYWrc',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756875320/508f6579ddb0d4d7f2c1537215005308_rii9uf.jpg',
       description: 'Bahasa Minahasa mencerminkan sejarah kontak dengan bangsa Eropa dan perkembangan agama Kristen di wilayah Sulawesi Utara.'
     },
     {
@@ -692,8 +692,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/VWDMm1vGDTM',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756875609/8f91a2a658b65546f4841dc74465a0ea_c0sa1o.jpg',
       description: 'Bahasa Gorontalo adalah bahasa yang berkembang di wilayah pesisir dengan pengaruh kuat dari tradisi maritim dan perdagangan.'
     },
     {
@@ -713,8 +713,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/5G__i3UOll0',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756881338/bec9be9ea649cda9312f3023f8d4dd5a_b5zaly.jpg',
       description: 'Bahasa Tolaki digunakan oleh suku Tolaki di Sulawesi Tenggara dengan tradisi lisan yang kuat dan sistem kekerabatan yang kompleks.'
     },
 
@@ -736,8 +736,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Kenken kabare?', pronunciation: 'ken-ken ka-ba-re' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Titiang lunga', pronunciation: 'ti-ti-ang lu-nga' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/n9vjGya9iho',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756881438/8421de7e1dc6e530a56f17c7b315d00c_yh770z.jpg',
       description: 'Bahasa Bali memiliki aksara dan tingkatan bahasa yang sangat kompleks, mencerminkan sistem kasta dan tradisi Hindu-Dharma yang kental.'
     },
     {
@@ -757,8 +757,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Ape khabar?', pronunciation: 'a-pe kha-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/FrYM0zM1VA8?',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756881576/26ed2f33da11ccab5bbd7c0f5739324b_be6huy.jpg',
       description: 'Bahasa Sasak berkembang di Lombok dengan pengaruh dari bahasa Bali dan Jawa, serta tradisi Islam yang kuat dalam masyarakat Sasak.'
     },
     {
@@ -778,8 +778,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kaba?', pronunciation: 'a-pa ka-ba' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/KiW_5dGYVok',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756881727/489979260bfd31988d447c92298e7314_hmicyk.jpg',
       description: 'Bahasa Bima berkembang dari tradisi Kesultanan Bima dan mencerminkan perpaduan budaya lokal dengan pengaruh Islam dan Melayu.'
     },
     {
@@ -799,8 +799,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/H52RclW9_ko',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756881964/984790e0c238d2dd989a5d67d5764cd4_sasotk.jpg',
       description: 'Bahasa Manggarai memiliki tradisi adat yang sangat kuat dan sistem kekerabatan matrilineal yang unik di Flores.'
     },
 
@@ -822,8 +822,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/PfrhokruomA',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756882135/2ffa4a9b513cf7d94f7fe4c9925f0a55_n8nfjq.jpg',
       description: 'Bahasa Ambon berkembang sebagai lingua franca di Maluku dengan pengaruh dari berbagai bahasa Eropa dan tradisi multikultural.'
     },
     {
@@ -843,8 +843,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/3yQuFSlOreA',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756882400/c9e23f04aef728c62f27a10efacb73ff_qecj4p.jpg',
       description: 'Bahasa Ternate adalah bahasa non-Austronesia yang unik dan mencerminkan sejarah Kesultanan Ternate sebagai pusat rempah-rempah.'
     },
     {
@@ -864,8 +864,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Nit nen?', pronunciation: 'nit nen' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Wa lani', pronunciation: 'wa la-ni' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/Z_-cRHFAA5c',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756882782/489979260bfd31988d447c92298e7314_gl4era.jpg',
       description: 'Bahasa Dani adalah salah satu bahasa Papua yang memiliki sistem tonal dan kaya akan kosakata yang berkaitan dengan alam pegunungan.'
     },
     {
@@ -885,8 +885,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/fTTG9Qfua20',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756883285/b904492b88ce75f64060df9d7f197bae_vpqmqv.jpg',
       description: 'Bahasa Arfak adalah bahasa yang digunakan oleh suku Arfak di Papua Barat dengan tradisi lisan yang sangat kaya dan unik.'
     },
     {
@@ -906,8 +906,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/XmgPu1tRE3M',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756884106/44c743eb273a4a8aedbc1c7770f604ba_wtk62n.jpg',
       description: 'Bahasa Biak adalah bahasa Austronesia yang berkembang di kepulauan dengan tradisi maritim dan pelayaran yang kuat.'
     },
     {
@@ -927,8 +927,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/GMNQMG0D44U',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756884236/3fdf4036c77bbfdae751a2dbee1dce64_benklu.jpg',
       description: 'Bahasa Maybrat adalah bahasa non-Austronesia yang digunakan di Papua Barat Daya dengan tradisi lisan yang masih terjaga.'
     },
     {
@@ -948,8 +948,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/9343860/pexels-photo-9343860.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/ZeOhtDh-7tY',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756884341/1452f34e214ba8775409f6a996b22b7a_pk0ltf.jpg',
       description: 'Bahasa Yali adalah bahasa non-Austronesia yang digunakan di daerah pegunungan Papua Tengah dengan tradisi yang masih sangat tradisional.'
     },
     {
@@ -969,8 +969,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/LAGsuqcVMEg',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756884650/ffd96ca815b56b02a678671c43f50759_japcho.jpg',
       description: 'Bahasa Asmat digunakan oleh suku Asmat yang terkenal dengan seni ukir kayunya dan hidup di daerah rawa-rawa Papua Selatan.'
     },
     {
@@ -990,8 +990,8 @@ const BahasaDaerah = () => {
         { id: '3', indonesian: 'Apa kabar?', local: 'Apa kabar?', pronunciation: 'a-pa ka-bar' },
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      image: 'https://images.pexels.com/photos/8837694/pexels-photo-8837694.jpeg?auto=compress&cs=tinysrgb&w=600',
+      videoUrl: 'https://www.youtube.com/embed/KHdkKs0XCw8',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756884786/e916b04ae2c9969c1a3dad3973ed9be6_phjpld.jpg',
       description: 'Bahasa Mee digunakan di daerah pegunungan Papua dengan tradisi pertanian tradisional dan sistem tonal yang kompleks.'
     }
   ];
