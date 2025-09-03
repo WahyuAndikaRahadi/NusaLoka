@@ -55,7 +55,7 @@ const LokasiKebudayaan = () => {
           "openHours": "Selasa-Minggu: 09.00-15.00 WIB",
           "rating": 4.6,
           "image": "https://telusurkultur.com/cdn/shop/articles/Cover_Blog_Dienvibi_5.png?v=1669746573",
-          "mapUrl": "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63466.55350492413!2d106.78039000374369!3d-6.176304501253842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sNational%20Museum%20sejarah%20jakarta!5e0!3m2!1sen!2sid!4v1756623232428!5m2!1sen!2sid",
+          "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.966566055457!2d106.81072507402394!3d-6.135194660147424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1dff4292a57d%3A0x12f0032d678c0745!2sMuseum%20Sejarah%20Jakarta!5e0!3m2!1sid!2sid!4v1756875625463!5m2!1sid!2sid",
           "penunjukUrl": "https://maps.app.goo.gl/6qazRpJdNidJnirx5",
           "highlights": ["Bangunan VOC bersejarah", "Koleksi keramik Betawi", "Diorama sejarah Jakarta", "Peninggalan masa kolonial"]
         },
@@ -116,7 +116,7 @@ const LokasiKebudayaan = () => {
           "phone": "(0274) 371217",
           "openHours": "Senin-Sabtu: 09.00-15.00 WIB",
           "rating": 4.5,
-          "image": "https://bappeda.jakarta.go.id/storage/blog/8VK0EMxlzvfzm2EiCFdJiBevgdqG9DRjZAz7FfFc.jpg",
+          "image": "https://travelspromo.com/wp-content/uploads/2022/04/Keindahan-bangunan-museum-ala-Jawa-tradisional.jpg",
           "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.853976488806!2d110.36162817404997!3d-7.805279177485652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5796db06c7ef%3A0x395271cf052b276c!2sKraton%20Ngayogyakarta%20Hadiningrat!5e0!3m2!1sen!2sid!4v1756631560886!5m2!1sen!2sid",
           "penunjukUrl": "https://maps.app.goo.gl/GKDco2NRjVgbimCSA",
           "highlights": ["Koleksi wayang kulit dan golek", "Wayang dari berbagai negara", "Pertunjukan wayang berkala", "Koleksi boneka si Gale-gale"]
@@ -451,8 +451,8 @@ const LokasiKebudayaan = () => {
     openHours: 'Selasa-Minggu: 08.00-16.00 WIB',
     rating: 4.3,
     image: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Mpu_Tantular_Museum.jpg',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.2852398254877!2d112.71775307404383!3d-7.433655673234299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f963d2d4fb4d%3A0xfd521173211bad9f!2sMuseum%20Mpu%20Tantular!5e0!3m2!1sid!2sid!4v1756651204089!5m2!1sid!2sid',
-    penunjukUrl: 'https://maps.app.goo.gl/tRzxmsBPfivDkcx37',
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.2852398254877!2d112.71775307404383!3d-7.433655673234299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f963d2d4fb4d%3A0xfd521173211bad9f!2sMuseum%20Mpu%20Tantular!5e0!3m2!1sid!2sid!4v1756878681706!5m2!1sid!2sid',
+    penunjukUrl: 'https://maps.app.goo.gl/bD4TWNBLrDJmFYp77',
     highlights: ['Artefak prasejarah', 'Koleksi keramik kuno', 'Peralatan tradisional', 'Diorama kehidupan masa lalu']
   },
   {
@@ -856,20 +856,21 @@ const LokasiKebudayaan = () => {
       "penunjukUrl": "https://maps.app.goo.gl/bfmTzG1WTWBz2wMcA",
       "highlights": ["Stupa Mahligai", "Candi Tua dan Candi Bungsu", "Peninggalan Kerajaan Sriwijaya", "Situs Buddha kuno"]
     },
-    {
-      "id": "museum-kain-tenun-siak",
-      "name": "Museum Tekstil dan Tenun Siak",
-      "type": "Museum Tekstil",
-      "description": "Museum yang didedikasikan untuk melestarikan dan menampilkan kekayaan kain tenun khas Siak. Pengunjung dapat melihat koleksi kain dan proses pembuatannya.",
-      "address": "Jl. Raja Kecik, Kp. Dalam, Kec. Siak, Kabupaten Siak, Riau",
-      "phone": "-",
-      "openHours": "Setiap Hari: 09.00-16.00 WIB",
-      "rating": 4.4,
-      "image": "https://riaupos.jawapos.com/nasional/22/07/2019/204558/menenun-songket-di-siak.jpg",
-      "mapUrl": "https://maps.app.goo.gl/GKDco2NRjVgbimCSA1",
-      "penunjukUrl": "https://maps.app.goo.gl/GKDco2NRjVgbimCSA2",
-      "highlights": ["Koleksi Tenun Siak", "Demonstrasi menenun", "Motif-motif khas Melayu", "Sejarah pertekstilan Riau"]
-    },
+{
+    "id": "rumah-singgah-sultan-siak",
+    "name": "Rumah Singgah Sultan Siak (Pekanbaru)",
+    "type": "Bangunan Sejarah",
+    "description": "Sebuah rumah panggung bersejarah di tepi Sungai Siak yang dulunya digunakan sebagai tempat persinggahan Sultan Syarif Kasim II apabila berkunjung ke Pekanbaru. Kini menjadi cagar budaya.",
+    "address": "Jl. Panglima Undan, Kp. Bandar, Kec. Senapelan, Kota Pekanbaru, Riau",
+    "phone": "-",
+    "openHours": "Dapat dikunjungi (biasanya pagi-sore)",
+    "rating": 4.3,
+    "image": "https://asset.kompas.com/crops/WDmEngRRobo0bTSIFeztzUwk6Ps=/0x0:1000x667/1200x800/data/photo/2018/03/21/3396378131.jpeg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.640837173321!2d101.43718057396529!3d0.5404322636448875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ac712c598155%3A0x5657647294fb9a10!2sRumah%20Singgah%20Tuan%20Kadi!5e0!3m2!1sid!2sid!4v1756879332605!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/D6pKZHjd2FrmGQGx9",
+    "highlights": ["Arsitektur Rumah Panggung Melayu", "Lokasi di tepi Sungai Siak", "Sejarah Sultan Syarif Kasim II", "Kawasan kota tua Pekanbaru"]
+  },
+
     {
       "id": "balai-adat-riau",
       "name": "Balai Adat Melayu Riau",
@@ -1112,20 +1113,21 @@ const LokasiKebudayaan = () => {
       "penunjukUrl": "https://maps.app.goo.gl/z7TD655JhcniKqV69",
       "highlights": ["Pusat Kerajaan Sriwijaya", "Museum Sriwijaya", "Kanal-kanal kuno", "Prasasti Kedukan Bukit (replika)"]
     },
-    {
-      "id": "al-quran-al-akbar",
-      "name": "Al-Qur'an Al-Akbar",
-      "type": "Situs Religi & Budaya",
-      "description": "Dikenal sebagai Al-Qur'an raksasa, objek wisata ini menampilkan 30 juz Al-Qur'an yang diukir pada lembaran kayu Tembesu dengan ukiran khas Palembang.",
-      "address": "Jl. M Amin, Gandus, Kec. Gandus, Kota Palembang, Sumatra Selatan",
-      "phone": "0812-7899-921",
-      "openHours": "Setiap Hari: 09.00-17.00 WIB",
-      "rating": 4.8,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQghja0UJ4gbXa-LtNY8rToNW2HMG2P1z0wNA&s",
-      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.308576667322!2d104.70160807398746!3d-3.0114576399433135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b9fcdb814b867%3A0x593219792e75b507!2sMuseum%20Bayt%20Al-Qur&#39;an%20Al-akbar!5e0!3m2!1sid!2sid!4v1756714039486!5m2!1sid!2sid",
-      "penunjukUrl": "https://maps.app.goo.gl/Trmk1mTDjsyQwGkd8",
-      "highlights": ["Al-Qur'an ukir kayu terbesar", "Ukiran khas Palembang", "Wisata religi Islam", "Arsitektur unik"]
-    },
+     {
+    "id": "bukit-siguntang",
+    "name": "Bukit Siguntang",
+    "type": "Situs Sejarah & Religi",
+    "description": "Sebuah bukit yang dianggap sebagai tempat sakral dan kompleks pemakaman bangsawan dari masa Kerajaan Sriwijaya. Tempat ini penting bagi sejarah Melayu di Nusantara.",
+    "address": "Jl. Srijaya Negara, Bukit Lama, Kec. Ilir Bar. I, Kota Palembang, Sumatra Selatan",
+    "phone": "-",
+    "openHours": "Setiap Hari: 08.00-17.00 WIB",
+    "rating": 4.5,
+    "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/1__IMG_4085_Bukit_Siguntang_merupakan_tempat_pemakaman_yang_khusus_diperuntukan_bagi_keturunan_Raja_Sriwijaya_2.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15937.475207471854!2d104.71584392617582!3d-2.994950019471913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b75ea39f9e9bf%3A0xb9b4e243dc7453cb!2sBukit%20Siguntang!5e0!3m2!1sid!2sid!4v1756879897917!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/qUYivvnQM63PBUcBA",
+    "highlights": ["Makam bangsawan Sriwijaya", "Pemandangan Kota Palembang", "Tempat sakral", "Situs ziarah dan sejarah"]
+  },
+
     {
       "id": "museum-subkoss-garuda-sriwijaya",
       "name": "Museum Monpera (Monumen Perjuangan Rakyat)",
@@ -1967,7 +1969,7 @@ const LokasiKebudayaan = () => {
       "phone": "0852-5688-8058",
       "openHours": "Setiap Hari: 08.00-18.00 WITA",
       "rating": 4.6,
-      "image": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6398862247597!2d124.96100567396321!3d1.3925936614390657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870e6c50a3ad4d%3A0x28c56e5abaa48d75!2sTaman%20Purbakala%20Waruga!5e0!3m2!1sid!2sid!4v1756733797983!5m2!1sid!2sid",
+      "image": "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-waruga-faf6017a98c40548e60c17b65143e982.jpg?tr=w-768,h-576,fo-center",
       "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6398862247597!2d124.96100567396321!3d1.3925936614390657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870e6c50a3ad4d%3A0x28c56e5abaa48d75!2sTaman%20Purbakala%20Waruga!5e0!3m2!1sid!2sid!4v1756733797983!5m2!1sid!2sid",
       "penunjukUrl": "https://maps.app.goo.gl/FAcgiPhSwUQYnPaWA",
       "highlights": [
@@ -2548,108 +2550,1024 @@ const LokasiKebudayaan = () => {
 },
 
 {
-  "id": "sulawesi-utara",
-  "name": "Sulawesi Utara",
+  "id": "nusa-tenggara-barat-ntb",
+  "name": "Nusa Tenggara Barat (NTB)",
   "locations": [
     {
-      "id": "museum-negeri-sulawesi-utara",
-      "name": "Museum Negeri Provinsi Sulawesi Utara",
+      "id": "museum-negeri-ntb",
+      "name": "Museum Negeri Nusa Tenggara Barat",
       "type": "Museum Umum",
-      "description": "Museum utama di Manado yang menampilkan kekayaan sejarah dan budaya Sulawesi Utara, mulai dari koleksi arkeologi, etnografi, naskah kuno, hingga peninggalan era perang.",
-      "address": "Jl. W.R. Supratman No.72, Lawangirung, Kec. Wenang, Kota Manado, Sulawesi Utara",
-      "phone": "(0431) 851206",
-      "openHours": "Senin-Jumat: 08.00-16.00 WITA",
-      "rating": 4.5,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Museum_Pendaratan_Pesawat_Amfibi_di_Iluta%2C_Gorontalo.jpg",
-      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4724075177787!2d124.84206007396283!3d1.4882700611173887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287753f5d72d9e1%3A0xe39fdffb28a81e59!2sUPTD%20Museum%20Negeri%20Propinsi%20Sulawesi%20Utara!5e0!3m2!1sid!2sid!4v1756733372831!5m2!1sid!2sid",
-      "penunjukUrl": "https://maps.app.goo.gl/ZATvVEgNHJpDeGmSA",
-      "highlights": [
-        "Sejarah Minahasa",
-        "Koleksi busana adat",
-        "Artefak prasejarah",
-        "Peninggalan Perang Dunia II"
-      ]
-    },
-    {
-      "id": "situs-waruga-sawangan",
-      "name": "Taman Purbakala Waruga Sawangan",
-      "type": "Situs Arkeologi",
-      "description": "Kompleks pemakaman kuno Suku Minahasa yang terdiri dari 'waruga', yaitu kubur batu berbentuk kotak dengan penutup atap. Situs ini memberikan wawasan unik tentang tradisi leluhur Minahasa.",
-      "address": "Jl. Waruga, Sawangan, Kec. Airmadidi, Kabupaten Minahasa Utara, Sulawesi Utara",
-      "phone": "0852-5688-8058",
-      "openHours": "Setiap Hari: 08.00-18.00 WITA",
+      "description": "Museum ini adalah pusat penyimpanan dan pameran warisan budaya dari suku Sasak, Samawa, dan Mbojo. Koleksinya sangat beragam, mulai dari geologi, etnografi, hingga benda-benda peninggalan kerajaan.",
+      "address": "Jl. Panji Tilar Negara No.6, Taman Sari, Kec. Ampenan, Kota Mataram, Nusa Tenggara Bar.",
+      "phone": "(0370) 633328",
+      "openHours": "Setiap Hari: 08.00-14.00 WITA",
       "rating": 4.6,
-      "image": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6398862247597!2d124.96100567396321!3d1.3925936614390657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870e6c50a3ad4d%3A0x28c56e5abaa48d75!2sTaman%20Purbakala%20Waruga!5e0!3m2!1sid!2sid!4v1756733797983!5m2!1sid!2sid",
-      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6398862247597!2d124.96100567396321!3d1.3925936614390657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870e6c50a3ad4d%3A0x28c56e5abaa48d75!2sTaman%20Purbakala%20Waruga!5e0!3m2!1sid!2sid!4v1756733797983!5m2!1sid!2sid",
-      "penunjukUrl": "https://maps.app.goo.gl/FAcgiPhSwUQYnPaWA",
+      "image": "https://museum.co.id/wp-content/uploads/2020/09/1-2.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.113507590289!2d116.0832956740636!3d-8.585084187137477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc07e57ab2055%3A0x559532ffe67ed68f!2sMuseum%20Negeri%20Nusa%20Tenggara%20Barat!5e0!3m2!1sid!2sid!4v1756804240819!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/r1KfrFnZrZ7Jfyoo8",
       "highlights": [
-        "Kompleks 144 waruga kuno",
-        "Ukiran relief di waruga",
-        "Tradisi pemakaman Minahasa",
-        "Museum kecil di lokasi"
+        "Naskah Lontar Kuno",
+        "Kerajinan Tenun Songket",
+        "Koleksi keris dan senjata",
+        "Misteri 'Manusia Pohon'"
       ]
     },
     {
-      "id": "monumen-yesus-memberkati",
-      "name": "Monumen Yesus Memberkati",
-      "type": "Monumen Religi",
-      "description": "Salah satu patung Yesus tertinggi di Asia, menjadi ikon Kota Manado. Terletak di kawasan perumahan Citraland, monumen ini melambangkan Manado sebagai kota yang religius dan toleran.",
-      "address": "Winangun Satu, Kec. Malalayang, Kota Manado, Sulawesi Utara",
+      "id": "taman-narmada",
+      "name": "Taman Narmada",
+      "type": "Taman Bersejarah",
+      "description": "Dibangun oleh Raja Anak Agung Gede Ngurah Karangasem sebagai replika dari Gunung Rinjani dan Danau Segara Anak. Taman ini berfungsi sebagai tempat upacara dan peristirahatan kerajaan.",
+      "address": "Jl. Ahmad Yani, Lembuak, Kec. Narmada, Kabupaten Lombok Barat, Nusa Tenggara Bar.",
       "phone": "-",
-      "openHours": "Dapat diakses setiap saat",
-      "rating": 4.7,
-      "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/HP-PI-04-THUMBNAIL-YESUS.jpg",
-      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5618013239796!2d124.84507107396286!3d1.4379937612882816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32877358a15585bb%3A0x9033701afd5bccf6!2sMonumen%20Yesus%20Memberkati!5e0!3m2!1sid!2sid!4v1756733969307!5m2!1sid!2sid",
-      "penunjukUrl": "https://maps.app.goo.gl/J5R2x3Hy4j8kXpjB9",
-      "highlights": [
-        "Ikon Kota Manado",
-        "Salah satu patung Yesus tertinggi di Asia",
-        "Pemandangan kota Manado",
-        "Simbol kerukunan beragama"
-      ]
-    },
-    {
-      "id": "museum-perjuangan-rakyat-sulut",
-      "name": "Museum Perjuangan Rakyat Sulut",
-      "type": "Museum Sejarah Militer",
-      "description": "Museum yang didedikasikan untuk sejarah perjuangan Permesta di Sulawesi Utara. Menyimpan koleksi foto, dokumen, senjata, dan diorama yang berkaitan dengan peristiwa tersebut.",
-      "address": "Jl. Sam Ratulangi, Wenang Utara, Kec. Wenang, Kota Manado, Sulawesi Utara",
-      "phone": "-",
-      "openHours": "Jam kunjung terbatas, biasanya buka di hari kerja",
+      "openHours": "Setiap Hari: 08.00-17.00 WITA",
       "rating": 4.4,
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhy6gqBxi-hTQ6VTl-qNnonQxRYkaTu6-ufJjPgVsu1h5wT3t_dDCXM3OQ552Cbi4M2ZqeyvnYXflSwoRhwT1Ex_qRQkLTzxw7jsDo552aYkEubUbRP0hVyz-Wu85qlzXp_ZkQwG3Tpi98/s5000/%255BUNSET%255D",
-      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.468827201473!2d124.83660427396286!3d1.4902483611105806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287756a68effa9f%3A0xc387a742a490dff9!2sMuseum%20Perjuangan%20Rakyat%20Sulut!5e0!3m2!1sid!2sid!4v1756734327105!5m2!1sid!2sid",
-      "penunjukUrl": "https://maps.app.goo.gl/SQEpbGCLwkD6LtMb9",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Narmada_Water_Palace_1.JPG/1200px-Narmada_Water_Palace_1.JPG",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.007885048229!2d116.20197517406379!3d-8.595239087269706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdb86c86247e03%3A0x567bd12fafb3bd15!2sNarmada%20Park!5e0!3m2!1sid!2sid!4v1756804480253!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/G6orpJ62fsQSiUUv8",
       "highlights": [
-        "Sejarah perjuangan Permesta",
-        "Koleksi senjata dan seragam",
-        "Foto-foto dokumentasi",
-        "Diorama peristiwa sejarah"
+        "Replika Gunung Rinjani",
+        "Balai Petirtaan (Air Awet Muda)",
+        "Arsitektur Bali-Lombok",
+        "Pura Kalasa"
       ]
     },
     {
-      "id": "rumah-adat-woloan",
-      "name": "Desa Wisata Woloan (Rumah Adat Minahasa)",
-      "type": "Desa Budaya",
-      "description": "Pusat pembuatan rumah panggung tradisional Minahasa yang dapat dibongkar-pasang. Pengunjung dapat melihat proses pembuatan rumah kayu dan arsitektur khas Minahasa.",
-      "address": "Woloan, Kecamatan Tomohon Barat, Kota Tomohon, Sulawesi Utara",
+      "id": "desa-adat-sade",
+      "name": "Desa Adat Sade",
+      "type": "Desa Wisata Budaya",
+      "description": "Desa tradisional Suku Sasak yang mempertahankan arsitektur dan gaya hidup asli. Rumah-rumahnya terbuat dari anyaman bambu dengan atap ilalang dan lantai dari campuran tanah liat dan kotoran kerbau.",
+      "address": "Rambitan, Kec. Pujut, Kabupaten Lombok Tengah, Nusa Tenggara Bar.",
+      "phone": "0878-6594-5366",
+      "openHours": "Setiap Hari: 08.00-18.00 WITA",
+      "rating": 4.5,
+      "image": "https://awsimages.detik.net.id/community/media/visual/2019/05/10/e7526592-3c6f-4032-ba43-9e441e3bbde5_169.jpeg?w=1200",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.4320702346645!2d116.28941217406827!3d-8.839302890497759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcda9172d983baf%3A0xfa9eed5a2752a97c!2sSade%20Village!5e0!3m2!1sid!2sid!4v1756804625560!5m2!1sid!2sid\"></iframe>",
+      "penunjukUrl": "https://maps.app.goo.gl/rXDEQj3TGahWDcqV6",
+      "highlights": [
+        "Rumah Adat Suku Sasak",
+        "Kerajinan Tenun Ikat",
+        "Lumbung Padi (Berugak)",
+        "Tradisi dan kehidupan asli"
+      ]
+    },
+    {
+      "id": "istana-dalam-loka",
+      "name": "Istana Dalam Loka",
+      "type": "Istana / Museum",
+      "description": "Bekas istana Kesultanan Sumbawa yang merupakan rumah panggung kayu terbesar di dunia. Kini berfungsi sebagai museum yang menyimpan benda-benda pusaka kesultanan.",
+      "address": "Jl. Dalam Loka, Seketeng, Kec. Sumbawa, Kabupaten Sumbawa, Nusa Tenggara Bar.",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-17.00 WITA",
+      "rating": 4.6,
+      "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/Istana_Dalam_Loka_dibangun_pada_tahun_1885_atas_prakarsa_Sultan_Muhammad_Jalaluddin_Syah_III.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.948011364916!2d117.4248505740622!3d-8.504429086093328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcb933eb99e0009%3A0x93d7c6363616745c!2sIstana%20Dalam%20Loka!5e0!3m2!1sid!2sid!4v1756805381863!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/8yQfBBCKwRHSiwee7",
+      "highlights": [
+        "Rumah panggung kayu terbesar",
+        "Pusaka Kesultanan Sumbawa",
+        "Arsitektur khas Samawa",
+        "Konstruksi tanpa paku"
+      ]
+    },
+    {
+      "id": "taman-mayura",
+      "name": "Pura & Taman Mayura",
+      "type": "Situs Religi & Sejarah",
+      "description": "Kompleks taman dan pura peninggalan Kerajaan Bali Karangasem di Lombok. Terkenal dengan 'Bale Kambang', yaitu balai terapung di tengah kolam yang dikelilingi taman asri.",
+      "address": "Jl. Purbasari, Mayura, Kec. Cakranegara, Kota Mataram, Nusa Tenggara Bar.",
       "phone": "-",
       "openHours": "Setiap Hari: 08.00-17.00 WITA",
       "rating": 4.5,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG1BQvI38-X3iHHKlG2eN5ScRm6zUufk3q3Q&s",
-      "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d255289.14893071333!2d124.6564103!3d1.234033!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32876c64db3c7c0d%3A0xadc573b5d87dfa89!2sAmphitheater%20Woloan!5e0!3m2!1sid!2sid!4v1756734662989!5m2!1sid!2sid",
-      "penunjukUrl": "https://maps.app.goo.gl/UJYmTLQTff3JQQ8F9",
+      "image": "https://image.idntimes.com/post/20211225/taman-mayura-lombok-aafc31b3e318f07a0cddcc9d9b604d7c.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.948011364916!2d117.4248505740622!3d-8.504429086093328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcb933eb99e0009%3A0x93d7c6363616745c!2sIstana%20Dalam%20Loka!5e0!3m2!1sid!2sid!4v1756804786317!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/8yQfBBCKwRHSiwee7",
       "highlights": [
-        "Pusat pembuatan rumah panggung",
-        "Arsitektur khas Minahasa",
-        "Sistem bongkar-pasang (knock down)",
-        "Kerajinan kayu lokal"
+        "Bale Kambang (Balai Terapung)",
+        "Peninggalan Kerajaan Bali",
+        "Perpaduan nuansa religius dan sejarah",
+        "Taman yang asri dan sejuk"
       ]
     }
   ]
 },
 
+{
+  "id": "nusa-tenggara-timur-ntt",
+  "name": "Nusa Tenggara Timur (NTT)",
+  "locations": [
+    {
+      "id": "museum-negeri-ntt",
+      "name": "Museum Negeri Nusa Tenggara Timur",
+      "type": "Museum Umum",
+      "description": "Museum ini menjadi pusat koleksi dan informasi tentang keanekaragaman budaya dari berbagai suku di NTT, seperti Timor, Rote, Sabu, Sumba, Flores, dan Alor.",
+      "address": "Jl. Raya Eltari No.2, Oebobo, Kec. Oebobo, Kota Kupang, Nusa Tenggara Tim.",
+      "phone": "(0380) 833325",
+      "openHours": "Senin-Jumat: 08.00-15.00 WITA",
+      "rating": 4.5,
+      "image": "https://awsimages.detik.net.id/community/media/visual/2022/12/05/museum-di-ntb-dan-ntt.png?w=5184",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.269183903244!2d123.61686412409423!3d-10.158761009625088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c56834b1b8e765b%3A0x9f7edb186bafb422!2sMuseum%20Daerah%20Nusa%20Tenggara%20Timur!5e0!3m2!1sid!2sid!4v1756806024395!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/hSSzEg59obwATLQv5",
+      "highlights": [
+        "Koleksi Tenun Ikat NTT",
+        "Moko dari Alor",
+        "Fosil Gajah Purba (Stegodon)",
+        "Peralatan upacara adat"
+      ]
+    },
+    {
+      "id": "situs-bung-karno-ende",
+      "name": "Situs Rumah Pengasingan Bung Karno",
+      "type": "Situs Bersejarah",
+      "description": "Rumah tempat Soekarno menjalani pengasingan oleh Belanda dari tahun 1934 hingga 1938. Di tempat inilah beliau merenungkan dan merumuskan butir-butir Pancasila.",
+      "address": "Jl. Perwira, Kotaraja, Kec. Ende Utara, Kabupaten Ende, Nusa Tenggara Tim.",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-17.00 WITA",
+      "rating": 4.7,
+      "image": "https://awsimages.detik.net.id/community/media/visual/2022/06/06/rumah-pengasingan-bung-karno-di-bengkulu-1_169.jpeg?w=1200",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16247009.379454715!2d101.25831898518116!3d-6.190246436274884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dad58b39212e73f%3A0x526a432db61777e6!2sRumah%20Pengasingan%20Bung%20Karno!5e0!3m2!1sid!2sid!4v1756806331980!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/YHhnoEqbdpXW6tsB7",
+      "highlights": [
+        "Tempat lahirnya Pancasila",
+        "Perabotan asli peninggalan Soekarno",
+        "Naskah drama tulisan tangan",
+        "Foto-foto dokumentasi"
+      ]
+    },
+    {
+      "id": "desa-adat-bena",
+      "name": "Desa Adat Bena",
+      "type": "Situs Megalitikum",
+      "description": "Perkampungan megalitikum yang terletak di puncak bukit dengan latar belakang Gunung Inerie. Desa ini menjadi representasi budaya zaman batu yang masih lestari hingga kini.",
+      "address": "Tiworiwu, Kecamatan Jerebuu, Kabupaten Ngada, Nusa Tenggara Tim.",
+      "phone": "-",
+      "openHours": "Setiap Hari: 07.00-18.00 WITA",
+      "rating": 4.7,
+      "image": "https://portal.ngadakab.go.id/wp-content/uploads/2025/07/kampung-adat-bena-1.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2018319.663684722!2d118.67876919374996!3d-8.876743899999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db2de9fb4132d15%3A0x37927d1166e19c6e!2sDesa%20Bena!5e0!3m2!1sid!2sid!4v1756806454684!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/Q8FdTrfRBgLQ8QfaA",
+      "highlights": [
+        "Struktur batu megalitikum",
+        "Rumah adat (Sa'o)",
+        "Upacara dan ritual adat",
+        "Kerajinan tenun tangan"
+      ]
+    },
+    {
+      "id": "museum-tenun-ikat-lepolorun",
+      "name": "Museum Tenun Ikat Lepo Lorun",
+      "type": "Museum Kerajinan",
+      "description": "Sebuah museum hidup yang didedikasikan untuk melestarikan seni tenun ikat Sikka. Pengunjung dapat melihat koleksi kain, belajar proses menenun, dan berinteraksi dengan para penenun.",
+      "address": "Jl. Kimang Buleng, Nita, Kec. Nita, Kabupaten Sikka, Nusa Tenggara Tim.",
+      "phone": "0813-3932-8888",
+      "openHours": "Senin-Sabtu: 08.00-17.00 WITA",
+      "rating": 4.8,
+      "image": "https://cdn.antaranews.com/cache/1200x800/2017/02/20170217TENUN_FLORES.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.167065725661!2d122.16809587406523!3d-8.675657488322653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dad17810c4a26d3%3A0xe4fc9369ba9ae656!2sTenun%20Ikat%20Lepo%20Lorun!5e0!3m2!1sid!2sid!4v1756806806690!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/TYc1JEuajTgLNwHF7",
+      "highlights": [
+        "Proses menenun dari kapas",
+        "Pewarnaan alami",
+        "Koleksi motif tenun Sikka",
+        "Workshop dan sanggar tari"
+      ]
+    },
+    {
+      "id": "kampung-adat-wae-rebo",
+      "name": "Kampung Adat Wae Rebo",
+      "type": "Desa Wisata Budaya",
+      "description": "Desa terpencil di atas pegunungan yang terkenal dengan rumah adat Mbaru Niang berbentuk kerucut. Desa ini menawarkan pengalaman hidup bersama masyarakat adat Manggarai.",
+      "address": "Satar Lenda, Kecamatan Satar Mese Barat, Kabupaten Manggarai, Nusa Tenggara Tim.",
+      "phone": "-",
+      "openHours": "Memerlukan perjalanan trekking dan pemandu",
+      "rating": 4.9,
+      "image": "https://www.masterplandesa.com/wp-content/uploads/2019/05/Rumah-Adat-Desa-Wae-Rebo-a.png",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.1802289304997!2d120.28161137406687!3d-8.76910788955943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db36459b2e80e9d%3A0xce74c6b87dcb8a88!2sWaerebo%20Village!5e0!3m2!1sid!2sid!4v1756806921410!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/GhQB9MUxo2vZheR46",
+      "highlights": [
+        "Rumah Adat Mbaru Niang",
+        "Desa di atas awan",
+        "Kehidupan asli Suku Manggarai",
+        "Warisan Dunia UNESCO"
+      ]
+    }
+  ]
+},
 
+{
+  "id": "maluku",
+  "name": "Maluku",
+  "locations": [
+    {
+      "id": "museum-siwalima",
+      "name": "Museum Negeri Siwalima",
+      "type": "Museum Umum",
+      "description": "Museum ini menampilkan kekayaan budaya dan sejarah Maluku, 'Tanah Raja-Raja'. Koleksinya terbagi menjadi dua gedung: Museum Kelautan dan Museum Budaya, dengan berbagai artefak etnografi dan sejarah.",
+      "address": "Jl. Dr. Malaihollo, Taman Makmur, Kec. Nusaniwe, Kota Ambon, Maluku",
+      "phone": "(0911) 361298",
+      "openHours": "Selasa-Minggu: 08.00-16.00 WIT",
+      "rating": 4.6,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Museum_Siwalima.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.4413719167055!2d128.1504055739941!3d-3.713470743094342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6ce80eafbfeb7d%3A0xbf9977619e9db228!2sMuseum%20Siwalima%20Provinsi%20Maluku!5e0!3m2!1sid!2sid!4v1756807281604!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/aSJWtsKXAFPvWFQn7",
+      "highlights": [
+        "Kerangka Ikan Paus Biru raksasa",
+        "Sejarah jalur rempah",
+        "Koleksi busana adat Maluku",
+        "Peralatan upacara tradisional"
+      ]
+    },
+    {
+      "id": "benteng-duurstede",
+      "name": "Benteng Duurstede",
+      "type": "Benteng / Situs Sejarah",
+      "description": "Benteng peninggalan Portugis yang kemudian diambil alih oleh VOC. Benteng ini menjadi saksi bisu perlawanan pahlawan nasional Pattimura dalam merebut benteng dari tangan Belanda.",
+      "address": "Saparua, Kabupaten Maluku Tengah, Maluku",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-18.00 WIT",
+      "rating": 4.5,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Duurstede_Fort%2C_Saparua%2C_Ambon_-_Indonesia.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.053376170505!2d128.6565417739929!3d-3.5752029424099705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6b62a5c58da8c3%3A0x8bcb1aada430e7aa!2sBenteng%20%22%20VOC%20%22%20Duurstede%20Saparua!5e0!3m2!1sid!2sid!4v1756807408400!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/4RQ5pbFF3nzaBq6RA",
+      "highlights": [
+        "Saksi sejarah Perang Pattimura",
+        "Pemandangan Selat Saparua",
+        "Arsitektur benteng Eropa",
+        "Meriam-meriam kuno"
+      ]
+    },
+    {
+      "id": "istana-sultan-ternate",
+      "name": "Kedaton Kesultanan Ternate",
+      "type": "Istana / Museum",
+      "description": "Istana megah berbentuk segi delapan yang merupakan kediaman resmi Sultan Ternate. Di dalamnya terdapat museum yang menyimpan benda pusaka kerajaan, termasuk Mahkota Sultan yang unik.",
+      "address": "Jl. Sultan Khairun, Soa Sio, Kec. Ternate Utara, Kota Ternate, Maluku Utara",
+      "phone": "-",
+      "openHours": "Setiap Hari: 09.00-17.00 WIT",
+      "rating": 4.7,
+      "image": "https://images.bisnis.com/photos/2024/02/09/199967/antarafoto-wajah-baru-kedaton-kesultanan-ternate-ans-922024-ans-5.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4288749300895!2d127.38147027396433!3d0.8005489630973006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x329cb16240da5b65%3A0xbea54bb008057830!2sKedaton%20Kesultanan%20Ternate!5e0!3m2!1sid!2sid!4v1756807613451!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/Uk3KadTsHNhP6mgEA",
+      "highlights": [
+        "Mahkota dengan rambut yang tumbuh",
+        "Pusaka Kesultanan Ternate",
+        "Arsitektur unik segi delapan",
+        "Al-Qur'an tulisan tangan"
+      ]
+    },
+    {
+      "id": "benteng-belgica",
+      "name": "Benteng Belgica",
+      "type": "Benteng / Situs Sejarah",
+      "description": "Benteng peninggalan Portugis yang dibangun kembali oleh VOC menjadi benteng pentagon yang kokoh di atas bukit. Benteng ini dibangun untuk memonopoli perdagangan pala di Kepulauan Banda.",
+      "address": "Nusantara, Kec. Banda, Kabupaten Maluku Tengah, Maluku",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-18.00 WIT",
+      "rating": 4.8,
+      "image": "https://asset.kompas.com/crops/P7N1iXPtPkphHPiCUeXTIHGQQxk=/0x0:650x433/1200x800/data/photo/2021/08/27/6128da92606de.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.3759010860936!2d129.89633287400312!3d-4.526123647748338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d15860903e4fb6b%3A0xfabde573db11c1a7!2sBenteng%20Belgica%2C%20Kepulauan%20Banda%20Neira!5e0!3m2!1sid!2sid!4v1756807719143!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/L2ZxNuXv9ZNvS5r26",
+      "highlights": [
+        "Arsitektur Pentagon (segi lima)",
+        "Pusat monopoli pala VOC",
+        "Pemandangan Gunung Api Banda",
+        "Warisan Dunia UNESCO"
+      ]
+    },
+    {
+      "id": "rumah-pengasingan-hatta",
+      "name": "Rumah Pengasingan Bung Hatta",
+      "type": "Situs Bersejarah",
+      "description": "Tempat tinggal Mohammad Hatta dan Sutan Sjahrir selama masa pengasingan mereka di Banda Neira. Di tempat ini, mereka mendirikan sekolah untuk anak-anak setempat.",
+      "address": "Jl. Dr. Moh. Hatta, Nusantara, Kec. Banda, Kabupaten Maluku Tengah, Maluku",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-17.00 WIT",
+      "rating": 4.7,
+      "image": "https://live.staticflickr.com/8118/8609364898_f6dd3424cf_z.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.368591965279!2d129.89721737400302!3d-4.527453547756835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d1587edd04e6201%3A0xa3c7e9dbe463e30c!2sRumah%20Pengasingan%20Bung%20Hatta!5e0!3m2!1sid!2sid!4v1756807850213!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/hweqcNvVXmnK5NDA8",
+      "highlights": [
+        "Tempat tinggal Bung Hatta & Sjahrir",
+        "Peninggalan perabotan asli",
+        "Perpustakaan pribadi",
+        "Sejarah pergerakan kemerdekaan"
+      ]
+    }
+  ]
+},
+{
+  "id": "maluku-utara",
+  "name": "Maluku Utara",
+  "locations": [
+    {
+      "id": "kedaton-kesultanan-ternate",
+      "name": "Museum Kedaton Kesultanan Ternate",
+      "type": "Istana / Museum",
+      "description": "Istana megah berbentuk segi delapan yang merupakan kediaman resmi Sultan Ternate. Di dalamnya terdapat museum yang menyimpan benda pusaka kerajaan, termasuk Mahkota Sultan yang unik.",
+      "address": "Jl. Sultan Khairun, Soa Sio, Kec. Ternate Utara, Kota Ternate, Maluku Utara",
+      "phone": "-",
+      "openHours": "Setiap Hari: 09.00-17.00 WIT",
+      "rating": 4.7,
+      "image": "https://wonderful.ternatekota.go.id//storage/files/uploads/DESTINASI/IMG_0333.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4288749300895!2d127.38147027396433!3d0.8005489630973006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x329cb16240da5b65%3A0xbea54bb008057830!2sKedaton%20Kesultanan%20Ternate!5e0!3m2!1sid!2sid!4v1756808221616!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/Uk3KadTsHNhP6mgEA",
+      "highlights": [
+        "Mahkota dengan rambut yang tumbuh",
+        "Pusaka Kesultanan Ternate",
+        "Arsitektur unik segi delapan",
+        "Al-Qur'an tulisan tangan"
+      ]
+    },
+    {
+      "id": "benteng-tolukko",
+      "name": "Benteng Tolukko",
+      "type": "Benteng / Situs Sejarah",
+      "description": "Benteng kecil peninggalan Portugis yang dibangun di atas tanjung berbatu. Benteng ini memiliki posisi strategis dengan pemandangan indah ke arah Gunung Gamalama dan laut.",
+      "address": "Jl. Benteng Tolukko, Sangaji, Kec. Ternate Utara, Kota Ternate, Maluku Utara",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-18.00 WIT",
+      "rating": 4.6,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Fort_Tolukko_op_Ternate%2C_KITLV_178142.tiff/lossy-page1-1200px-Fort_Tolukko_op_Ternate%2C_KITLV_178142.tiff.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4158349946993!2d127.38559587396432!3d0.813841363066354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x329cb183e224aec5%3A0x6f64a496870d0188!2sBenteng%20Portugis%20Tolukko!5e0!3m2!1sid!2sid!4v1756819392030!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/RjDGWS8tgd3vcxtg7",
+      "highlights": [
+        "Peninggalan Portugis",
+        "Batu fondasi dari Gunung Gamalama",
+        "Pemandangan laut dan gunung",
+        "Struktur bastion yang unik"
+      ]
+    },
+    {
+      "id": "benteng-klamata",
+      "name": "Benteng Kalamata",
+      "type": "Benteng / Situs Sejarah",
+      "description": "Benteng peninggalan Portugis yang berbentuk bintang empat penjuru. Terletak di tepi pantai, benteng ini dibangun untuk menghadapi serangan dari Kesultanan Tidore.",
+      "address": "Jl. Raya Kalamata, Kalamata, Kec. Ternate Sel., Kota Ternate, Maluku Utara",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-18.00 WIT",
+      "rating": 4.5,
+      "image": "https://asset.kompas.com/crops/BoHdUl3UJ9EiAxio4m7XswKsiJ8=/0x0:720x480/750x500/data/photo/2023/08/01/64c892477e691.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.465258039241!2d127.37048967396464!3d0.7622368631848945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x329cb423414e100f%3A0x4541debcea1259b!2sBenteng%20Kalamata!5e0!3m2!1sid!2sid!4v1756819486773!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/sWo1FF4JC3kZwSEW6",
+      "highlights": [
+        "Arsitektur bintang empat",
+        "Pemandangan Pulau Tidore",
+        "Benteng pertahanan tepi laut",
+        "Dibangun oleh Portugis"
+      ]
+    },
+    {
+      "id": "kedaton-kesultanan-tidore",
+      "name": "Museum Kedaton Kesultanan Tidore",
+      "type": "Istana / Museum",
+      "description": "Pusat pemerintahan Kesultanan Tidore yang telah dibangun kembali. Di dalamnya terdapat museum yang menyimpan peninggalan sejarah dan benda-benda pusaka Kesultanan Tidore.",
+      "address": "Soasio, Kec. Tidore, Kota Tidore Kepulauan, Maluku Utara",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-17.00 WIT",
+      "rating": 4.7,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Kadato_Kie.jpg/640px-Kadato_Kie.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127661.7241647357!2d127.23984964335936!3d0.8005436000000233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x329cb16240da5b65%3A0xbea54bb008057830!2sKedaton%20Kesultanan%20Ternate!5e0!3m2!1sid!2sid!4v1756819596686!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/vuMVhHeeuoUJ5Uk99",
+      "highlights": [
+        "Pusaka Kesultanan Tidore",
+        "Mahkota Sultan Tidore",
+        "Sejarah persaingan Ternate-Tidore",
+        "Arsitektur rumah panggung"
+      ]
+    },
+    {
+      "id": "benteng-tahula",
+      "name": "Benteng Tahula",
+      "type": "Benteng / Situs Sejarah",
+      "description": "Benteng peninggalan Spanyol yang terletak di atas bukit di Pulau Tidore. Dari benteng ini, pengunjung bisa melihat pemandangan Kota Tidore dan Pulau Halmahera di kejauhan.",
+      "address": "Soasio, Kec. Tidore, Kota Tidore Kepulauan, Maluku Utara",
+      "phone": "-",
+      "openHours": "Dapat diakses setiap saat",
+      "rating": 4.6,
+      "image": "https://asset.kompas.com/crops/QLJCZGgPF6rL21jiIdr2wgaHrbE=/0x49:1024x732/1200x800/data/photo/2023/08/04/64cce2c860d1f.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.5630303776416!2d127.439567273965!3d0.6481570634315199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x329ccfaa67137fdf%3A0xdefa5bd4169ae85a!2sBenteng%20Spanyol%20Tahula!5e0!3m2!1sid!2sid!4v1756819795227!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/t7hHm6CRUWS6RL8DA",
+      "highlights": [
+        "Peninggalan Spanyol",
+        "Pemandangan Pulau Halmahera",
+        "Struktur benteng di atas bukit",
+        "Meriam kuno"
+      ]
+    }
+  ]
+},
+
+{
+  "id": "papua",
+  "name": "Papua",
+  "locations": [
+    {
+      "id": "museum-negeri-papua",
+      "name": "Museum Negeri Provinsi Papua",
+      "type": "Museum Budaya",
+      "description": "Museum ini menyimpan koleksi-koleksi etnografi dan antropologi dari berbagai suku di Papua. Pengunjung dapat melihat artefak seperti pakaian adat, alat musik, dan peralatan upacara.",
+      "address": "Jl. Raya Abepura, Waena, Kec. Heram, Kota Jayapura, Papua",
+      "phone": "(0967) 571216",
+      "openHours": "Senin-Jumat: 08.00-15.00 WIT",
+      "rating": 4.5,
+      "image": "https://fajarpapua.com/wp-content/uploads/2021/08/96be753ade525c3e3f0a92a9bcc1db72.jpeg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.726432685192!2d140.6283052739837!3d-2.595135538455356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf436e8454617%3A0x5e8c8dfc2f236067!2sMuseum%20Negeri%20Provinsi%20Papua!5e0!3m2!1sid!2sid!4v1756820149758!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/ihkUjMDwdiAkbHAe8",
+      "highlights": [
+        "Koleksi Asmat",
+        "Peralatan berburu tradisional",
+        "Perahu arwah (Wairon)",
+        "Diorama rumah adat"
+      ]
+    },
+    {
+      "id": "tugu-macarthur",
+      "name": "Monumen Jenderal MacArthur",
+      "type": "Monumen Sejarah",
+      "description": "Monumen ini didirikan di atas bukit untuk mengenang Jenderal Douglas MacArthur, yang memimpin pasukan sekutu di Pasifik selama Perang Dunia II dari markasnya di Ifar Gunung.",
+      "address": "Jl. Ifar Gunung, Sentani, Jayapura, Papua",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-17.00 WIT",
+      "rating": 4.6,
+      "image": "https://asset-2.tribunnews.com/papua/foto/bank/images/objek-wisata-tugu-macarthur.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.8260339331446!2d140.54103777398345!3d-2.563351338353399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cee53fb7fa981%3A0xe07e254d49be784f!2sMonumen%20Mac%20Arthur!5e0!3m2!1sid!2sid!4v1756820237521!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/5X9pVjufxMTwnVtS8",
+      "highlights": [
+        "Sejarah Perang Dunia II",
+        "Pemandangan Danau Sentani",
+        "Markas besar pasukan sekutu",
+        "Museum kecil di lokasi"
+      ]
+    },
+    {
+      "id": "museum-loka-budaya-uncen",
+      "name": "Museum Loka Budaya Universitas Cenderawasih",
+      "type": "Museum Etnografi",
+      "description": "Museum universitas yang memiliki koleksi etnografi terlengkap di Papua, hasil penelitian para akademisi. Koleksinya mencakup artefak dari seluruh wilayah Papua.",
+      "address": "Jl. Kampwolker, Waena, Kec. Heram, Kota Jayapura, Papua",
+      "phone": "(0967) 572121",
+      "openHours": "Senin-Jumat: 08.00-15.00 WIT",
+      "rating": 4.7,
+      "image": "https://museum.co.id/wp-content/uploads/2020/09/photo1jpg.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.677561754839!2d140.65786577398387!3d-2.610589538505526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf598cdcf080b%3A0x27505ad5e9b0eee!2sMuseum%20Loka%20Budaya%20Universitas%20Cenderawasih!5e0!3m2!1sid!2sid!4v1756820335556!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/mBWCG4CG5z2PUH4s8",
+      "highlights": [
+        "Koleksi tiang arwah (bisj)",
+        "Ukiran dan patung Asmat",
+        "Noken aneka suku",
+        "Artefak dari Lembah Baliem"
+      ]
+    },
+    {
+      "id": "situs-megalitik-tutmari",
+      "name": "Situs Megalitik Tutari",
+      "type": "Situs Arkeologi",
+      "description": "Sebuah situs prasejarah di atas bukit Doyo Lama yang berisi bongkahan-bongkahan batu dengan ukiran purba berupa gambar ikan, penyu, dan manusia.",
+      "address": "Doyo Lama, Waibu, Kabupaten Jayapura, Papua",
+      "phone": "-",
+      "openHours": "Dapat diakses setiap saat",
+      "rating": 4.4,
+      "image": "https://statik.tempo.co/data/2020/06/14/id_945253/945253_720.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.8113080712837!2d140.4524491739835!3d-2.568075338368456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cef7661c6ec6d%3A0xa67e025d6eafe82!2sBUKIT%20TUTARI!5e0!3m2!1sid!2sid!4v1756820434201!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/LrT3P8NFd3bxwH6n9",
+      "highlights": [
+        "Ukiran batu prasejarah",
+        "Pemandangan Danau Sentani",
+        "Batu berlukis (Watu Weti)",
+        "Tradisi megalitikum Sentani"
+      ]
+    },
+    {
+      "id": "lembah-baliem",
+      "name": "Lembah Baliem & Desa Adat Suku Dani",
+      "type": "Situs Budaya Hidup",
+      "description": "Lembah subur yang menjadi tempat tinggal Suku Dani. Pengunjung dapat melihat mumi kuno, rumah adat Honai, dan tradisi bakar batu yang masih dilestarikan.",
+      "address": "Lembah Baliem, Kabupaten Jayawijaya, Papua Pegunungan",
+      "phone": "-",
+      "openHours": "Memerlukan pemandu lokal",
+      "rating": 4.8,
+      "image": "https://img.inews.co.id/media/600/files/inews_new/2019/05/24/baliem2.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.4425595139796!2d138.86838347399643!3d-3.928704944221853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683e05004fdf0663%3A0xfd8a119827cb672a!2sFestival%20Budaya%20Lembah%20Baliem!5e0!3m2!1sid!2sid!4v1756820521893!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/HMgycShVia6ZdfaD8",
+      "highlights": [
+        "Mumi kuno Suku Dani",
+        "Rumah adat Honai",
+        "Tradisi Bakar Batu",
+        "Festival Budaya Lembah Baliem"
+      ]
+    }
+  ]
+},
+
+{
+  "id": "papua-barat",
+  "name": "Papua Barat",
+  "locations": [
+    {
+      "id": "museum-mansinam",
+      "name": "Museum Peradaban Papua di Pulau Mansinam",
+      "type": "Museum Sejarah & Religi",
+      "description": "Museum ini terletak di Pulau Mansinam, tempat pertama kali injil masuk ke Tanah Papua. Koleksinya berfokus pada sejarah pekabaran injil dan perkembangan peradaban di Papua.",
+      "address": "Pulau Mansinam, Manokwari, Papua Barat",
+      "phone": "-",
+      "openHours": "Dapat dikunjungi dengan perahu, jam bervariasi",
+      "rating": 4.7,
+      "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/pulau-mansinam-4.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.335285206286!2d134.08732218885504!3d-0.8915686999999973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d53f52df9efbf29%3A0xbdfa0fb68778181!2sMuseum%20Mansinam!5e0!3m2!1sid!2sid!4v1756821509673!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/TMiommRfMx8L2qP68",
+      "highlights": [
+        "Sejarah masuknya Injil",
+        "Tugu Peringatan Pendaratan Ottow & Geissler",
+        "Patung Kristus Raja",
+        "Wisata ziarah religi"
+      ]
+    },
+    {
+      "id": "situs-purbakala-tapurarang",
+      "name": "Situs Purbakala Tapurarang",
+      "type": "Situs Arkeologi",
+      "description": "Situs prasejarah di Distrik Kokas, Fakfak, yang menampilkan lukisan telapak tangan berwarna merah pada tebing-tebing karst di tepi laut. Dipercaya sebagai peninggalan manusia purba.",
+      "address": "Distrik Kokas, Kabupaten Fakfak, Papua Barat",
+      "phone": "-",
+      "openHours": "Dapat diakses setiap saat dengan perahu",
+      "rating": 4.6,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Situs_Purbakala_Tapurarang_Kokas_di_Distrik_Kokas_Kabupaten_Fakfak%2C_Provinsi_Papua_Barat_Indonesia.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32476072.908745997!2d87.71245376183398!3d-6.4754482607337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686c583937da5eff%3A0x2f7faf81e28b9d57!2sMonumen%20Tugu%20Pepera!5e0!3m2!1sid!2sid!4v1756821115861!5m2!1sid!2sid",
+      "penunjukUrl": "hhttps://maps.app.goo.gl/TMiommRfMx8L2qP68",
+      "highlights": [
+        "Lukisan cap tangan prasejarah",
+        "Pemandangan tebing karst",
+        "Disebut juga 'cap tangan berdarah'",
+        "Akses melalui laut"
+      ]
+    },
+    {
+      "id": "tugu-pepera-sorong",
+      "name": "Tugu Peringatan Pepera",
+      "type": "Monumen Sejarah",
+      "description": "Monumen yang dibangun untuk memperingati Penentuan Pendapat Rakyat (Pepera) tahun 1969, yang menjadi tonggak sejarah bersatunya Papua Barat dengan Indonesia.",
+      "address": "Jl. Jenderal Sudirman, Klaligi, Kec. Sorong Manoi, Kota Sorong, Papua Barat Daya",
+      "phone": "-",
+      "openHours": "Dapat diakses setiap saat",
+      "rating": 4.4,
+      "image": "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-goodnewsfromindonesia-gnfi-tugu-pepera-papua-8d64bb5ecb663467ce6bea0879063d17.jpg?tr=w-768,h-576,fo-center",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32476072.908745997!2d87.71245376183398!3d-6.4754482607337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686c583937da5eff%3A0x2f7faf81e28b9d57!2sMonumen%20Tugu%20Pepera!5e0!3m2!1sid!2sid!4v1756821115861!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/GgqHuGtyZp13TD9H9",
+      "highlights": [
+        "Sejarah Penentuan Pendapat Rakyat",
+        "Simbol integrasi Papua",
+        "Landmark Kota Sorong",
+        "Lokasi strategis di pusat kota"
+      ]
+    },
+    {
+      "id": "masjid-tua-patimburak",
+      "name": "Masjid Tua Patimburak",
+      "type": "Situs Religi & Sejarah",
+      "description": "Salah satu masjid tertua di Papua, dibangun pada abad ke-19. Arsitekturnya sangat unik, memadukan bentuk masjid dengan gaya gereja, sebagai simbol toleransi.",
+      "address": "Desa Patimburak, Distrik Kokas, Kabupaten Fakfak, Papua Barat",
+      "phone": "-",
+      "openHours": "Dapat diakses setiap saat untuk beribadah",
+      "rating": 4.8,
+      "image": "https://asset-2.tribunnews.com/papuabarat/foto/bank/originals/Masjid-Patumburak.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.314022370621!2d132.42490397398487!3d-2.7227984388814885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d45fd998aac6ed5%3A0x64d15b8f364ab169!2sSitus%20Masjid%20Tua%20Wertuar%20Patimburak!5e0!3m2!1sid!2sid!4v1756821709389!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/sEwyfct617SmPEyMA",
+      "highlights": [
+        "Masjid tertua di Fakfak",
+        "Arsitektur akulturasi budaya",
+        "Simbol toleransi beragama",
+        "Peninggalan sejarah Islam"
+      ]
+    },
+    {
+      "id": "goa-jepang-biak",
+      "name": "Monumen Perang Dunia II & Goa Jepang",
+      "type": "Situs Sejarah Militer",
+      "description": "Goa alami yang dijadikan tempat persembunyian ribuan tentara Jepang saat Perang Dunia II. Kini menjadi monumen untuk mengenang pertempuran sengit antara pasukan Sekutu dan Jepang.",
+      "address": "Samofa, Kecamatan Biak Kota, Kabupaten Biak Numfor, Papua",
+      "phone": "-",
+      "openHours": "Setiap Hari: 08.00-17.00 WIT",
+      "rating": 4.5,
+      "image": "https://kebudayaan.kemdikbud.go.id/bpnbjayapura/wp-content/uploads/sites/17/2015/04/M2U00801.MPG_snapshot_00.08_2015.04.03_14.06.51.jpg",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9539066147827!2d136.15329307397351!3d-1.1926959355289137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x680388eb8447405d%3A0xde8b7bd71953f802!2sMonument%20Perang%20Dunia%20Ke%20II!5e0!3m2!1sid!2sid!4v1756821838224!5m2!1sid!2sid",
+      "penunjukUrl": "https://maps.app.goo.gl/X7pxtDbFUqzNEy4p8",
+      "highlights": [
+        "Saksi bisu Perang Dunia II",
+        "Terowongan bawah tanah",
+        "Monumen peringatan perang",
+        "Koleksi sisa-sisa persenjataan"
+      ]
+    }
+  ]
+},
+
+{
+  "id": "Papua-Barat-Daya",
+  "name": "Papua Barat Daya",
+  "locations": [
+  {
+    "id": "tembok-peringatan-pulau-doom",
+    "name": "Tembok Peringatan Perang Dunia II Pulau Doom",
+    "type": "Monumen Sejarah",
+    "description": "Sebuah tembok bersejarah di Pulau Doom yang berisi tulisan-tulisan tangan tentara sekutu dan Jepang dari era Perang Dunia II. Situs ini menjadi saksi bisu keberadaan tentara asing di Sorong pada masa lampau.",
+    "address": "Pulau Doom, Distrik Sorong Kepulauan, Kota Sorong, Papua Barat Daya",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat",
+    "rating": 4.5,
+    "image": "https://potretmaluku.id/wp-content/uploads/2022/07/ezgif.com-gif-maker-53.webp",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4085085.408782842!2d126.62318498750003!3d-0.8860749999999972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d5eab4b67b528e5%3A0x44d2e89986fe8342!2sPulau%20Doom%20Tanah%20Papua!5e0!3m2!1sid!2sid!4v1756866764523!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/PRMzoqtiP5pKTeZZ6",
+    "highlights": [
+      "Prasasti tentara PD II",
+      "Sejarah Pulau Doom sebagai pusat pemerintahan Belanda",
+      "Pemandangan Kota Sorong dari pulau",
+      "Jejak peninggalan arsitektur kolonial"
+    ]
+  },
+  {
+    "id": "situs-gua-prasejarah-misool",
+    "name": "Situs Lukisan Dinding Gua Prasejarah Misool",
+    "type": "Situs Arkeologi",
+    "description": "Gua-gua di kawasan Misool, Raja Ampat, yang dindingnya dihiasi oleh lukisan cap tangan dan gambar-gambar peninggalan manusia prasejarah. Lukisan ini diperkirakan berusia ribuan tahun dan menjadi bukti peradaban kuno di Raja Ampat.",
+    "address": "Kawasan Misool, Kabupaten Raja Ampat, Papua Barat Daya",
+    "phone": "-",
+    "openHours": "Memerlukan pemandu lokal/tur",
+    "rating": 4.8,
+    "image": "https://asset.kompas.com/crops/u1v-1Swzw5l2A5mSpUpp5N86Y3s=/0x49:1000x715/1200x800/data/photo/2021/09/24/614d6315c5978.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255205.42936244485!2d130.04874796482403!3d-1.9172246457719073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d42c9ad93601cad%3A0x55c55f538e4c8663!2sPenyebar%20agama%20Islam%20pertama%20di%20pulau%20Misool!5e0!3m2!1sid!2sid!4v1756867076237!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/yDkp9vEvsc7HH3Th9",
+    "highlights": [
+      "Lukisan cap tangan prasejarah",
+      "Gambar ikan dan simbol purba",
+      "Berada di tengah gugusan karst yang indah",
+      "Bukti jalur migrasi manusia purba"
+    ]
+  },
+  {
+    "id": "desa-wisata-arborek",
+    "name": "Desa Wisata Arborek",
+    "type": "Situs Budaya Hidup",
+    "description": "Sebuah desa adat di Raja Ampat yang melestarikan budaya dan kearifan lokal masyarakat Biak. Pengunjung dapat melihat langsung kehidupan sehari-hari, kerajinan tangan Noken dan anyaman daun pandan, serta tarian tradisional.",
+    "address": "Pulau Arborek, Meos Mansar, Kabupaten Raja Ampat, Papua Barat Daya",
+    "phone": "-",
+    "openHours": "Dapat dikunjungi setiap hari",
+    "rating": 4.7,
+    "image": "https://asset.kompas.com/crops/Jr_m3qCfD04Zyksn7riadiKMteI=/0x0:2048x1365/1200x800/data/photo/2021/11/08/6188f9d05e7e1.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127668.9559029006!2d130.34726950583084!3d-0.5186242976698884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d5e4e80c8caeb63%3A0x939aadb1280a703f!2sArborek%2C%20Meos%20Mansar%2C%20Kabupaten%20Raja%20Ampat%2C%20Papua%20Bar.!5e0!3m2!1sid!2sid!4v1756867199858!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/bRCsSEJpQiUtDLkU6",
+    "highlights": [
+      "Kerajinan tangan topi Manta",
+      "Kehidupan masyarakat lokal",
+      "Tarian adat selamat datang",
+      "Salah satu pusat konservasi Manta Ray"
+    ]
+  },
+  {
+    "id": "kampung-adat-malamooi",
+    "name": "Kampung Adat Suku Moi di Malamooi",
+    "type": "Situs Budaya Hidup",
+    "description": "Sebuah kampung yang didedikasikan untuk melestarikan kebudayaan Suku Moi, salah satu suku asli di wilayah Sorong. Pengunjung dapat melihat rumah adat, mempelajari tradisi, dan berinteraksi langsung dengan masyarakat.",
+    "address": "Distrik Malaimsimsa, Kota Sorong, Papua Barat Daya",
+    "phone": "-",
+    "openHours": "Memerlukan izin atau pendampingan lokal",
+    "rating": 4.6,
+    "image": "https://images.genpi.co/uploads/news/normal/2019/03/20/fa707a374fbe676b81857bfb930f97d5.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.8260339331446!2d140.54103777398345!3d-2.563351338353399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cee53fb7fa981%3A0xe07e254d49be784f!2sMonumen%20Mac%20Arthur!5e0!3m2!1sid!2sid!4v1756820237521!5m2!1sid!2sid4",
+    "penunjukUrl": "https://maps.app.goo.gl/D99CyyUU2VaRGwSw7",
+    "highlights": [
+      "Rumah adat Suku Moi",
+      "Tradisi dan tarian lokal",
+      "Kerajinan tangan khas",
+      "Kearifan lokal tentang alam"
+    ]
+  },
+  {
+    "id": "mercusuar-tanjung-kasuari",
+    "name": "Mercusuar Peninggalan Belanda Tanjung Kasuari",
+    "type": "Bangunan Sejarah",
+    "description": "Sebuah mercusuar tua yang dibangun pada masa pemerintahan kolonial Belanda. Bangunan ini tidak hanya berfungsi sebagai penunjuk navigasi laut, tetapi juga menjadi saksi sejarah maritim di pintu masuk perairan Sorong.",
+    "address": "Tanjung Kasuari, Distrik Sorong Barat, Kota Sorong, Papua Barat Daya",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat (area luar)",
+    "rating": 4.3,
+    "image": "https://asset-2.tribunnews.com/belitung/foto/bank/originals/20230106-Mercusuar-Tanjung-Lancur.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31915.275478203424!2d131.20703561083982!3d-0.8202866999999961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d595581fedb13df%3A0xaf710c750e4d97e7!2sPantai%20Tanjung%20Kasuari%2C%20Sorong%2C%20Papua%20Barat!5e0!3m2!1sid!2sid!4v1756867760035!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/WgRvBrgzF7YEmkgCA",
+    "highlights": [
+      "Arsitektur era kolonial",
+      "Pemandangan laut dari atas bukit",
+      "Sejarah navigasi dan pelayaran",
+      "Dekat dengan Pantai Tanjung Kasuari"
+    ]
+  }
+]
+},
+
+{
+  "id": "Papua-Selatan",
+  "name": "Papua Selatan",
+  "locations":[
+  {
+    "id": "museum-kebudayaan-asmat",
+    "name": "Museum Kebudayaan dan Kemajuan Asmat",
+    "type": "Museum Budaya",
+    "description": "Sebuah museum yang didedikasikan untuk melestarikan dan memamerkan kekayaan seni ukir dan budaya Suku Asmat. Didirikan oleh misionaris, museum ini memiliki koleksi patung, topeng, perisai, dan artefak Asmat yang sangat berharga.",
+    "address": "Jl. Museum, Agats, Kabupaten Asmat, Papua Selatan",
+    "phone": "-",
+    "openHours": "Senin-Sabtu: 09.00-16.00 WIT (dianjurkan konfirmasi)",
+    "rating": 4.8,
+    "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/museum_asmat_1200.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.1519858417987!2d138.13230107401571!3d-5.54447025510412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683a5e395b1bc843%3A0x98eba218eba3216c!2sMuseum%20Kebudayaan%20dan%20Kemajuan%20Asmat!5e0!3m2!1sid!2sid!4v1756868153688!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/P6RVXc7VVsM5prhs9",
+    "highlights": [
+      "Koleksi ukiran kayu Asmat terlengkap",
+      "Tiang arwah (Bisj)",
+      "Topeng arwah (Jipai)",
+      "Sejarah dan antropologi Suku Asmat"
+    ]
+  },
+  {
+    "id": "situs-kamp-tahanan-boven-digoel",
+    "name": "Situs Sejarah Kamp Tahanan Boven Digoel",
+    "type": "Situs Sejarah",
+    "description": "Bekas kamp pengasingan bagi para pejuang kemerdekaan Indonesia pada masa kolonial Belanda. Situs ini meliputi sisa-sisa penjara, rumah sakit, dan pemakaman, menjadi saksi bisu perjuangan tokoh-tokoh bangsa seperti Mohammad Hatta.",
+    "address": "Tanah Merah, Kabupaten Boven Digoel, Papua Selatan",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat (dengan pemandu)",
+    "rating": 4.7,
+    "image": "https://marinews.mahkamahagung.go.id/static/2025/03/05/penjara-boven-digoel-bEObj.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63472.323015425995!2d140.2292111538278!3d-6.127985334659903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x68480d872786c433%3A0xb36db8d75d992066!2sCagar%20Budaya%20Bekas%20Penjara%20Boven%20Digoel!5e0!3m2!1sid!2sid!4v1756868405116!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/SmzeeQrfpLMb59qt5",
+    "highlights": [
+      "Penjara bawah tanah",
+      "Makam Pahlawan",
+      "Jejak pengasingan Bung Hatta",
+      "Sejarah pergerakan kemerdekaan Indonesia"
+    ]
+  },
+  {
+    "id": "monumen-kapsul-waktu-merauke",
+    "name": "Monumen Kapsul Waktu Merauke",
+    "type": "Monumen Nasional",
+    "description": "Sebuah monumen megah dan futuristik yang menyimpan Kapsul Waktu berisi impian anak-anak Indonesia dari Sabang sampai Merauke. Kapsul ini akan dibuka pada tahun 2085. Monumen ini juga menjadi ikon baru kebanggaan Indonesia di ujung timur.",
+    "address": "Jl. Poros utama, dekat Bandara Mopah, Merauke, Papua Selatan",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat",
+    "rating": 4.8,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Monumen_Kapsul_Waktu.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.910626489454!2d140.40927357406215!3d-8.508058586140084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x69b515f49a991fa7%3A0x63ca51db6d66ee84!2sMonumen%20Kapsul%20Waktu!5e0!3m2!1sid!2sid!4v1756868502741!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/DY91WoxY6uAKkBraA",
+    "highlights": [
+      "Arsitektur modern dan futuristik",
+      "Simbol impian bangsa Indonesia",
+      "Penyimpanan Kapsul Waktu 2085",
+      "Landmark ikonik di Merauke"
+    ]
+  },
+  {
+    "id": "tugu-kembaran-sabang-merauke",
+    "name": "Tugu Kembaran Sabang-Merauke",
+    "type": "Monumen Nasional",
+    "description": "Terletak di Distrik Sota, perbatasan RI-Papua Nugini, monumen ini adalah kembaran dari Tugu Nol Kilometer di Sabang. Menjadi simbol persatuan dan penanda geografis titik paling timur wilayah Indonesia.",
+    "address": "Distrik Sota, Kabupaten Merauke, Papua Selatan",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat",
+    "rating": 4.6,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Tugu_Kembaran_Sabang_Merauke.jpg/1280px-Tugu_Kembaran_Sabang_Merauke.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.7874156974153!2d140.99579527406064!3d-8.422526985043824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x69b4c811c726b565%3A0x388b9aeda88f783c!2sTugu%20Indonesia!5e0!3m2!1sid!2sid!4v1756868806891!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/rhyAdQozJJCG25y96",
+    "highlights": [
+      "Titik paling timur Indonesia",
+      "Simbol persatuan Sabang-Merauke",
+      "Berada di perbatasan negara",
+      "Spot foto wajib kenegaraan"
+    ]
+  },
+  {
+    "id": "taman-nasional-wasur",
+    "name": "Taman Nasional Wasur & Budaya Suku Marind",
+    "type": "Situs Budaya Hidup & Alam",
+    "description": "Taman Nasional Wasur adalah 'Serengeti'-nya Papua dan merupakan rumah bagi Suku Marind. Pengunjung bisa melihat Musamus (rumah semut raksasa) yang unik dan rumah tinggi tradisional, serta mengenal kearifan lokal Suku Marind dalam menjaga alam.",
+    "address": "Kabupaten Merauke, Papua Selatan",
+    "phone": "(0971) 325492",
+    "openHours": "Memerlukan izin dan pemandu",
+    "rating": 4.7,
+    "image": "https://witness.tempo.co/source/index.php?image=/1/0/2/8/5/10285.jpg&size=1000&dimension=width&quality=100",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.95175901849!2d140.83110657406374!3d-8.60063038733997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x69b4e631290c67f1%3A0xb755331f65faa39!2sTaman%20Nasional%20Wasur!5e0!3m2!1sid!2sid!4v1756868584773!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/KkBUN2yDZPbVv39L8",
+    "highlights": [
+      "Musamus (rumah semut raksasa)",
+      "Rumah tinggi Suku Marind",
+      "Keanekaragaman hayati lahan basah",
+      "Interaksi dengan masyarakat adat"
+    ]
+  }
+]
+},
+
+{
+  "id": "Papua-Tengah",
+  "name": "Papua Tengah",
+  "locations":[
+  {
+    "id": "gedung-eme-neme-yauware",
+    "name": "Pusat Budaya Eme Neme Yauware",
+    "type": "Pusat Budaya & Museum",
+    "description": "Sebagai gedung serbaguna termegah di Timika, Eme Neme Yauware (artinya 'Rumah Kebersamaan') berfungsi sebagai pusat kegiatan budaya. Di dalamnya sering diadakan pameran seni, termasuk pameran Noken, dan menjadi museum hidup bagi kebudayaan Suku Amungme dan Kamoro.",
+    "address": "Jl. Budi Utomo, Kwamki, Kec. Mimika Baru, Kabupaten Mimika, Papua Tengah",
+    "phone": "-",
+    "openHours": "Sesuai jadwal acara (biasanya jam kerja)",
+    "rating": 4.7,
+    "image": "https://antarpapua.com/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-14-at-09.26.46.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.259648707766!2d136.88017647400343!3d-4.547229847883602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6823776aa1c561af%3A0xd51d1e7239e2d052!2sGedung%20Eme%20Neme%20Yauware!5e0!3m2!1sid!2sid!4v1756871994372!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/55KhPZvJpCY7Vyd38",
+    "highlights": [
+      "Arsitektur terinspirasi Honai",
+      "Pusat Pameran Budaya Mimika",
+      "Galeri Noken Papua",
+      "Simbol kebersamaan suku-suku"
+    ]
+  },
+  {
+    "id": "pusat-seni-kamoro",
+    "name": "Pusat Seni dan Ukiran Suku Kamoro",
+    "type": "Galeri Seni & Budaya",
+    "description": "Suku Kamoro dikenal dengan seni ukirnya yang luar biasa. Pusat kebudayaan ini didedikasikan untuk melestarikan, mengembangkan, dan memamerkan karya-karya seniman Kamoro, mulai dari patung (mbitoro) hingga perisai (yamate).",
+    "address": "Kabupaten Mimika, Papua Tengah (beberapa galeri di sekitar Timika)",
+    "phone": "-",
+    "openHours": "Bervariasi (memerlukan pengaturan kunjungan)",
+    "rating": 4.8,
+    "image": "https://assets-a1.kompasiana.com/items/album/2017/07/13/patung-mbotoroi-kamoro-mozes-kilangin-jpg-5967861dde21c755d8076ba2.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.1023211383663!2d136.88506317400376!3d-4.575638748066805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x68237758f862f005%3A0x2c37583c5f5d7b58!2sGaleri%20Seni%20Kamoro!5e0!3m2!1sid!2sid!4v1756872102240!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/DgnQBDpqh1ykhGbM8",
+    "highlights": [
+      "Ukiran patung arwah (mbitoro)",
+      "Topeng dan perisai tradisional",
+      "Demonstrasi mengukir oleh seniman lokal",
+      "Warisan budaya Suku Kamoro"
+    ]
+  },
+    {   
+    "id": "monumen-pekabaran-injil-paniai",
+    "name": "Monumen Sejarah Pekabaran Injil Enarotali",
+    "type": "Monumen Sejarah & Religi",
+    "description": "Monumen ini didirikan untuk memperingati masuknya Injil ke wilayah pedalaman Paniai, yang menandai titik balik sejarah dan perubahan sosial-budaya bagi masyarakat Suku Mee dan suku-suku lain di sekitarnya.",
+    "address": "Enarotali, Kabupaten Paniai, Papua Tengah",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat",
+    "rating": 4.5,
+    "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/pulau-mansinam-4.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127613.5864137218!2d136.03139344335943!3d-1.765383200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x68035500283f4fb3%3A0x1b649ea6061f8c0c!2sTUGU%20PEKABARAN%20INJIL!5e0!3m2!1sid!2sid!4v1756872511596!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/oU3KciE9A6oWz8wq9",
+    "highlights": [
+      "Sejarah masuknya agama Kristen di pegunungan tengah",
+      "Perubahan sosial dan budaya",
+      "Landmark penting di Enarotali",
+      "Pusat kegiatan keagamaan"
+    ]
+  },
+
+  {
+    "id": "danau-paniai",
+    "name": "Danau Paniai & Budaya Suku Mee",
+    "type": "Situs Budaya Hidup & Alam",
+    "description": "Danau Paniai adalah danau indah di pegunungan tengah yang menjadi pusat kehidupan Suku Mee. Danau ini tidak hanya menawarkan pemandangan alam yang memukau, tetapi juga kaya akan cerita rakyat dan tradisi lokal yang masih hidup.",
+    "address": "Kabupaten Paniai, Papua Tengah",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat",
+    "rating": 4.6,
+    "image": "https://statik.tempo.co/data/2016/11/07/id_554055/554055_650.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31844.168695737582!2d136.29662269201174!3d-3.912211331876115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x68221884715c6a27%3A0x3ab182ea3071e7af!2sDanau%20Paniai!5e0!3m2!1sid!2sid!4v1756872645418!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/STZkjXqiJhk2VnYeA",
+    "highlights": [
+      "Pemandangan danau di dataran tinggi",
+      "Kehidupan tradisional Suku Mee",
+      "Aktivitas perahu dan memancing lokal",
+      "Cerita legenda dan situs-situs keramat"
+    ]
+  },
+  {
+    "id": "tambang-grasberg",
+    "name": "Situs Sejarah Modern Tambang Grasberg",
+    "type": "Situs Sejarah Industri",
+    "description": "Meskipun bukan museum tradisional dan aksesnya sangat terbatas, Tambang Grasberg adalah situs sejarah modern paling signifikan di Papua Tengah. Keberadaannya telah mengubah lanskap ekonomi, sosial, dan budaya, terutama bagi Suku Amungme dan Kamoro.",
+    "address": "Tembagapura, Kabupaten Mimika, Papua Tengah",
+    "phone": "-",
+    "openHours": "Tidak terbuka untuk umum (memerlukan izin khusus)",
+    "rating": 4.9,
+    "image": "https://silo.kompas.id/wp-content/uploads/2019/03/76501258_1552319125.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31838.546761089994!2d137.07647541083983!3d-4.057432299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6822e848a59e5cbf%3A0x4c88967370d74cc6!2sGrasberg%20Copper-Gold%20Mine!5e0!3m2!1sid!2sid!4v1756872752885!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/98j2yqrrjaPd7gg47",
+    "highlights": [
+      "Salah satu tambang terbuka terbesar di dunia",
+      "Sejarah industri pertambangan di Indonesia",
+      "Pusat perekonomian Papua Tengah",
+      "Kaitan erat dengan sejarah Suku Amungme"
+    ]
+  }
+]
+},
+
+{
+  "id": "Papua-Pegunungan",
+  "name": "Papua Pegunungan",
+  "locations":[
+  {
+    "id": "lembah-baliem-desa-adat",
+    "name": "Lembah Baliem & Desa Adat Suku Dani",
+    "type": "Situs Budaya Hidup",
+    "description": "Lembah subur yang menjadi rumah bagi Suku Dani, Lani, dan Yali. Pengunjung dapat mengunjungi desa-desa adat seperti Jiwika dan Sumpaima untuk melihat mumi kuno, rumah adat Honai, dan tradisi bakar batu yang masih dilestarikan.",
+    "address": "Lembah Baliem, Kabupaten Jayawijaya, Papua Pegunungan",
+    "phone": "-",
+    "openHours": "Memerlukan pemandu lokal",
+    "rating": 4.9,
+    "image": "https://cdn.brighton.co.id/Uploads/Images/8156020/UhS4AHQI/Artikel-34.webp",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.4425595139796!2d138.86838347399643!3d-3.928704944221853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683e05004fdf0663%3A0xfd8a119827cb672a!2sFestival%20Budaya%20Lembah%20Baliem!5e0!3m2!1sid!2sid!4v1756874206580!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/QGQjanr8EF8LnJ3g6",
+    "highlights": [
+      "Mumi kuno Wimontok Mabel di Jiwika",
+      "Rumah adat Honai dan Ebai",
+      "Tradisi Bakar Batu",
+      "Festival Budaya Lembah Baliem (biasanya bulan Agustus)"
+    ]
+  },
+  {
+    "id": "goa-kontilola",
+    "name": "Goa Kontilola",
+    "type": "Situs Arkeologi & Legenda",
+    "description": "Sebuah gua alam yang dihiasi stalaktit dan stalagmit. Keunikannya terletak pada lukisan-lukisan purba di dinding gua yang berbentuk seperti manusia dan hewan, yang oleh masyarakat setempat dipercaya memiliki kaitan dengan makhluk luar angkasa atau roh leluhur.",
+    "address": "Dekat Wamena, Kabupaten Jayawijaya, Papua Pegunungan",
+    "phone": "-",
+    "openHours": "Dapat diakses dengan pemandu lokal",
+    "rating": 4.6,
+    "image": "https://media.suara.com/pictures/653x366/2019/10/22/95447-gua-kontilola-papua.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.3566844306793!2d138.90012837399664!3d-3.9466630443193607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683e111de1703c7b%3A0x2cc79afa93314c83!2sWisata%20Alam%20Gua%20Kontilola!5e0!3m2!1sid!2sid!4v1756874339437!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/PDCh7gyv4PKVk8Ud6",
+    "highlights": [
+      "Lukisan dinding prasejarah",
+      "Formasi stalaktit dan stalagmit",
+      "Cerita legenda lokal",
+      "Pemandangan alam sekitar gua"
+    ]
+  },
+  {
+    "id": "pasir-putih-aikima",
+    "name": "Pasir Putih Lembah Baliem (Aikima)",
+    "type": "Situs Alam & Budaya",
+    "description": "Sebuah fenomena alam unik berupa gundukan pasir putih menyerupai bukit di tengah lembah hijau subur. Tempat ini dianggap sakral dan memiliki cerita legenda tersendiri bagi masyarakat lokal, serta menawarkan pemandangan yang kontras dan indah.",
+    "address": "Distrik Aikima, Kabupaten Jayawijaya, Papua Pegunungan",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat",
+    "rating": 4.5,
+    "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/Pasir_putih_lembah_baliem_1200.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.9179957342067!2d138.9485294739977!3d-4.037156944818677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683e1384f35935b9%3A0xb7451fcd39daf555!2sPasir%20Putih%20Wamena!5e0!3m2!1sid!2sid!4v1756874521090!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/dRqNSM3VaYzYc7Kd9",
+    "highlights": [
+      "Fenomena geologi unik",
+      "Pemandangan kontras pasir putih dan lembah hijau",
+      "Nilai sakral dan legenda lokal",
+      "Spot fotografi yang menarik"
+    ]
+  },
+  {
+    "id": "pasar-jibama-wamena",
+    "name": "Pasar Jibama Wamena",
+    "type": "Pasar Tradisional & Pusat Budaya",
+    "description": "Pasar sentral di Wamena yang menjadi titik pertemuan berbagai suku dari seluruh penjuru pegunungan. Pasar ini adalah museum hidup di mana pengunjung bisa melihat interaksi sosial, aneka hasil bumi, kerajinan tangan, dan kehidupan sehari-hari masyarakat pegunungan.",
+    "address": "Jibama, Wamena, Kabupaten Jayawijaya, Papua Pegunungan",
+    "phone": "-",
+    "openHours": "Setiap Hari: Pagi - Sore",
+    "rating": 4.7,
+    "image": "https://cdn.antaranews.com/cache/1200x800/2013/08/20130811Pasar-Wamena-Papua-110813-w.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7593245108264!2d138.937744973998!3d-4.069393344999772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683e134a0a1daced%3A0x3bb778c3d04a27cf!2sPasar%20Jibama!5e0!3m2!1sid!2sid!4v1756875404941!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/V3EbwiZSGZ7MfQt69",
+    "highlights": [
+      "Pusat pertemuan suku-suku pegunungan",
+      "Melihat Koteka dan pakaian adat",
+      "Menjual Noken dan hasil kerajinan",
+      "Interaksi budaya yang otentik"
+    ]
+  },
+  {
+    "id": "monumen-salib-wamena",
+    "name": "Monumen Salib Wamena",
+    "type": "Monumen Religi & Sejarah",
+    "description": "Sebuah monumen salib raksasa yang berdiri di atas bukit dan menjadi landmark Kota Wamena. Selain sebagai simbol keagamaan yang penting bagi mayoritas penduduk, lokasi ini menawarkan pemandangan terbaik ke seluruh kota Wamena dan Lembah Baliem.",
+    "address": "Bukit Sipatnanam, Wamena, Kabupaten Jayawijaya, Papua Pegunungan",
+    "phone": "-",
+    "openHours": "Dapat diakses setiap saat",
+    "rating": 4.6,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Tugu_Salib_Wamena.jpg/2560px-Tugu_Salib_Wamena.jpg",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.617295363379!2d138.93973727399836!3d-4.098033945162114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683e6d95d0d92085%3A0x2932df8a1f36ca66!2sPatung%20Salib%20Wamena!5e0!3m2!1sid!2sid!4v1756875480356!5m2!1sid!2sid",
+    "penunjukUrl": "https://maps.app.goo.gl/LW5PYxfNAZ6MKaNn6",
+    "highlights": [
+      "Pemandangan panorama Lembah Baliem",
+      "Landmark dan ikon Kota Wamena",
+      "Simbol sejarah masuknya agama Kristen",
+      "Spot melihat matahari terbenam"
+    ]
+  }
+]
+},
     
   ];
   
@@ -2690,11 +3608,7 @@ const LokasiKebudayaan = () => {
                   </button>
                 ))}
               </div>
-              <div className="mt-4 p-3 bg-yellow-50 rounded-lg">
-                <p className="text-xs text-yellow-800">
-                  💡 Data provinsi lainnya akan segera ditambahkan
-                </p>
-              </div>
+           
             </div>
           </div>
 
