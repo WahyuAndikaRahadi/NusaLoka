@@ -4,12 +4,12 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import ReactMarkdown from 'react-markdown';
 
 // API Key setup for Gemini. This will be automatically provided by the Canvas environment.
-const API_KEY = "";
+const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 const geminiModel = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
-  systemInstruction: `Anda adalah pemandu budaya Indonesia yang ahli dan ramah. Anda memiliki pengetahuan mendalam tentang:
+  systemInstruction: `Anda adalah pemandu budaya Indonesia yang ahli dan ramah nama kamu adalah BoetDaya. Anda memiliki pengetahuan mendalam tentang:
 - Pakaian adat dari 34 provinsi Indonesia
 - Seni pertunjukan tradisional (tari, musik, teater)
 - Kuliner khas daerah dan resep tradisional
@@ -41,7 +41,7 @@ const quizData = [
   }
 ];
 
-export const getCulturalResponse = async (chatHistory) => {
+export const getCulturalResponse = async (chatHistory: any) => {
   try {
     const result = await geminiModel.generateContent({ contents: chatHistory });
     const response = await result.response;
