@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Play, Volume2, BookOpen, Users, MapPin, ExternalLink } from 'lucide-react';
+import CountUp from '../items/CountUp';
+import GradientText from '../items/GradientText';
 
 interface Language {
   id: string;
@@ -510,7 +512,7 @@ const BahasaDaerah = () => {
       name: 'Bahasa Kutai',
       province: 'Kalimantan Timur',
       speakers: '300 ribu',
-      characteristics: [  
+      characteristics: [
         'Pengaruh bahasa Melayu',
         'Tradisi kerajaan',
         'Dialek sungai',
@@ -1007,7 +1009,7 @@ const BahasaDaerah = () => {
             Bahasa Daerah Indonesia
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Pelajari kekayaan bahasa daerah Indonesia dari 38 provinsi dengan tutorial interaktif dan video pembelajaran. 
+            Pelajari kekayaan bahasa daerah Indonesia dari 38 provinsi dengan tutorial interaktif dan video pembelajaran.
             Lestarikan bahasa leluhur untuk generasi mendatang.
           </p>
         </div>
@@ -1022,11 +1024,10 @@ const BahasaDaerah = () => {
                   <button
                     key={language.id}
                     onClick={() => setSelectedLanguage(language.id)}
-                    className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${
-                      selectedLanguage === language.id
+                    className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${selectedLanguage === language.id
                         ? 'bg-red-50 text-red-600 border-l-4 border-red-600'
                         : 'hover:bg-gray-50 text-gray-700'
-                    }`}
+                      }`}
                   >
                     <div className="font-semibold text-sm">{language.name}</div>
                     <div className="text-xs text-gray-500">{language.province}</div>
@@ -1151,19 +1152,83 @@ const BahasaDaerah = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">700+</div>
+              <div className="text-3xl font-bold mb-2">
+                <GradientText
+                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                  animationSpeed={3}
+                  showBorder={false}
+                  className="custom-class"
+                >
+                  <CountUp
+                    from={0}
+                    to={45}
+                    separator=","
+                    direction="up"
+                    duration={2}
+                    className="count-up-text"
+                  />
+                </GradientText>
+              </div>
               <div className="text-gray-600">Bahasa Daerah</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">38</div>
+              <div className="text-3xl font-bold mb-2">
+                <GradientText
+                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                  animationSpeed={3}
+                  showBorder={false}
+                  className="custom-class"
+                >
+                  <CountUp
+                    from={0}
+                    to={38}
+                    separator=","
+                    direction="up"
+                    duration={2}
+                    className="count-up-text"
+                  />
+                </GradientText>
+              </div>
               <div className="text-gray-600">Provinsi</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">300+</div>
+              <div className="text-3xl font-bold mb-2">
+                <GradientText
+                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                  animationSpeed={3}
+                  showBorder={false}
+                  className="custom-class"
+                >
+                  <CountUp
+                    from={0}
+                    to={300}
+                    separator=","
+                    direction="up"
+                    duration={2}
+                    className="count-up-text"
+                  />
+                </GradientText>
+              </div>
               <div className="text-gray-600">Suku Bangsa</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">17,500+</div>
+              <div className="text-3xl font-bold mb-2">
+                <GradientText
+                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                  animationSpeed={3}
+                  showBorder={false}
+                  className="custom-class"
+                >
+                  <CountUp
+                    from={0}
+                    to={17500}
+                    separator=","
+                    direction="up"
+                    duration={2}
+                    className="count-up-text"
+                  />
+                </GradientText>
+              </div>
               <div className="text-gray-600">Pulau</div>
             </div>
           </div>

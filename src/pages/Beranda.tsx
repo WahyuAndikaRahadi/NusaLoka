@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Users, BookOpen, Sparkles, ArrowRight, Heart, Globe, Camera } from 'lucide-react';
+import CountUp from '../items/CountUp';
+import GradientText from '../items/GradientText';
 
 const Beranda = () => {
   const features = [
@@ -35,10 +37,10 @@ const Beranda = () => {
   ];
 
   const stats = [
-    { number: '38', label: 'Provinsi' },
-    { number: '700+', label: 'Bahasa Daerah' },
-    { number: '1,000+', label: 'Resep Tradisional' },
-    { number: '500+', label: 'Seni Pertunjukan' }
+    { number: 38, label: 'Provinsi' },
+    { number: 45, label: 'Bahasa Daerah' },
+    { number: 190, label: 'Lokasi Kebudayaan' },
+    { number: 113, label: 'Direktori Budaya' }
   ];
 
   return (
@@ -57,7 +59,7 @@ const Beranda = () => {
               </p>
             </div>
             <p className="text-lg text-red-100 max-w-2xl mx-auto leading-relaxed">
-              Platform digital yang menghubungkan warisan budaya Indonesia dengan dunia modern, 
+              Platform digital yang menghubungkan warisan budaya Indonesia dengan dunia modern,
               menciptakan jembatan antara tradisi dan teknologi untuk generasi masa depan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,7 +87,23 @@ const Beranda = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-red-600 mb-2">{stat.number}</div>
+                <div className="text-3xl md:text-4xl font-bold mb-2">
+                  <GradientText
+                    colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                    animationSpeed={3}
+                    showBorder={false}
+                    className="custom-class"
+                  >
+                    <CountUp
+                      from={0}
+                      to={stat.number}
+                      separator=","
+                      direction="up"
+                      duration={2}
+                      className="count-up-text"
+                    />
+                   </GradientText>
+                </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
@@ -144,8 +162,8 @@ const Beranda = () => {
               Misi Kami
             </h2>
             <p className="text-xl text-green-100 max-w-4xl mx-auto leading-relaxed">
-              Menghubungkan warisan budaya Indonesia dengan teknologi modern, menciptakan ruang interaktif 
-              yang memungkinkan generasi muda untuk mengenal, memahami, dan melestarikan kekayaan budaya 
+              Menghubungkan warisan budaya Indonesia dengan teknologi modern, menciptakan ruang interaktif
+              yang memungkinkan generasi muda untuk mengenal, memahami, dan melestarikan kekayaan budaya
               Nusantara untuk masa depan yang berkelanjutan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
@@ -174,7 +192,7 @@ const Beranda = () => {
             Mulai Perjalanan Budaya Anda
           </h2>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            Bergabunglah dengan ribuan orang yang telah menjelajahi kekayaan budaya Indonesia 
+            Bergabunglah dengan ribuan orang yang telah menjelajahi kekayaan budaya Indonesia
             melalui NusaLoka. Temukan cerita-cerita menarik di balik setiap tradisi.
           </p>
           <Link
