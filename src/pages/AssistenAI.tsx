@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Bot, Send, User, Sparkles, MessageCircle, ChefHat, Brain } from 'lucide-react';
+import { Bot, Send, User, Sparkles, MessageCircle, Brain, Upload, Image as ImageIcon, Download } from 'lucide-react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import ReactMarkdown from 'react-markdown';
 
@@ -9,6 +9,8 @@ interface Message {
   type: 'bot' | 'user';
   content: string;
   timestamp: Date;
+  imageUrl?: string;
+  isGeneratedImage?: boolean;
 }
 
 interface QuizQuestion {
@@ -30,7 +32,7 @@ interface QuickQuestion {
   action: () => void;
 }
 
-// API Key setup for Gemini. This will be automatically provided by the Canvas environment.
+// API Key setup for Gemini
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 
@@ -46,371 +48,345 @@ const geminiModel = genAI.getGenerativeModel({
 Jawab dengan bahasa Indonesia yang sopan dan informatif. Berikan informasi yang akurat dan menarik tentang budaya Indonesia.`
 });
 
+const geminiImageModel = genAI.getGenerativeModel({
+    model: "gemini-2.0-flash-exp",
+    generationConfig: {
+      responseModalities: ["Text", "Image"]
+    }
+
+});
+
 // Data kuis untuk fitur interaktif (50 soal)
 const allQuizQuestions: QuizQuestion[] = [
-  // Pakaian Adat
   {
-    question: "Apa nama pakaian adat dari Sumatera Barat yang dikenakan oleh wanita dengan penutup kepala berbentuk tanduk kerbau?",
-    options: ["A. Ulos", "B. Bundo Kanduang", "C. Payas Agung", "D. Baju Bodo"],
-    answer: "B",
-    explanation: "Benar! Bundo Kanduang adalah pakaian adat wanita Minangkabau yang melambangkan kebesaran dan status ibu dalam adat."
+    "question": "Apa nama pakaian adat dari Sumatera Barat yang dikenakan oleh wanita dengan penutup kepala berbentuk tanduk kerbau?",
+    "options": [
+      "A. Ulos",
+      "B. Bundo Kanduang",
+      "C. Payas Agung",
+      "D. Baju Bodo"
+    ],
+    "answer": "B",
+    "explanation": "Benar! Bundo Kanduang adalah pakaian adat wanita Minangkabau yang melambangkan kebesaran dan status ibu dalam adat."
   },
   {
-    question: "Pakaian adat 'Ulos' berasal dari suku mana?",
-    options: ["A. Batak", "B. Asmat", "C. Dayak", "D. Minangkabau"],
-    answer: "A",
-    explanation: "Tepat sekali! Ulos adalah kain tenun tradisional Batak yang memiliki makna mendalam dan digunakan dalam berbagai upacara adat."
+    "question": "Pakaian adat 'Ulos' berasal dari suku mana?",
+    "options": [
+      "A. Batak",
+      "B. Asmat",
+      "C. Dayak",
+      "D. Minangkabau"
+    ],
+    "answer": "A",
+    "explanation": "Tepat sekali! Ulos adalah kain tenun tradisional Batak yang memiliki makna mendalam dan digunakan dalam berbagai upacara adat."
   },
   {
-    question: "Apa nama pakaian adat dari Sulawesi Selatan yang terkenal dengan bentuknya yang longgar dan lebar?",
-    options: ["A. Baju Cele", "B. Baju Bodo", "C. Kebaya", "D. Koteka"],
-    answer: "B",
-    explanation: "Benar! Baju Bodo adalah pakaian adat tradisional suku Bugis-Makassar yang merupakan salah satu pakaian tertua di dunia."
+    "question": "Apa nama pakaian adat dari Sulawesi Selatan yang terkenal dengan bentuknya yang longgar dan lebar?",
+    "options": [
+      "A. Baju Cele",
+      "B. Baju Bodo",
+      "C. Kebaya",
+      "D. Koteka"
+    ],
+    "answer": "B",
+    "explanation": "Benar! Baju Bodo adalah pakaian adat tradisional suku Bugis-Makassar yang merupakan salah satu pakaian tertua di dunia."
   },
   {
-    question: "Pakaian adat 'Payas Agung' berasal dari mana?",
-    options: ["A. Aceh", "B. Bali", "C. Jawa Tengah", "D. Papua"],
-    answer: "B",
-    explanation: "Tepat sekali! Payas Agung adalah pakaian adat kebesaran dari Bali yang sering digunakan dalam upacara pernikahan."
+    "question": "Pakaian adat 'Payas Agung' berasal dari mana?",
+    "options": [
+      "A. Aceh",
+      "B. Bali",
+      "C. Jawa Tengah",
+      "D. Papua"
+    ],
+    "answer": "B",
+    "explanation": "Tepat sekali! Payas Agung adalah pakaian adat kebesaran dari Bali yang sering digunakan dalam upacara pernikahan."
   },
   {
-    question: "Pakaian adat 'Baju Cele' berasal dari provinsi mana?",
-    options: ["A. Maluku", "B. Nusa Tenggara Timur", "C. Kalimantan Timur", "D. Riau"],
-    answer: "A",
-    explanation: "Benar! Baju Cele adalah pakaian adat dari Maluku yang memiliki motif kotak-kotak."
+    "question": "Pakaian adat 'Baju Cele' berasal dari provinsi mana?",
+    "options": [
+      "A. Maluku",
+      "B. Nusa Tenggara Timur",
+      "C. Kalimantan Timur",
+      "D. Riau"
+    ],
+    "answer": "A",
+    "explanation": "Benar! Baju Cele adalah pakaian adat dari Maluku yang memiliki motif kotak-kotak."
   },
   {
-    question: "Apa nama pakaian adat dari Jawa Tengah yang sering dipakai oleh bangsawan?",
-    options: ["A. Kebaya", "B. Kain Batik", "C. Beskap", "D. Blangkon"],
-    answer: "C",
-    explanation: "Tepat sekali! Beskap adalah atasan resmi pria Jawa yang sering dipadukan dengan blangkon dan kain batik."
+    "question": "Pakaian adat 'Pesa'an' yang didominasi warna hitam dan merah berasal dari provinsi mana?",
+    "options": [
+      "A. Jawa Tengah",
+      "B. Jawa Timur",
+      "C. Jawa Barat",
+      "D. Yogyakarta"
+    ],
+    "answer": "B",
+    "explanation": "Benar! Pesa'an adalah pakaian adat pria dari Madura, Jawa Timur, yang dikenakan bersama celana longgar."
   },
   {
-    question: "Suku Dayak di Kalimantan memiliki pakaian adat yang terbuat dari bahan apa?",
-    options: ["A. Kulit kayu", "B. Kain katun", "C. Sutra", "D. Kulit hewan"],
-    answer: "A",
-    explanation: "Benar! Pakaian adat suku Dayak sering dibuat dari kulit kayu, terutama kulit kayu paha, yang dihiasi manik-manik."
+    "question": "Apa nama pakaian adat dari Lampung yang terbuat dari kain tenun bermotif khas?",
+    "options": [
+      "A. Ulee Balang",
+      "B. King Baba",
+      "C. Tapis",
+      "D. Aesan Gede"
+    ],
+    "answer": "C",
+    "explanation": "Tepat sekali! Tapis adalah kain tenun tradisional Lampung yang disulam dengan benang emas atau perak."
   },
   {
-    question: "Pakaian adat 'Aesan Gede' adalah pakaian kebesaran dari provinsi mana?",
-    options: ["A. Jambi", "B. Lampung", "C. Sumatera Selatan", "D. Bengkulu"],
-    answer: "C",
-    explanation: "Tepat sekali! Aesan Gede adalah pakaian pengantin tradisional Sumatera Selatan yang melambangkan kebesaran Sriwijaya."
+    "question": "Pakaian adat 'Baju Kustin' berasal dari suku mana di Kalimantan Timur?",
+    "options": [
+      "A. Suku Dayak",
+      "B. Suku Kutai",
+      "C. Suku Tidung",
+      "D. Suku Banjar"
+    ],
+    "answer": "B",
+    "explanation": "Benar! Baju Kustin adalah pakaian adat pengantin dari suku Kutai yang terbuat dari kain beludru."
   },
   {
-    question: "Pakaian 'Koteka' adalah pakaian tradisional dari daerah mana?",
-    options: ["A. Maluku", "B. Papua", "C. Sulawesi", "D. Sumatera Utara"],
-    answer: "B",
-    explanation: "Benar! Koteka adalah pakaian tradisional pria Papua yang terbuat dari labu air."
+    "question": "Apa nama pakaian adat dari Aceh yang sering dikenakan dalam upacara pernikahan?",
+    "options": [
+      "A. Ulee Balang",
+      "B. Bundo Kanduang",
+      "C. Baju Kurung",
+      "D. Teluk Belanga"
+    ],
+    "answer": "A",
+    "explanation": "Tepat sekali! Ulee Balang adalah pakaian adat kebesaran dari Kesultanan Aceh yang digunakan untuk acara penting."
   },
   {
-    question: "Apa nama pakaian adat pria Sunda yang sering disebut 'Pangsi'?",
-    options: ["A. Baju Koko", "B. Peci", "C. Pangsi", "D. Jas tutup"],
-    answer: "C",
-    explanation: "Tepat sekali! Pangsi adalah pakaian tradisional pria Sunda yang sederhana dan nyaman."
+    "question": "Pakaian adat 'Baju Melayu' dari mana?",
+    "options": [
+      "A. Riau dan Kepulauan Riau",
+      "B. Jambi",
+      "C. Sumatera Utara",
+      "D. Sumatera Barat"
+    ],
+    "answer": "A",
+    "explanation": "Benar! Pakaian adat Melayu Teluk Belanga dan Baju Kebaya Labuh adalah contoh pakaian adat dari Riau."
   },
   {
-    question: "Pakaian adat yang terkenal dengan kain songketnya berasal dari provinsi mana?",
-    options: ["A. Bali", "B. NTB", "C. Sumatera Selatan", "D. Aceh"],
-    answer: "C",
-    explanation: "Benar! Songket Palembang adalah kain tenun tradisional Sumatera Selatan yang sangat mewah dan berharga."
+    "question": "Apa nama pakaian adat dari Jawa Tengah yang dikenakan oleh pria, sering dilengkapi dengan blangkon dan keris?",
+    "options": [
+      "A. Beskap",
+      "B. Baju Bodo",
+      "C. Pesa'an",
+      "D. Aesan Gede"
+    ],
+    "answer": "A",
+    "explanation": "Tepat sekali! Beskap adalah jas pria adat Jawa Tengah, biasanya dipakai dalam acara formal dan dilengkapi dengan blangkon dan keris."
   },
   {
-    question: "Apa nama pakaian adat dari Gorontalo yang dipakai saat upacara adat pernikahan?",
-    options: ["A. Biliu dan Makuta", "B. Baju Kurung", "C. Teluk Belanga", "D. Baju Bodo"],
-    answer: "A",
-    explanation: "Tepat sekali! Biliu (untuk wanita) dan Makuta (untuk pria) adalah pakaian adat pengantin Gorontalo."
+    "question": "Pakaian adat 'Baju Kebaya' umumnya berasal dari provinsi mana saja?",
+    "options": [
+      "A. Jawa dan Bali",
+      "B. Sumatera dan Kalimantan",
+      "C. Sulawesi dan Maluku",
+      "D. Papua dan Nusa Tenggara"
+    ],
+    "answer": "A",
+    "explanation": "Benar! Kebaya merupakan pakaian tradisional wanita yang sangat populer di Jawa, Sunda, dan Bali."
   },
   {
-    question: "Pakaian adat 'Teluk Belanga' berasal dari daerah mana?",
-    options: ["A. Riau", "B. Jambi", "C. Kepulauan Riau", "D. DKI Jakarta"],
-    answer: "C",
-    explanation: "Benar! Teluk Belanga adalah pakaian adat pria Kepulauan Riau, yang sering dipadukan dengan sarung dan kopiah."
+    "question": "Pakaian adat 'Baju Bodo' yang terbuat dari kain kasa adalah ciri khas dari suku apa?",
+    "options": [
+      "A. Suku Bugis",
+      "B. Suku Toraja",
+      "C. Suku Mandar",
+      "D. Suku Minahasa"
+    ],
+    "answer": "A",
+    "explanation": "Tepat sekali! Baju Bodo adalah pakaian tradisional suku Bugis-Makassar yang longgar dan terbuat dari kain kasa tipis."
   },
   {
-    question: "Apa nama pakaian adat dari Kalimantan Timur yang terbuat dari bahan alami?",
-    options: ["A. Baju King Baba", "B. Baju Misang", "C. Baju Kebaya", "D. Baju Teluk Belanga"],
-    answer: "A",
-    explanation: "Tepat sekali! Baju King Baba adalah pakaian adat suku Dayak di Kalimantan Timur, terbuat dari kulit kayu. "
+    "question": "Apa nama pakaian adat dari Yogyakarta yang sering dikenakan oleh Sultan dan keluarganya?",
+    "options": [
+      "A. Beskap",
+      "B. Surjan",
+      "C. Kebaya",
+      "D. Paes Ageng"
+    ],
+    "answer": "D",
+    "explanation": "Benar! Paes Ageng adalah pakaian adat pengantin khas Keraton Yogyakarta yang sangat mewah dan berornamen."
   },
   {
-    question: "Pakaian 'Baju Kurung' merupakan pakaian adat wanita dari beberapa daerah, termasuk...",
-    options: ["A. Jawa Barat", "B. Sumatera Barat", "C. Jawa Timur", "D. Kalimantan Selatan"],
-    answer: "B",
-    explanation: "Benar! Baju Kurung adalah pakaian adat wanita Melayu, dan banyak ditemukan di Sumatera Barat."
-  },
-  // Seni Pertunjukan
-  {
-    question: "Tari Kecak berasal dari daerah mana di Indonesia?",
-    options: ["A. Sumatera Barat", "B. Bali", "C. Sulawesi Selatan", "D. Jawa Tengah"],
-    answer: "B",
-    explanation: "Benar! Tari Kecak adalah seni pertunjukan unik dari Bali yang tidak diiringi instrumen musik, melainkan suara dari para penarinya."
+    "question": "Pakaian adat 'Pangsi' berasal dari provinsi mana?",
+    "options": [
+      "A. Banten",
+      "B. Jawa Barat",
+      "C. DKI Jakarta",
+      "D. Jawa Tengah"
+    ],
+    "answer": "B",
+    "explanation": "Tepat sekali! Pangsi adalah pakaian tradisional suku Sunda, Jawa Barat, yang sering digunakan untuk kegiatan sehari-hari."
   },
   {
-    question: "Apa nama alat musik tradisional dari Jawa Barat yang terbuat dari bambu?",
-    options: ["A. Angklung", "B. Sasando", "C. Kolintang", "D. Gendang"],
-    answer: "A",
-    explanation: "Tepat sekali! Angklung adalah alat musik multitonal yang dimainkan dengan cara digoyangkan."
+    "question": "Apa nama makanan khas Sumatera Barat yang terbuat dari daging sapi dan santan, dimasak dengan bumbu rempah-rempah hingga kering?",
+    "options": [
+      "A. Soto Betawi",
+      "B. Rendang",
+      "C. Pempek",
+      "D. Gudeg"
+    ],
+    "answer": "B",
+    "explanation": "Benar! Rendang adalah masakan khas Minangkabau yang diakui sebagai salah satu makanan terlezat di dunia."
   },
   {
-    question: "Tari Saman yang terkenal dengan gerakan tepuk tangan dan dada berasal dari provinsi mana?",
-    options: ["A. Aceh", "B. Sumatera Utara", "C. Riau", "D. Jambi"],
-    answer: "A",
-    explanation: "Benar! Tari Saman adalah tarian tradisional suku Gayo dari Aceh yang menampilkan kekompakan dan kecepatan gerakan."
+    "question": "Rumah adat suku Toraja di Sulawesi Selatan yang atapnya melengkung seperti perahu disebut apa?",
+    "options": [
+      "A. Rumah Gadang",
+      "B. Tongkonan",
+      "C. Honai",
+      "D. Joglo"
+    ],
+    "answer": "B",
+    "explanation": "Tepat sekali! Tongkonan adalah rumah adat Toraja yang memiliki arsitektur unik dan sarat makna filosofis."
   },
   {
-    question: "Alat musik 'Sasando' berasal dari mana?",
-    options: ["A. Maluku", "B. Papua", "C. Nusa Tenggara Timur", "D. Sulawesi Utara"],
-    answer: "C",
-    explanation: "Tepat sekali! Sasando adalah alat musik petik dari Pulau Rote, Nusa Tenggara Timur, yang terbuat dari daun lontar."
+    "question": "Tarian tradisional dari Aceh yang dikenal karena gerakan tangan dan badan yang serempak dan dinamis disebut apa?",
+    "options": [
+      "A. Tari Piring",
+      "B. Tari Saman",
+      "C. Tari Jaipong",
+      "D. Tari Kecak"
+    ],
+    "answer": "B",
+    "explanation": "Benar! Tari Saman adalah tarian suku Gayo yang masuk dalam daftar Warisan Budaya Takbenda UNESCO."
   },
   {
-    question: "Tarian 'Pendet' merupakan tarian penyambutan yang berasal dari...",
-    options: ["A. Jawa Timur", "B. Bali", "C. Jawa Tengah", "D. Sumatera Utara"],
-    answer: "B",
-    explanation: "Benar! Tari Pendet adalah tarian penyambutan yang berasal dari Bali, awalnya digunakan sebagai tarian persembahan di pura."
+    "question": "Alat musik tradisional dari Jawa Barat yang terbuat dari bambu dan dimainkan dengan digoyangkan adalah?",
+    "options": [
+      "A. Sasando",
+      "B. Gamelan",
+      "C. Angklung",
+      "D. Kolintang"
+    ],
+    "answer": "C",
+    "explanation": "Tepat sekali! Angklung adalah alat musik multiton yang dimainkan dengan cara menggoyangkan instrumen tersebut."
   },
   {
-    question: "Alat musik tradisional 'Kolintang' berasal dari suku mana?",
-    options: ["A. Suku Minahasa", "B. Suku Batak", "C. Suku Jawa", "D. Suku Dayak"],
-    answer: "A",
-    explanation: "Tepat sekali! Kolintang adalah alat musik perkusi dari Minahasa, Sulawesi Utara, yang terbuat dari bilah-bilah kayu."
+    "question": "Apa nama motif batik yang berasal dari Yogyakarta dan Solo yang hanya boleh digunakan oleh kalangan keraton?",
+    "options": [
+      "A. Parang Rusak",
+      "B. Kawung",
+      "C. Megamendung",
+      "D. Sidomukti"
+    ],
+    "answer": "A",
+    "explanation": "Benar! Motif Parang Rusak dulunya hanya boleh dipakai oleh raja dan bangsawan karena melambangkan kekuatan."
   },
   {
-    question: "Tarian 'Reog Ponorogo' berasal dari provinsi mana?",
-    options: ["A. Jawa Tengah", "B. Jawa Timur", "C. Jawa Barat", "D. Yogyakarta"],
-    answer: "B",
-    explanation: "Benar! Reog Ponorogo adalah kesenian tradisional dari Ponorogo, Jawa Timur, yang terkenal dengan topeng singa raksasanya."
+    "question": "Seni pertunjukan boneka tradisional yang berasal dari Jawa ini dikenal dengan nama apa?",
+    "options": [
+      "A. Wayang Golek",
+      "B. Wayang Kulit",
+      "C. Ketoprak",
+      "D. Ludruk"
+    ],
+    "answer": "B",
+    "explanation": "Tepat sekali! Wayang Kulit adalah pertunjukan boneka bayangan yang terbuat dari kulit hewan dan diukir."
   },
   {
-    question: "Seni pertunjukan 'Wayang Kulit' paling terkenal dari daerah mana?",
-    options: ["A. Bali", "B. Jawa", "C. Sumatera", "D. Kalimantan"],
-    answer: "B",
-    explanation: "Tepat sekali! Wayang Kulit adalah seni pertunjukan bayangan dari Jawa yang diakui UNESCO sebagai Masterpiece of Oral and Intangible Heritage of Humanity."
+    "question": "Suku mana yang terkenal dengan seni ukirnya, terutama di daerah Asmat, Papua?",
+    "options": [
+      "A. Suku Dani",
+      "B. Suku Korowai",
+      "C. Suku Asmat",
+      "D. Suku Sentani"
+    ],
+    "answer": "C",
+    "explanation": "Benar! Suku Asmat sangat terkenal di seluruh dunia karena seni ukiran kayu yang rumit dan artistik."
   },
   {
-    question: "Musik 'Gamelan' adalah ansambel musik tradisional dari...",
-    options: ["A. Jawa dan Bali", "B. Sumatera dan Jawa", "C. Bali dan Sumatera", "D. Kalimantan dan Sulawesi"],
-    answer: "A",
-    explanation: "Benar! Gamelan adalah ansambel musik yang terdiri dari instrumen perkusi metalofon dan gong, populer di Jawa dan Bali."
+    "question": "Rumah adat suku Minangkabau yang atapnya menyerupai tanduk kerbau disebut apa?",
+    "options": [
+      "A. Rumah Gadang",
+      "B. Rumah Limas",
+      "C. Rumah Panggung",
+      "D. Tongkonan"
+    ],
+    "answer": "A",
+    "explanation": "Tepat sekali! Rumah Gadang adalah rumah adat Minangkabau yang memiliki arsitektur unik dengan atap yang melengkung."
   },
   {
-    question: "Tari 'Jaipong' adalah tarian tradisional dari provinsi mana?",
-    options: ["A. DKI Jakarta", "B. Jawa Barat", "C. Jawa Tengah", "D. Banten"],
-    answer: "B",
-    explanation: "Tepat sekali! Jaipong adalah tarian pergaulan yang modern dari Jawa Barat, diciptakan oleh Gugum Gumbira."
+    "question": "Apa nama makanan khas dari Palembang, Sumatera Selatan, yang terbuat dari ikan dan tepung sagu, disajikan dengan kuah cuka?",
+    "options": [
+      "A. Tekwan",
+      "B. Pempek",
+      "C. Otak-otak",
+      "D. Laksan"
+    ],
+    "answer": "B",
+    "explanation": "Benar! Pempek adalah makanan khas Palembang yang memiliki cita rasa unik dan terkenal."
   },
   {
-    question: "Apa nama alat musik gesek tradisional dari Sumatera Utara?",
-    options: ["A. Rebab", "B. Sape", "C. Gendang", "D. Gulingtangan"],
-    answer: "A",
-    explanation: "Benar! Rebab adalah alat musik gesek yang juga ditemukan di berbagai budaya lain di Indonesia."
+    "question": "Festival apa yang terkenal di Bali untuk memperingati hari raya suci umat Hindu yang jatuh setiap 210 hari?",
+    "options": [
+      "A. Nyepi",
+      "B. Galungan",
+      "C. Waisak",
+      "D. Kuningan"
+    ],
+    "answer": "B",
+    "explanation": "Tepat sekali! Galungan adalah hari raya suci yang dirayakan oleh umat Hindu Bali sebagai peringatan kemenangan Dharma (kebaikan) melawan Adharma (kejahatan)."
   },
   {
-    question: "Tarian yang terkenal dengan gerakan lincah dan cepat, yang menceritakan tentang perjuangan Pangeran Diponegoro, adalah?",
-    options: ["A. Tari Bedhaya", "B. Tari Serimpi", "C. Tari Kuda Lumping", "D. Tari Perang"],
-    answer: "C",
-    explanation: "Tepat sekali! Tari Kuda Lumping adalah tarian tradisional Jawa yang menampilkan penari menunggang kuda buatan dari bambu."
+    "question": "Pertunjukan teater tradisional dari Jawa Tengah yang menggabungkan tari, musik, dan drama disebut apa?",
+    "options": [
+      "A. Ludruk",
+      "B. Ketoprak",
+      "C. Reog",
+      "D. Lenong"
+    ],
+    "answer": "B",
+    "explanation": "Benar! Ketoprak adalah seni pertunjukan teater tradisional yang sering menampilkan cerita-cerita sejarah."
   },
   {
-    question: "Apa nama alat musik petik dari Tapanuli, Sumatera Utara, yang mirip gitar?",
-    options: ["A. Hasapi", "B. Saluang", "C. Rebab", "D. Suling"],
-    answer: "A",
-    explanation: "Benar! Hasapi adalah alat musik petik tradisional suku Batak yang digunakan untuk mengiringi musik vokal."
+    "question": "Apa nama alat musik tradisional dari Nusa Tenggara Timur yang terbuat dari daun lontar dan dimainkan dengan dipetik?",
+    "options": [
+      "A. Kolintang",
+      "B. Kecapi",
+      "C. Sasando",
+      "D. Suling"
+    ],
+    "answer": "C",
+    "explanation": "Tepat sekali! Sasando adalah alat musik petik yang unik dari Pulau Rote."
   },
   {
-    question: "Tarian 'Piring' yang penarinya menggunakan piring sebagai properti berasal dari provinsi mana?",
-    options: ["A. Sumatera Barat", "B. Bengkulu", "C. Jambi", "D. Riau"],
-    answer: "A",
-    explanation: "Tepat sekali! Tari Piring adalah tarian tradisional Minangkabau yang sering ditampilkan saat acara panen raya."
+    "question": "Apa nama tarian yang berasal dari Bali yang menggambarkan pertempuran antara kebaikan dan keburukan?",
+    "options": [
+      "A. Tari Piring",
+      "B. Tari Saman",
+      "C. Tari Jaipong",
+      "D. Tari Barong"
+    ],
+    "answer": "D",
+    "explanation": "Benar! Tari Barong adalah tarian sakral yang menceritakan pertempuran antara makhluk mitologi Barong (kebaikan) dan Rangda (kejahatan)."
   },
   {
-    question: "Seni pertunjukan 'Ketoprak' yang menggabungkan drama dan musik berasal dari...",
-    options: ["A. Jawa Barat", "B. Jawa Timur", "C. Yogyakarta", "D. Jawa Tengah"],
-    answer: "D",
-    explanation: "Benar! Ketoprak adalah seni teater rakyat Jawa yang berasal dari Surakarta, Jawa Tengah."
-  },
-  // Kuliner
-  {
-    question: "Rendang, masakan daging pedas yang diakui sebagai salah satu makanan terlezat di dunia, berasal dari...",
-    options: ["A. Padang", "B. Aceh", "C. Jakarta", "D. Bali"],
-    answer: "A",
-    explanation: "Tepat sekali! Rendang adalah masakan khas suku Minangkabau yang dimasak perlahan dengan santan dan rempah-rempah."
+    "question": "Seni membuat patung dari bahan tanah liat, kayu, atau batu, sering ditemukan di Bali dan Papua, dikenal sebagai?",
+    "options": [
+      "A. Seni Ukir",
+      "B. Seni Patung",
+      "C. Seni Keramik",
+      "D. Seni Pahat"
+    ],
+    "answer": "B",
+    "explanation": "Tepat sekali! Seni patung adalah seni yang menciptakan karya tiga dimensi."
   },
   {
-    question: "Apa nama kuliner khas Palembang yang terbuat dari olahan ikan dan sagu?",
-    options: ["A. Bakso", "B. Coto", "C. Pempek", "D. Sate"],
-    answer: "C",
-    explanation: "Benar! Pempek adalah makanan khas Palembang yang disajikan dengan kuah cuka hitam yang asam."
-  },
-  {
-    question: "Gudeg, masakan nangka muda yang dimasak dengan santan dan gula merah, berasal dari...",
-    options: ["A. Solo", "B. Yogyakarta", "C. Semarang", "D. Surabaya"],
-    answer: "B",
-    explanation: "Tepat sekali! Gudeg adalah masakan khas Yogyakarta dan merupakan ikon kuliner kota tersebut."
-  },
-  {
-    question: "Apa nama sate khas Madura yang terkenal dengan bumbu kacangnya?",
-    options: ["A. Sate Maranggi", "B. Sate Lilit", "C. Sate Padang", "D. Sate Madura"],
-    answer: "D",
-    explanation: "Benar! Sate Madura disajikan dengan bumbu kacang yang lezat dan potongan daging ayam atau kambing."
-  },
-  {
-    question: "Nasi Liwet adalah makanan khas dari daerah mana?",
-    options: ["A. Banten", "B. Jawa Barat", "C. Jawa Tengah", "D. Jawa Timur"],
-    answer: "C",
-    explanation: "Tepat sekali! Nasi Liwet adalah hidangan nasi gurih khas Solo, Jawa Tengah, yang dimasak dengan santan, daun salam, dan serai."
-  },
-  {
-    question: "Apa nama kuliner khas Makassar yang berupa sup daging sapi dengan bumbu kacang yang kental?",
-    options: ["A. Coto Makassar", "B. Sop Konro", "C. Pallu Basa", "D. Es Palu Butung"],
-    answer: "A",
-    explanation: "Benar! Coto Makassar adalah sup daging sapi yang dimasak dengan bumbu khas Makassar dan disajikan dengan burasa atau ketupat."
-  },
-  {
-    question: "Rawon, sup daging berwarna hitam, berasal dari...",
-    options: ["A. Jawa Tengah", "B. Jawa Timur", "C. Bali", "D. Sumatera Utara"],
-    answer: "B",
-    explanation: "Tepat sekali! Rawon adalah makanan khas Jawa Timur, terutama Surabaya, yang mendapatkan warna hitamnya dari kluwek."
-  },
-  {
-    question: "Soto Betawi, soto khas Jakarta, menggunakan bahan dasar apa untuk kuahnya?",
-    options: ["A. Susu dan santan", "B. Santan", "C. Kaldu ayam", "D. Kaldu sapi"],
-    answer: "A",
-    explanation: "Benar! Soto Betawi adalah soto yang khas dengan kuah kental dari campuran susu dan santan."
-  },
-  {
-    question: "Apa nama kuliner khas Bali yang terbuat dari daging cincang yang dililitkan pada tusuk sate?",
-    options: ["A. Sate Maranggi", "B. Sate Lilit", "C. Sate Padang", "D. Sate Ayam"],
-    answer: "B",
-    explanation: "Tepat sekali! Sate Lilit adalah sate khas Bali yang terbuat dari daging ikan atau ayam cincang yang dibumbui."
-  },
-  {
-    question: "Makanan 'Papeda', yang terbuat dari sagu, adalah makanan pokok dari daerah...",
-    options: ["A. Sulawesi", "B. Kalimantan", "C. Maluku dan Papua", "D. Nusa Tenggara"],
-    answer: "C",
-    explanation: "Benar! Papeda adalah makanan pokok yang sering disajikan dengan ikan kuah kuning, sangat populer di Maluku dan Papua."
-  },
-  {
-    question: "Mie Aceh terkenal dengan rasa pedasnya dan menggunakan jenis mie apa?",
-    options: ["A. Mie instan", "B. Mie kuning tebal", "C. Bihun", "D. Mie keriting"],
-    answer: "B",
-    explanation: "Tepat sekali! Mie Aceh menggunakan mie kuning tebal yang dimasak dengan bumbu pedas yang kaya rempah."
-  },
-  {
-    question: "Apa nama kue tradisional dari Betawi yang terbuat dari beras ketan dan kelapa?",
-    options: ["A. Kue ape", "B. Kue cubit", "C. Kue pancong", "D. Kue putu"],
-    answer: "C",
-    explanation: "Benar! Kue Pancong adalah jajanan tradisional Betawi yang rasanya gurih dari kelapa parut."
-  },
-  {
-    question: "Makanan 'Karedok' adalah hidangan sayuran mentah dengan bumbu kacang yang berasal dari...",
-    options: ["A. Jawa Barat", "B. Jawa Tengah", "C. Banten", "D. DKI Jakarta"],
-    answer: "A",
-    explanation: "Tepat sekali! Karedok adalah makanan khas Sunda yang mirip dengan gado-gado, tetapi sayurannya mentah."
-  },
-  {
-    question: "Apa nama makanan khas Sumatera Barat yang terbuat dari singkong dan ikan teri?",
-    options: ["A. Keripik singkong", "B. Galamai", "C. Karupuak sanjai", "D. Balado"],
-    answer: "C",
-    explanation: "Benar! Karupuak Sanjai adalah kerupuk singkong yang renyah dan diberi bumbu balado pedas."
-  },
-  {
-    question: "Sup 'Brenebon', sup kacang merah dengan daging, adalah makanan khas dari...",
-    options: ["A. Maluku", "B. Sulawesi Utara", "C. Bali", "D. Sumatera Utara"],
-    answer: "B",
-    explanation: "Tepat sekali! Sup Brenebon adalah hidangan khas dari Manado, Sulawesi Utara, yang dipengaruhi oleh kuliner Belanda."
-  },
-  // Lain-lain (Sejarah, Bahasa, Tradisi)
-  {
-    question: "Istilah 'Bhinneka Tunggal Ika' berasal dari kitab apa?",
-    options: ["A. Sutasoma", "B. Negarakertagama", "C. Pararaton", "D. Arjunawiwaha"],
-    answer: "A",
-    explanation: "Benar! 'Bhinneka Tunggal Ika' yang artinya 'Berbeda-beda tetapi tetap satu' adalah kutipan dari kitab Sutasoma karya Mpu Tantular."
-  },
-  {
-    question: "Upacara 'Ngaben' adalah upacara pembakaran jenazah yang terkenal dari budaya...",
-    options: ["A. Jawa", "B. Batak", "C. Sunda", "D. Bali"],
-    answer: "D",
-    explanation: "Tepat sekali! Ngaben adalah upacara adat Hindu di Bali untuk mengantarkan roh leluhur ke alam baka."
-  },
-  {
-    question: "Bahasa daerah yang paling banyak penuturnya di Indonesia adalah...",
-    options: ["A. Sunda", "B. Jawa", "C. Batak", "D. Melayu"],
-    answer: "B",
-    explanation: "Benar! Bahasa Jawa adalah bahasa daerah dengan penutur terbanyak di Indonesia."
-  },
-  {
-    question: "Apa nama rumah adat dari provinsi Sulawesi Selatan yang berbentuk panggung dengan atap melengkung?",
-    options: ["A. Rumah Gadang", "B. Rumah Honai", "C. Rumah Tongkonan", "D. Rumah Toraja"],
-    answer: "C",
-    explanation: "Tepat sekali! Rumah Tongkonan adalah rumah adat suku Toraja yang terkenal dengan atapnya yang unik dan ukirannya."
-  },
-  {
-    question: "Tahun Baru Imlek di Indonesia memiliki tradisi unik, salah satunya adalah pertunjukan...",
-    options: ["A. Barongsai", "B. Ondel-ondel", "C. Reog", "D. Wayang"],
-    answer: "A",
-    explanation: "Benar! Barongsai adalah tarian tradisional Tiongkok yang sering dipertunjukkan saat perayaan Imlek di Indonesia."
-  },
-  {
-    question: "Tugu Monas di Jakarta melambangkan...",
-    options: ["A. Kejayaan Majapahit", "B. Perjuangan Kemerdekaan Indonesia", "C. Kekayaan alam Indonesia", "D. Persatuan dan Kesatuan"],
-    answer: "B",
-    explanation: "Tepat sekali! Monumen Nasional atau Monas didirikan untuk mengenang perjuangan rakyat Indonesia merebut kemerdekaan."
-  },
-  {
-    question: "Upacara 'Tabuik' yang memperingati kematian cucu Nabi Muhammad SAW, berasal dari...",
-    options: ["A. Aceh", "B. Bengkulu", "C. Sumatera Barat", "D. Jambi"],
-    answer: "C",
-    explanation: "Benar! Tabuik adalah upacara tradisional di Pariaman, Sumatera Barat, yang merupakan bagian dari perayaan Asyura."
-  },
-  {
-    question: "Alat musik petik 'Sape' adalah alat musik tradisional dari suku...",
-    options: ["A. Batak", "B. Dayak", "C. Bugis", "D. Minangkabau"],
-    answer: "B",
-    explanation: "Tepat sekali! Sape adalah alat musik petik dari Kalimantan Timur yang mirip dengan gitar."
-  },
-  {
-    question: "Pakaian adat 'Ulos' sering diberikan sebagai...",
-    options: ["A. Hadiah", "B. Cenderamata", "C. Lambang kehormatan dan kasih sayang", "D. Alat pembayaran"],
-    answer: "C",
-    explanation: "Benar! Ulos memiliki makna mendalam dan sering diberikan dalam upacara adat sebagai simbol restu, kasih sayang, dan kehormatan."
-  },
-  {
-    question: "Bahasa daerah yang digunakan di Maluku adalah...",
-    options: ["A. Bahasa Minahasa", "B. Bahasa Melayu Ambon", "C. Bahasa Sunda", "D. Bahasa Jawa"],
-    answer: "B",
-    explanation: "Tepat sekali! Bahasa Melayu Ambon adalah dialek bahasa Melayu yang digunakan di Maluku."
-  },
-  {
-    question: "Rumah adat 'Honai' adalah rumah tradisional dari daerah...",
-    options: ["A. Papua", "B. Maluku", "C. Nusa Tenggara Timur", "D. Sulawesi"],
-    answer: "A",
-    explanation: "Benar! Honai adalah rumah adat suku Dani di Papua yang berbentuk bulat dan terbuat dari kayu."
-  },
-  {
-    question: "Upacara 'Grebeg Maulud' yang merayakan kelahiran Nabi Muhammad SAW, berasal dari...",
-    options: ["A. Jawa Tengah", "B. Yogyakarta", "C. Jawa Timur", "D. DKI Jakarta"],
-    answer: "B",
-    explanation: "Tepat sekali! Grebeg Maulud adalah upacara tahunan di Keraton Yogyakarta untuk memperingati hari kelahiran Nabi Muhammad SAW."
-  },
-  {
-    question: "Pencak Silat adalah seni bela diri tradisional dari...",
-    options: ["A. Jepang", "B. Tiongkok", "C. Indonesia", "D. Korea"],
-    answer: "C",
-    explanation: "Benar! Pencak Silat adalah seni bela diri asli Indonesia yang diakui sebagai Warisan Budaya Takbenda Dunia oleh UNESCO."
-  },
-  {
-    question: "Apa nama upacara adat yang merayakan selesainya musim panen padi di beberapa daerah Indonesia?",
-    options: ["A. Sedekah Bumi", "B. Grebeg Suro", "C. Kasada", "D. Seren Taun"],
-    answer: "D",
-    explanation: "Tepat sekali! Seren Taun adalah upacara adat panen padi yang biasanya dirayakan oleh masyarakat Sunda."
-  },
-  {
-    question: "Lagu 'Apuse' adalah lagu daerah dari provinsi mana?",
-    options: ["A. Jawa Barat", "B. Papua", "C. Sumatera Selatan", "D. Sulawesi Utara"],
-    answer: "B",
-    explanation: "Benar! 'Apuse' adalah lagu tradisional dari daerah Papua yang bercerita tentang perpisahan dengan kakek dan nenek."
+    "question": "Apa nama masakan khas Padang yang terbuat dari nasi, lauk pauk, dan sayur, disajikan dalam piring kecil?",
+    "options": [
+      "A. Nasi Uduk",
+      "B. Nasi Goreng",
+      "C. Nasi Padang",
+      "D. Nasi Kuning"
+    ],
+    "answer": "C",
+    "explanation": "Benar! Nasi Padang adalah hidangan nasi yang disajikan dengan berbagai lauk pauk, khas dari daerah Padang, Sumatera Barat."
   }
 ];
 
@@ -437,22 +413,94 @@ export const getCulturalResponse = async (chatHistory: any[]): Promise<string> =
   }
 };
 
+// Function to convert file to base64
+const fileToBase64 = (file: File): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const result = reader.result as string;
+      // Remove the data URL prefix to get just the base64 data
+      const base64Data = result.split(',')[1];
+      resolve(base64Data);
+    };
+    reader.onerror = error => reject(error);
+  });
+};
+
+// Function to generate image with traditional clothing
+const generateTraditionalClothingImage = async (imageFile: File, clothingType: string): Promise<string> => {
+  try {
+    const base64Image = await fileToBase64(imageFile);
+    
+    const prompt = `Ubah foto orang ini menjadi mengenakan pakaian adat Indonesia ${clothingType}. Pastikan:
+1. Wajah dan postur tubuh tetap sama persis
+2. Pakaian adat yang dikenakan sesuai dengan tradisi dan detail yang akurat
+3. Background yang sesuai dengan budaya Indonesia
+4. Kualitas gambar yang tinggi dan realistis
+5. Mempertahankan proporsi dan anatomi yang natural
+
+Buatlah transformasi yang menghormati budaya Indonesia dengan detail yang autentik.`;
+
+    const result = await geminiImageModel.generateContent([
+      { text: prompt },
+      {
+        inlineData: {
+          mimeType: imageFile.type,
+          data: base64Image,
+        },
+      },
+    ]);
+
+    const response = await result.response;
+    
+    // Check if response contains generated image
+    const candidates = response.candidates;
+    if (candidates && candidates[0] && candidates[0].content && candidates[0].content.parts) {
+      for (const part of candidates[0].content.parts) {
+        if (part.inlineData) {
+          // Convert base64 to blob URL for display
+          const imageData = part.inlineData.data;
+          const mimeType = part.inlineData.mimeType || 'image/png';
+          const byteCharacters = atob(imageData);
+          const byteNumbers = new Array(byteCharacters.length);
+          for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+          }
+          const byteArray = new Uint8Array(byteNumbers);
+          const blob = new Blob([byteArray], { type: mimeType });
+          return URL.createObjectURL(blob);
+        }
+      }
+    }
+    
+    throw new Error('No image generated in response');
+  } catch (error) {
+    console.error('Error generating image:', error);
+    throw error;
+  }
+};
+
 const AssistenAI = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
       type: 'bot',
-      content: 'Halo! Saya BoetDaya. Saya siap membantu Anda menjelajahi kekayaan budaya Indonesia. Apa yang ingin Anda ketahui hari ini?',
+      content: 'Halo! Saya BoetDaya. Saya siap membantu Anda menjelajahi kekayaan budaya Indonesia. Anda juga bisa upload foto untuk saya ubah menjadi mengenakan pakaian adat Indonesia! Apa yang ingin Anda ketahui hari ini?',
       timestamp: new Date()
     }
   ]);
   const [inputMessage, setInputMessage] = useState<string>('');
   const [isTyping, setIsTyping] = useState<boolean>(false);
-  const [quizState, setQuizState] = useState<'idle' | 'active'>('idle'); // 'idle', 'active'
+  const [quizState, setQuizState] = useState<'idle' | 'active'>('idle');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [selectedQuestions, setSelectedQuestions] = useState<QuizQuestion[]>([]);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string>('');
+  const [isGeneratingImage, setIsGeneratingImage] = useState<boolean>(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const quickQuestions: string[] = [
     'Ceritakan tentang batik Indonesia',
@@ -462,18 +510,31 @@ const AssistenAI = () => {
     'Mulai Kuis Budaya'
   ];
 
+  const traditionalClothingOptions: string[] = [
+    'Kebaya Jawa',
+    'Baju Bodo Sulawesi',
+    'Ulos Batak',
+    'Payas Agung Bali',
+    'Bundo Kanduang Minang',
+    'Aesan Gede Palembang',
+    'Teluk Belanga Riau',
+    'Pakaian Adat Dayak',
+    'Baju Cele Maluku',
+    'Koteka Papua'
+  ];
+
   const aiFeatures: AIFeature[] = [
     {
       icon: MessageCircle,
-      title: 'BoetDaya',
+      title: 'BoetDaya Chat',
       description: 'Bertanya langsung tentang budaya Indonesia',
       color: 'bg-blue-50 text-blue-600'
     },
     {
-      icon: ChefHat,
-      title: 'Rekomendasi Resep AI',
-      description: 'Masukkan bahan, dapatkan resep tradisional',
-      color: 'bg-green-50 text-green-600'
+      icon: ImageIcon,
+      title: 'AI Photo Transform',
+      description: 'Upload foto untuk diubah menjadi pakaian adat',
+      color: 'bg-red-50 text-red-600'
     },
     {
       icon: Brain,
@@ -484,9 +545,8 @@ const AssistenAI = () => {
   ];
 
   const startQuiz = (): void => {
-    // Mengacak seluruh array dan mengambil 10 pertanyaan pertama
     const shuffledQuestions: QuizQuestion[] = shuffleArray([...allQuizQuestions]);
-    const quizSubset = shuffledQuestions.slice(0, 10);
+    const quizSubset = shuffledQuestions.slice(0, 5);
     setSelectedQuestions(quizSubset);
     
     setQuizState('active');
@@ -499,6 +559,62 @@ const AssistenAI = () => {
       timestamp: new Date()
     };
     setMessages(prev => [...prev, quizMessage]);
+  };
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const file = event.target.files?.[0];
+    if (file && file.type.startsWith('image/')) {
+      setSelectedImage(file);
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImagePreview(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleGenerateTraditionalClothing = async (clothingType: string): Promise<void> => {
+    if (!selectedImage) return;
+
+    setIsGeneratingImage(true);
+    setIsTyping(true);
+
+    // Add user message showing the uploaded image
+    const userMessage: Message = {
+      id: Date.now(),
+      type: 'user',
+      content: `Tolong ubah foto saya menjadi mengenakan ${clothingType}`,
+      timestamp: new Date(),
+      imageUrl: imagePreview
+    };
+    setMessages(prev => [...prev, userMessage]);
+
+    try {
+      const generatedImageUrl = await generateTraditionalClothingImage(selectedImage, clothingType);
+      
+      const botResponse: Message = {
+        id: Date.now() + 1,
+        type: 'bot',
+        content: `Berikut adalah foto Anda yang telah diubah menjadi mengenakan ${clothingType}! Saya telah mempertahankan wajah dan postur Anda sambil menambahkan detail pakaian adat yang autentik.`,
+        timestamp: new Date(),
+        imageUrl: generatedImageUrl,
+        isGeneratedImage: true
+      };
+      setMessages(prev => [...prev, botResponse]);
+    } catch (error) {
+      const errorMessage: Message = {
+        id: Date.now() + 1,
+        type: 'bot',
+        content: 'Maaf, terjadi kesalahan saat mengubah foto Anda. Silakan coba lagi dengan foto yang berbeda atau coba lagi nanti.',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    }
+
+    setIsGeneratingImage(false);
+    setIsTyping(false);
+    setSelectedImage(null);
+    setImagePreview('');
   };
 
   const handleSendMessage = async (): Promise<void> => {
@@ -583,6 +699,15 @@ const AssistenAI = () => {
     }
   };
 
+  const downloadImage = (imageUrl: string, filename: string): void => {
+    const link = document.createElement('a');
+    link.href = imageUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -602,7 +727,7 @@ const AssistenAI = () => {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Berinteraksi langsung dengan AI untuk mempelajari budaya Indonesia.
-            Dapatkan jawaban detail, rekomendasi personal, dan pengalaman interaktif.
+            Upload foto Anda untuk diubah menjadi mengenakan pakaian adat tradisional!
           </p>
         </div>
 
@@ -620,9 +745,10 @@ const AssistenAI = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Pertanyaan cepat */}
-          <div className="lg:col-span-1">
-            <div className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-xl p-6 sticky top-24">
+          {/* Sidebar */}
+          <div className="lg:col-span-1 space-y-6">
+            {/* Pertanyaan cepat */}
+            <div className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                 <Sparkles className="h-5 w-5 text-yellow-600 mr-2" />
                 Pertanyaan Populer
@@ -639,6 +765,58 @@ const AssistenAI = () => {
                 ))}
               </div>
             </div>
+
+            {/* Image Upload Section */}
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                <ImageIcon className="h-5 w-5 text-blue-600 mr-2" />
+                Transform Foto Anda
+              </h3>
+              
+              <input
+                type="file"
+                ref={fileInputRef}
+                onChange={handleImageUpload}
+                accept="image/*"
+                className="hidden"
+              />
+              
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                className="w-full mb-4 p-4 border-2 border-dashed border-blue-300 rounded-lg hover:border-blue-500 transition-colors duration-300 flex flex-col items-center"
+              >
+                <Upload className="h-8 w-8 text-blue-500 mb-2" />
+                <span className="text-sm text-gray-600">Upload Foto Anda</span>
+              </button>
+
+              {imagePreview && (
+                <div className="mb-4">
+                  <img
+                    src={imagePreview}
+                    alt="Preview"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                </div>
+              )}
+
+              {selectedImage && (
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-gray-700 mb-2">Pilih Pakaian Adat:</p>
+                  <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                    {traditionalClothingOptions.map((clothing, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleGenerateTraditionalClothing(clothing)}
+                        disabled={isGeneratingImage}
+                        className="w-full text-left p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:bg-blue-50 text-xs disabled:opacity-50"
+                      >
+                        {clothing}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Antarmuka chat */}
@@ -650,7 +828,9 @@ const AssistenAI = () => {
                   <Bot className="h-6 w-6 text-white mr-3" />
                   <div>
                     <h3 className="text-white font-semibold">BoetDaya</h3>
-                    <p className="text-red-100 text-sm">Online - Siap membantu</p>
+                    <p className="text-red-100 text-sm">
+                      {isGeneratingImage ? 'Sedang mengubah foto...' : 'Online - Siap membantu'}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -676,6 +856,24 @@ const AssistenAI = () => {
                           ? 'bg-red-600 text-white'
                           : 'bg-gray-100 text-gray-900'
                       }`}>
+                        {message.imageUrl && (
+                          <div className="mb-2">
+                            <img
+                              src={message.imageUrl}
+                              alt="Uploaded or generated"
+                              className="max-w-full h-auto rounded-lg"
+                            />
+                            {message.isGeneratedImage && (
+                              <button
+                                onClick={() => downloadImage(message.imageUrl!, `pakaian-adat-${Date.now()}.png`)}
+                                className="mt-2 flex items-center text-xs bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700 transition-colors"
+                              >
+                                <Download className="h-3 w-3 mr-1" />
+                                Download
+                              </button>
+                            )}
+                          </div>
+                        )}
                         {message.content && (
                           message.type === 'bot' ? (
                             <ReactMarkdown>{message.content}</ReactMarkdown>
@@ -744,8 +942,8 @@ const AssistenAI = () => {
               <p className="text-gray-600 text-sm">Memahami konteks sejarah, filosofi, dan makna budaya</p>
             </div>
             <div className="bg-white rounded-lg p-6">
-              <h3 className="font-bold text-gray-900 mb-2">🎯 Rekomendasi Personal</h3>
-              <p className="text-gray-600 text-sm">Memberikan saran berdasarkan minat dan lokasi Anda</p>
+              <h3 className="font-bold text-gray-900 mb-2">🎯 Transformasi Foto AI</h3>
+              <p className="text-gray-600 text-sm">Mengubah foto Anda menjadi mengenakan pakaian adat Indonesia</p>
             </div>
             <div className="bg-white rounded-lg p-6">
               <h3 className="font-bold text-gray-900 mb-2">📚 Pembelajaran Interaktif</h3>
