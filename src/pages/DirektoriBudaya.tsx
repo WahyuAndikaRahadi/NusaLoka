@@ -279,224 +279,261 @@ const DirektoriBudaya = () => {
     "name": "Tari Saman",
     "province": "Aceh",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuYv3OHtXSSS3tqSvBG2CRebU-ILGxRBsjrA&s",
-    "description": "Tarian suku Gayo yang menampilkan kekompakan gerakan tangan dan diiringi syair."
+    "description": "Tarian suku Gayo yang menampilkan kekompakan gerakan tangan dan diiringi syair.",
+    "origin": "Dikembangkan oleh Syekh Saman, seorang ulama dari Gayo, Aceh Tenggara, sebagai media dakwah. Awalnya merupakan permainan rakyat yang disebut 'pok one'."
   },
   {
     "name": "Tari Tortor",
     "province": "Sumatera Utara",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Tor-Tor_Pose.jpg",
-    "description": "Tarian persembahan dan ritual adat Batak yang diiringi musik gondang."
+    "description": "Tarian persembahan dan ritual adat Batak yang diiringi musik gondang.",
+    "origin": "Telah ada sejak zaman purba dan awalnya merupakan bagian dari ritual sakral masyarakat Batak yang dipengaruhi oleh roh leluhur."
   },
   {
     "name": "Tari Piring",
     "province": "Sumatera Barat",
     "image": "https://asset.kompas.com/crops/SQ9F33noGOkAW7rPY2Zy1sAzi5c=/0x0:750x500/1200x800/data/photo/2022/02/05/61fe2cfd8d1cd.jpg",
-    "description": "Tarian yang menampilkan atraksi menggunakan piring sebagai properti utama."
+    "description": "Tarian yang menampilkan atraksi menggunakan piring sebagai properti utama.",
+    "origin": "Berasal dari Solok, Sumatera Barat, dan pada awalnya merupakan ritual ucapan syukur masyarakat kepada dewa-dewa atas hasil panen yang melimpah."
   },
   {
     "name": "Tari Zapin",
     "province": "Riau",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZjTxqAJoSPDJhsdS7di5wsYLl26BsIvL3gg&s",
-    "description": "Tarian Melayu yang kental dengan pengaruh budaya Arab dan Islam."
+    "description": "Tarian Melayu yang kental dengan pengaruh budaya Arab dan Islam.",
+    "origin": "Berasal dari Yaman dan dibawa oleh para pedagang Arab pada awal abad ke-16 ke Riau, kemudian berkembang dengan pengaruh budaya Melayu."
   },
   {
     "name": "Tari Melemang",
     "province": "Kepulauan Riau",
     "image": "https://melayupedia.com/foto_berita/2021/07/2021-07-03-tari-melemang-pentas-kesenian-bagi-keluarga-kerajaan-di-kepri.jpg",
-    "description": "Tarian istana yang menceritakan tentang kebesaran dan kemegahan kerajaan."
+    "description": "Tarian istana yang menceritakan tentang kebesaran dan kemegahan kerajaan.",
+    "origin": "Berasal dari Kerajaan Bentan (sekitar abad ke-12) dan ditarikan oleh dayang-dayang istana untuk menghibur raja."
   },
   {
     "name": "Tari Sekapur Sirih",
     "province": "Jambi",
     "image": "https://awsimages.detik.net.id/community/media/visual/2024/01/16/tari-sekapur-sirih_169.jpeg?w=1200",
-    "description": "Tarian penyambutan tamu agung dengan menyuguhkan sirih."
+    "description": "Tarian penyambutan tamu agung dengan menyuguhkan sirih.",
+    "origin": "Diciptakan oleh Firdaus Chatab pada tahun 1962 dan ditata ulang oleh O.K. Hendrik untuk menyambut tamu-tamu kehormatan di Jambi."
   },
   {
     "name": "Tari Andun",
     "province": "Bengkulu",
     "image": "https://i0.wp.com/nidianews.com/wp-content/uploads/2024/11/tari-andun.jpg?fit=700%2C437&ssl=1",
-    "description": "Tarian rakyat yang dibawakan saat pesta panen sebagai ungkapan rasa syukur."
+    "description": "Tarian rakyat yang dibawakan saat pesta panen sebagai ungkapan rasa syukur.",
+    "origin": "Merupakan tarian adat masyarakat Serawai di Bengkulu Selatan yang sudah ada sejak dahulu kala dan digunakan sebagai sarana mencari jodoh."
   },
   {
     "name": "Tari Gending Sriwijaya",
     "province": "Sumatera Selatan",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIJkWCyZK5A1Z9QLsoSwqfgrmNdJaI8UpJMA&s",
-    "description": "Tarian kolosal yang menceritakan keagungan Kerajaan Sriwijaya."
+    "description": "Tarian kolosal yang menceritakan keagungan Kerajaan Sriwijaya.",
+    "origin": "Diciptakan pada tahun 1943-1944 atas permintaan pemerintah Jepang untuk menyambut tamu di Palembang."
   },
   {
     "name": "Tari Campak",
     "province": "Kepulauan Bangka Belitung",
     "image": "https://www.wisatabelitung.net/wp-content/uploads/2024/05/tarian-daerah-kepulauan-bangka-belitung-930x620.jpg",
-    "description": "Tarian pergaulan muda-mudi yang ceria dan dinamis."
+    "description": "Tarian pergaulan muda-mudi yang ceria dan dinamis.",
+    "origin": "Berkembang pada masa pendudukan Portugis di Bangka Belitung, terlihat dari musik akordeon dan kostum penari yang bergaya Eropa."
   },
   {
     "name": "Tari Melinting",
     "province": "Lampung",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWroCQXFmfa3YrEFm4hP_UEh2UTNOJ8PEIJw&s",
-    "description": "Tarian adat yang sakral dan hanya ditampilkan oleh keturunan bangsawan."
+    "description": "Tarian adat yang sakral dan hanya ditampilkan oleh keturunan bangsawan.",
+    "origin": "Berasal dari Keratuan Melinting di Lampung Timur dan diciptakan oleh Ratu Melinting pada abad ke-16."
   },
   {
     "name": "Debus",
     "province": "Banten",
     "image": "https://alfikr.id/cdn/content/2023/01/22/1ff2d724bd66843d21779aa246fd5ec2.jpg",
-    "description": "Seni pertunjukan yang menampilkan kekebalan tubuh terhadap benda tajam."
+    "description": "Seni pertunjukan yang menampilkan kekebalan tubuh terhadap benda tajam.",
+    "origin": "Muncul pada abad ke-16 pada masa pemerintahan Sultan Maulana Hasanuddin sebagai sarana penyebaran agama Islam dan membangkitkan semangat melawan penjajah."
   },
   {
     "name": "Ondel-ondel",
     "province": "DKI Jakarta",
     "image": "https://1001indonesia.net/asset/2016/05/Ondel-ondel.jpg",
-    "description": "Pertunjukan boneka raksasa khas Betawi yang biasanya ditampilkan berpasangan."
+    "description": "Pertunjukan boneka raksasa khas Betawi yang biasanya ditampilkan berpasangan.",
+    "origin": "Dipercaya sudah ada sejak zaman nenek moyang dan berfungsi sebagai penolak bala atau pelindung dari roh-roh jahat."
   },
   {
     "name": "Jaipongan",
     "province": "Jawa Barat",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Jaipong.jpg",
-    "description": "Tarian pergaulan yang enerjik dan dinamis dengan iringan musik kendang yang khas."
+    "description": "Tarian pergaulan yang enerjik dan dinamis dengan iringan musik kendang yang khas.",
+    "origin": "Diciptakan oleh H. Suanda dan Gugum Gumbira sekitar tahun 1976 di Karawang, merupakan pengembangan dari seni tradisi Ketuk Tilu."
   },
   {
     "name": "Tari Gambyong",
     "province": "Jawa Tengah",
     "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Gambyong_Langenkusuma_Pj_DSC_1322.JPG",
-    "description": "Tarian penyambutan tamu dengan gerakan yang lemah gemulai."
+    "description": "Tarian penyambutan tamu dengan gerakan yang lemah gemulai.",
+    "origin": "Awalnya merupakan tarian rakyat untuk upacara ritual pertanian, kemudian dikembangkan di lingkungan Keraton Surakarta oleh S.N. Pradatmadja."
   },
   {
     "name": "Tari Bedhaya",
     "province": "DI Yogyakarta",
     "image": "https://pariwisataindonesia.id/wp-content/uploads/2020/10/Tari-Bedhaya-foto-by-3.bp_.blogspot.com_.jpg",
-    "description": "Tarian istana yang sakral dengan gerakan yang anggun dan meditatif."
+    "description": "Tarian istana yang sakral dengan gerakan yang anggun dan meditatif.",
+    "origin": "Diciptakan oleh Sultan Agung dari Mataram, terinspirasi dari mimpinya bertemu dengan Kanjeng Ratu Kidul."
   },
   {
     "name": "Reog Ponorogo",
     "province": "Jawa Timur",
     "image": "https://www.situsjatim.com/webmin/images/posts/1/2024/2024-09-02/31a0834cc84e676f0972cffe5d36df16_1.jpg",
-    "description": "Pertunjukan seni tradisional dengan topeng singa raksasa yang megah."
+    "description": "Pertunjukan seni tradisional dengan topeng singa raksasa yang megah.",
+    "origin": "Memiliki beberapa versi cerita, salah satu yang terkenal adalah kisah Ki Ageng Kutu yang menciptakan Reog sebagai sindiran kepada Raja Kertabhumi."
   },
   {
     "name": "Tari Kecak",
     "province": "Bali",
     "image": "https://blog.inivie.com/wp-content/uploads/2025/04/tari-kecak-uluwatu.jpg",
-    "description": "Drama tari yang mengisahkan Ramayana dengan iringan paduan suara 'cak-cak'."
+    "description": "Drama tari yang mengisahkan Ramayana dengan iringan paduan suara 'cak-cak'.",
+    "origin": "Diciptakan pada tahun 1930-an oleh I Wayan Limbak dan pelukis Jerman Walter Spies, diadaptasi dari ritual Sanghyang."
   },
   {
     "name": "Tari Gandrung",
     "province": "Nusa Tenggara Barat",
     "image": "https://apimice.kemenparekraf.go.id/event-daerah/public/676/813/539/67681353902fa182774471.webp",
-    "description": "Tarian pergaulan yang dibawakan oleh penari wanita dengan mengajak penonton untuk menari bersama."
+    "description": "Tarian pergaulan yang dibawakan oleh penari wanita dengan mengajak penonton untuk menari bersama.",
+    "origin": "Awalnya merupakan tarian ritual sebagai ungkapan rasa syukur atas panen yang melimpah, dipengaruhi oleh budaya Hindu-Buddha."
   },
   {
     "name": "Tari Caci",
     "province": "Nusa Tenggara Timur",
     "image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Caci_Dance.jpg",
-    "description": "Tarian perang yang merupakan pertarungan antara dua orang laki-laki menggunakan cambuk dan perisai."
+    "description": "Tarian perang yang merupakan pertarungan antara dua orang laki-laki menggunakan cambuk dan perisai.",
+    "origin": "Merupakan tradisi masyarakat Manggarai sebagai ajang pembuktian keberanian dan ketangkasan para pria, sering ditampilkan saat syukuran musim panen."
   },
   {
     "name": "Tari Monong",
     "province": "Kalimantan Barat",
     "image": "https://img.inews.co.id/media/1200/files/inews_new/2022/10/04/Tari_Monong_Kalimantan_Barat.jpg",
-    "description": "Tarian penyembuhan yang dilakukan oleh seorang dukun untuk mengusir roh jahat."
+    "description": "Tarian penyembuhan yang dilakukan oleh seorang dukun untuk mengusir roh jahat.",
+    "origin": "Berasal dari ritual pengobatan suku Dayak, di mana dukun menari sambil membaca mantra untuk menyembuhkan orang yang sakit."
   },
   {
     "name": "Tari Balean Dadas",
     "province": "Kalimantan Tengah",
     "image": "https://mediacenter.palangkaraya.go.id/wp-content/uploads/sites/24/2023/03/img24684das.jpg",
-    "description": "Tarian ritual penyembuhan penyakit yang dilakukan oleh dukun wanita."
+    "description": "Tarian ritual penyembuhan penyakit yang dilakukan oleh dukun wanita.",
+    "origin": "Lahir dari tradisi dan kepercayaan suku Dayak Ma'anyan sebagai sarana untuk berkomunikasi dengan roh-roh leluhur dalam proses penyembuhan."
   },
   {
     "name": "Tari Baksa Kembang",
     "province": "Kalimantan Selatan",
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/WikiNusantara_2023%2C_Banjarmasin%2C_20_Mei_2023_%28005%29.jpg",
-    "description": "Tarian penyambutan tamu dengan menaburkan bunga sebagai simbol penghormatan."
+    "description": "Tarian penyambutan tamu dengan menaburkan bunga sebagai simbol penghormatan.",
+    "origin": "Berkembang di lingkungan keraton Banjar sebagai tarian untuk menyambut tamu-tamu agung kerajaan."
   },
   {
     "name": "Tari Hudoq",
     "province": "Kalimantan Timur",
     "image": "https://apimice.kemenparekraf.go.id/event-daerah/public/676/80f/8e9/67680f8e9621e838864468.webp",
-    "description": "Tarian ritual suku Dayak yang menggunakan topeng menyerupai burung enggang untuk memohon kesuburan."
+    "description": "Tarian ritual suku Dayak yang menggunakan topeng menyerupai burung enggang untuk memohon kesuburan.",
+    "origin": "Berasal dari kepercayaan suku Dayak Bahau dan Modang, di mana Hudoq adalah jelmaan roh yang turun ke bumi untuk memberkati hasil panen."
   },
   {
     "name": "Tari Jepen",
     "province": "Kalimantan Utara",
     "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_jepen_genjoh_1200.jpg",
-    "description": "Tarian pergaulan yang mendapat pengaruh dari budaya Melayu dan Islam."
+    "description": "Tarian pergaulan yang mendapat pengaruh dari budaya Melayu dan Islam.",
+    "origin": "Berkembang dari kesenian suku Kutai yang mendapat pengaruh kuat dari kebudayaan Melayu dan ajaran Islam."
   },
   {
     "name": "Tari Maengket",
     "province": "Sulawesi Utara",
     "image": "https://sultantv.co/wp-content/uploads/2023/09/tari.jpg",
-    "description": "Tarian massal yang terdiri dari tiga babak yang menggambarkan kehidupan masyarakat Minahasa."
+    "description": "Tarian massal yang terdiri dari tiga babak yang menggambarkan kehidupan masyarakat Minahasa.",
+    "origin": "Sudah ada sejak masyarakat Minahasa mengenal pertanian dan menjadi bagian dari upacara adat sebagai ucapan syukur kepada Tuhan atas hasil panen."
   },
   {
     "name": "Tari Dana-Dana",
     "province": "Gorontalo",
     "image": "https://www.infopublik.id/resources/album/bulan-oktober-2022/Tari_Dana-Dana.JPG",
-    "description": "Tarian pergaulan yang diadaptasi dari tarian Melayu dengan nuansa Islami."
+    "description": "Tarian pergaulan yang diadaptasi dari tarian Melayu dengan nuansa Islami.",
+    "origin": "Berasal dari tradisi Arab yang dibawa oleh para pedagang dan penyebar agama Islam, kemudian diadaptasi dengan budaya lokal Gorontalo."
   },
   {
     "name": "Tari Dero",
     "province": "Sulawesi Tengah",
     "image": "https://image.idntimes.com/post/20231229/358167197-739487011515825-5775336983517216433-n-a61658b270ed6393d191cc28525d5f98-d99cffa568d6e8a9c3938c900a224590.jpeg",
-    "description": "Tarian persahabatan yang dilakukan secara massal dengan bergandengan tangan membentuk lingkaran."
+    "description": "Tarian persahabatan yang dilakukan secara massal dengan bergandengan tangan membentuk lingkaran.",
+    "origin": "Berasal dari Kabupaten Poso dan merupakan tarian tradisional masyarakat suku Pamona sebagai ungkapan kegembiraan dan persatuan."
   },
   {
     "name": "Tari Pattennung",
     "province": "Sulawesi Barat",
     "image": "https://img.inews.co.id/media/1200/files/inews_new/2023/10/27/tari_pattennung.jpg",
-    "description": "Tarian yang menggambarkan kegiatan menenun kain tradisional."
+    "description": "Tarian yang menggambarkan kegiatan menenun kain tradisional.",
+    "origin": "Terinspirasi dari aktivitas para perempuan suku Mandar yang menenun sarung sutra, mencerminkan ketekunan, kesabaran, dan keindahan."
   },
   {
     "name": "Tari Pakarena",
     "province": "Sulawesi Selatan",
     "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_pakarena_1200.jpg",
-    "description": "Tarian yang dibawakan oleh penari wanita dengan gerakan yang sangat lembut dan anggun."
+    "description": "Tarian yang dibawakan oleh penari wanita dengan gerakan yang sangat lembut dan anggun.",
+    "origin": "Bermula dari mitos perpisahan antara penghuni 'botting langi' (negeri khayangan) dan penghuni 'lino' (bumi) di Gowa."
   },
   {
     "name": "Tari Lulo",
     "province": "Sulawesi Tenggara",
     "image": "https://www.kolakadesa.id/wowatamboli.kolakadesa.id/desa/upload/artikel/sedang_1742329392_tari_lulo.jpg",
-    "description": "Tarian pergaulan yang dilakukan secara massal dengan bergandengan tangan."
+    "description": "Tarian pergaulan yang dilakukan secara massal dengan bergandengan tangan.",
+    "origin": "Merupakan tarian adat suku Tolaki yang dilakukan dalam berbagai upacara adat sebagai simbol persatuan dan kebersamaan."
   },
   {
     "name": "Tari Cakalele",
     "province": "Maluku",
     "image": "https://cdn2.gnfi.net/gnfi/uploads/articles/shutterstock-1973789729-1ea8e880966965b5d2ace25d151c772a.jpg",
-    "description": "Tarian perang yang menggambarkan keberanian dan ketangkasan para prajurit."
+    "description": "Tarian perang yang menggambarkan keberanian dan ketangkasan para prajurit.",
+    "origin": "Awalnya merupakan tarian untuk menyambut para pahlawan yang pulang dari medan perang atau sebagai bagian dari persiapan perang."
   },
   {
     "name": "Tari Soya-Soya",
     "province": "Maluku Utara",
     "image": "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_soya-soya_1200.jpg",
-    "description": "Tarian perang yang menceritakan tentang perebutan kembali takhta Sultan Baabullah."
+    "description": "Tarian perang yang menceritakan tentang perebutan kembali takhta Sultan Baabullah.",
+    "origin": "Mengisahkan peristiwa penyerbuan pasukan dari Kayoa ke Benteng Portugis untuk menuntut balas atas kematian Sultan Khairun dari Ternate."
   },
   {
     "name": "Tari Suanggi",
     "province": "Papua Barat",
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Tari_Soanggi.jpg",
-    "description": "Tarian ritual yang bersifat magis untuk mengusir roh jahat."
+    "description": "Tarian ritual yang bersifat magis untuk mengusir roh jahat.",
+    "origin": "Berasal dari kisah seorang suami yang istrinya meninggal karena diserang roh jahat (Suanggi), tarian ini merupakan ritual untuk menenangkan arwah."
   },
   {
     "name": "Tari Yospan",
     "province": "Papua",
     "image": "https://www.wonderverseindonesia.com/storage/app/media/uploaded-files/shutterstock_2353474365%20Medium.jpeg.jpg",
-    "description": "Tarian pergaulan yang enerjik dan penuh keceriaan."
+    "description": "Tarian pergaulan yang enerjik dan penuh keceriaan.",
+    "origin": "Merupakan penggabungan dua tarian rakyat Papua, yaitu Yosim dan Pancar, yang kemudian menjadi populer di kalangan muda-mudi."
   },
   {
     "name": "Tari Perang",
     "province": "Papua Pegunungan",
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5xjdC20PyRbBx_6qXGsSmTslNSjydchwUFK8klRnfa0oI4dL3KI5dVti26rRMEtnH08KtPaA6asW1n5U7l1t209tMjxAQCrLZboCU1bafFhXFAugVjA8O2e3KItvOD1UZ8bAXIvE1vqk2SIzNROT1SQbIz8p8UewX_AJpuREATdrKXNVMTs4F7f7n8Q/s700/olop.jpg",
-    "description": "Tarian yang menggambarkan semangat dan keberanian para prajurit dalam berperang."
+    "description": "Tarian yang menggambarkan semangat dan keberanian para prajurit dalam berperang.",
+    "origin": "Dahulu ditarikan untuk mengobarkan semangat para prajurit sebelum berperang melawan suku lain, kini menjadi pertunjukan budaya."
   },
   {
     "name": "Tari Det Pok Mbui",
     "province": "Papua Tengah",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tari_Det_Pok_Mbui.jpg/960px-Tari_Det_Pok_Mbui.jpg",
-    "description": "Tarian upacara adat suku Asmat yang menggunakan topeng arwah."
+    "description": "Tarian upacara adat suku Asmat yang menggunakan topeng arwah.",
+    "origin": "Merupakan bagian dari ritual suku Asmat untuk menghormati dan mengantarkan arwah kerabat yang telah meninggal ke alam baka."
   },
   {
     "name": "Tari Gatzi",
     "province": "Papua Selatan",
     "image": "https://cdn.grid.id/crop/0x0:0x0/x/photo/2020/05/16/2617125296.jpg",
-    "description": "Tarian ungkapan rasa syukur atas melimpahnya hasil buruan."
-  },
+    "description": "Tarian ungkapan rasa syukur atas melimpahnya hasil buruan.",
+    "origin": "Berasal dari tradisi masyarakat suku Marind Anim sebagai bentuk kegembiraan dan rasa syukur kepada Sang Pencipta setelah berhasil dalam perburuan."
+  }
 ];
 
   const kuliner = [
