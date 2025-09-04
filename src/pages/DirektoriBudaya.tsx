@@ -865,15 +865,14 @@ const DirektoriBudaya = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
             <GradientText
               colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
               animationSpeed={3}
               showBorder={false}
-              className="custom-class"
+              className="custom-class mb-100 leading-normal"
             >
               Direktori Budaya Indonesia
-
             </GradientText>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -902,8 +901,8 @@ const DirektoriBudaya = () => {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === tab.id
-                    ? 'bg-white text-red-600 shadow-md'
-                    : 'text-gray-600 hover:text-red-600'
+                  ? 'bg-white text-red-600 shadow-md'
+                  : 'text-gray-600 hover:text-red-600'
                   }`}
               >
                 {tab.label}

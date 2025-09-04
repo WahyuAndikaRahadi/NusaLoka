@@ -759,7 +759,7 @@ const AssistenAI = () => {
               colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
               animationSpeed={3}
               showBorder={false}
-              className="custom-class"
+              className="custom-class mb-100 leading-normal"
             >
               Asisten AI Budaya
             </GradientText>
