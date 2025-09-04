@@ -501,7 +501,8 @@ const AssistenAI = () => {
   const [imagePreview, setImagePreview] = useState<string>('');
   const [isGeneratingImage, setIsGeneratingImage] = useState<boolean>(false);
 
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  // useRef is no longer needed for auto-scrolling
+  const messagesEndRef = useRef<HTMLDivElement>(null); 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const quickQuestions: string[] = [
@@ -512,18 +513,44 @@ const AssistenAI = () => {
     'Mulai Kuis Budaya'
   ];
 
-  const traditionalClothingOptions: string[] = [
-    'Kebaya Jawa',
-    'Baju Bodo Sulawesi',
-    'Ulos Batak',
-    'Payas Agung Bali',
-    'Bundo Kanduang Minang',
-    'Aesan Gede Palembang',
-    'Teluk Belanga Riau',
-    'Pakaian Adat Dayak',
-    'Baju Cele Maluku',
-    'Koteka Papua'
-  ];
+ const traditionalClothingOptions = [
+  'Ulee Balang',
+  'Ulos',
+  'Bundo Kanduang',
+  'Teluk Belanga dan Kebaya Laboh',
+  'Baju Kurung Tanggung',
+  'Aesan Gede',
+  'Paksian',
+  'Rejang Lebong',
+  'Tulang Bawang',
+  'Kebaya Encim & Sadariah',
+  'Pangsi',
+  'Kebaya Sunda',
+  'Kebaya Jawa',
+  'Kesatrian Ageng',
+  'Pesa\'an',
+  'Payas Agung',
+  'Lambung',
+  'Pakaian Adat Suku Sabu',
+  'King Baba & King Bibinge',
+  'Sangkarut',
+  'Babaju Kun Galung Pacinan',
+  'Kustin',
+  'Ta\'a & Sapei Sapaq',
+  'Laku Tepu',
+  'Biliu & Makuta',
+  'Baju Nggembe',
+  'Pattuqduq Towaine',
+  'Baju Bodo',
+  'Babu Nggawi',
+  'Cele',
+  'Manteren Lamo',
+  'Ewer',
+  'Holim',
+  'Pakaian Adat Suku Asmat',
+  'Boe & Kuli Bia',
+  'Koteka',
+];
 
   const aiFeatures: AIFeature[] = [
     {
@@ -710,11 +737,14 @@ const AssistenAI = () => {
     document.body.removeChild(link);
   };
 
+  // The useEffect hook for auto-scrolling is removed to disable the feature.
+  /*
   useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages]);
+  */
 
   return (
     <div className="py-16">
@@ -909,6 +939,7 @@ const AssistenAI = () => {
                     </div>
                   </div>
                 )}
+                {/* useRef is not used for scrolling anymore */}
                 <div ref={messagesEndRef} />
               </div>
 
