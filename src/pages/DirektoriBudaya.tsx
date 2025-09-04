@@ -39,7 +39,7 @@ const DirektoriBudaya = () => {
     {
       "name": "Teluk Belanga dan Kebaya Laboh",
       "province": "Riau Dan Kepulauan Riau",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNFik9MjxMYfFR4DKKnzJK9NJOBlWQsrchGA&s",
+      "image": "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1571565096/swbr5vkodo4xq16mghqh.jpg",
       "description": "Pria mengenakan Baju Teluk Belanga (baju kurung leher cekak musang) dengan celana panjang dan kain samping. Wanita memakai Kebaya Laboh yang longgar dan dipadukan dengan kain batik.",
       "philosophy": "Mencerminkan nilai-nilai kesopanan, kelembutan, dan keislaman dalam budaya Melayu."
     },
@@ -54,7 +54,7 @@ const DirektoriBudaya = () => {
     {
       "name": "Aesan Gede",
       "province": "Sumatera Selatan",
-      "image": "https://backpackerjakarta.com/wp-content/uploads/2018/02/Gambar-Aesan-Gede-Pria-dan-Wanita-1.jpg",
+      "image": "https://image.idntimes.com/post/20250525/1000185590-679b8fb0461ad11c7448d145cee7fdab-48dab222b21ae963ce0d9213432d0dfb.jpg",
       "description": "Pakaian pengantin yang mewah dan megah, didominasi warna merah dan emas. Terinspirasi dari zaman Kerajaan Sriwijaya.",
       "philosophy": "Melambangkan keagungan, kemewahan, dan kejayaan Kerajaan Sriwijaya di masa lampau."
     },
@@ -75,7 +75,7 @@ const DirektoriBudaya = () => {
     {
       "name": "Tulang Bawang",
       "province": "Lampung",
-      "image": "https://blog.pusatkain.com/wp-content/uploads/2024/10/IMG_0998-682x1024.jpeg",
+      "image": "https://seringjalan.com/wp-content/uploads/2020/05/INILAH-PAKAIAN-ADAT-TRADISIONAL-TULANG-BAWANG-reportersatu-com.jpg",
       "description": "Pakaian adat yang didominasi oleh kain tapis, kain tenun tradisional Lampung yang disulam dengan benang emas.",
       "philosophy": "Motif pada kain tapis memiliki makna filosofis yang mendalam, berkaitan dengan kehidupan, alam, dan keyakinan masyarakat Lampung."
     },
@@ -89,14 +89,14 @@ const DirektoriBudaya = () => {
     {
       "name": "Pangsi",
       "province": "Banten",
-      "image": "https://img.lazcdn.com/g/ff/kf/S9092843e89864e2dbed374420ea2c0b30.jpg_720x720q80.jpg",
+      "image": "https://blog.knitto.co.id/wp-content/uploads/2024/03/Baju-Pangsi-Sunda.jpg",
       "description": "Pakaian sederhana berwarna hitam yang terdiri dari baju kemeja longgar dan celana longgar. Sering digunakan oleh para jawara dan masyarakat Baduy.",
       "philosophy": "Melambangkan kesederhanaan, kekuatan, dan kesetaraan."
     },
     {
       "name": "Kebaya Sunda",
       "province": "Jawa Barat",
-      "image": "https://lh7-us.googleusercontent.com/qWXYLP639QCI_d7cIo0IdNyuZHanwK3aojYO9MPU-R5FCrXB5sWFnGXK__y4Z9dKKK6_brbR_LqUbLHMuH4LBmsR-RFzrFQT_gQuxs8QySJ1ivKmUjjb82McZY3nP7Kd6pumxsdo7-_PiIKo_qtnUQM",
+      "image": "https://lh7-us.googleusercontent.com/YGKXpJw8ECutD14OSAwR6pEycSV0ApBCNt89Ro8hc3v0Dpn4LxT0tcMieVkiUG8ULzK5i3IJcv-uS3FQ__fo0dqi9OvTWG85vukG3LuQ5eTogpLfuCWS8F_wyzdYubnKSWgMCNVBsB-9x2iChVA79DA",
       "description": "Kebaya dengan desain yang lebih sederhana dan elegan, seringkali berwarna cerah dan dipadukan dengan kain batik atau samping.",
       "philosophy": "Mencerminkan kesederhanaan, keanggunan, dan kedekatan dengan alam."
     },
@@ -159,14 +159,14 @@ const DirektoriBudaya = () => {
     {
       "name": "Babaju Kun Galung Pacinan",
       "province": "Kalimantan Selatan",
-      "image": "https://asset.kompas.com/crops/w8DEbiAmIsNzSGv7-KCsHu-bOKo=/106x0:604x498/340x340/data/photo/2021/03/17/6051ef1c4dead.png",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixHNHIP6VD-Ay11PhBLFz4IqROqUHfI9rXQExqo74jplG6-sJWa89-TP41RReW0EoPl6pC14PpQxZsU6xzpXAPWRmRMb7metT2ZHGuLeRrWRR7yi-9sMIdsdghSVqeghRF8OmEoTGifEg/w1280-h720-p-k-no-nu/banjar.JPG",
       "description": "Pakaian pengantin Banjar yang mendapat pengaruh budaya Tionghoa dan Timur Tengah. Didominasi warna kuning dan hijau dengan hiasan payet dan manik-manik.",
       "philosophy": "Mencerminkan akulturasi budaya dan nilai-nilai keagamaan."
     },
     {
       "name": "Kustin",
       "province": "Kalimantan Timur",
-      "image": "https://rri-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/1/o/1000055152/g778z3wqsm3ajlo.jpeg",
+      "image": "https://pict.sindonews.net/dyn/850/pena/news/2024/08/17/186/1437445/ini-makna-filosofi-baju-adat-kustin-yang-dikenakan-jokowi-di-upacara-hut-ke79-ri-ipo.jpg",
       "description": "Pakaian kebesaran Suku Kutai yang terbuat dari bahan beludru hitam dengan sulaman benang emas.",
       "philosophy": "Melambangkan keagungan, kemewahan, dan status sosial bangsawan Kerajaan Kutai."
     },
@@ -194,14 +194,14 @@ const DirektoriBudaya = () => {
     {
       "name": "Baju Nggembe",
       "province": "Sulawesi Tengah",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Beine_baju_adat.jpg/1450px-Beine_baju_adat.jpg",
+      "image": "https://www.celebes.co/wp-content/uploads/2021/02/Keunikan-yang-Dimiliki-Baju-Adat-Kaili.webp",
       "description": "Baju adat Suku Kaili yang berbentuk segi empat dengan lubang leher di tengah dan lengan yang tidak terlalu panjang. Biasanya berwarna cerah.",
       "philosophy": "Melambangkan kegembiraan dan keterbukaan masyarakat Kaili."
     },
     {
       "name": "Pattuqduq Towaine",
       "province": "Sulawesi Barat",
-      "image": "https://www.garudacitizen.com/wp-content/uploads/2025/02/pakaian-adat-sulawesi-barat.webp",
+      "image": "https://cdn1.katadata.co.id/media/images/2024/08/20/Baju_Pattuqduq_Towaine-2024_08_20-17_28_11_919df37bb6c38e0b62745d438b5a9289.jpg",
       "description": "Pakaian adat wanita Mandar yang terdiri dari baju kurung, sarung sutra (lipa' sa'be), dan berbagai aksesoris.",
       "philosophy": "Mencerminkan keanggunan, ketekunan, dan keterampilan wanita Mandar."
     },
@@ -229,7 +229,7 @@ const DirektoriBudaya = () => {
     {
       "name": "Manteren Lamo",
       "province": "Maluku Utara",
-      "image": "https://awsimages.detik.net.id/community/media/visual/2021/12/14/pakaian-adat-maluku.png?w=1200",
+      "image": "https://superapp.id/blog/wp-content/uploads/2022/04/1.-The-Asian-Parent.webp",
       "description": "Pakaian kebesaran sultan Ternate dan Tidore, berupa jubah panjang yang dihiasi dengan benang emas dan perak.",
       "philosophy": "Simbol kepemimpinan, kebijaksanaan, dan kebesaran Kesultanan di Maluku Utara."
     },
@@ -919,7 +919,7 @@ const DirektoriBudaya = () => {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-80 object-cover"
               />
               <div className="p-6">
                 <div className="flex items-center mb-3">
