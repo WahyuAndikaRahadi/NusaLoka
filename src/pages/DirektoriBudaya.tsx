@@ -229,7 +229,7 @@ const DirektoriBudaya = () => {
     {
       "name": "Manteren Lamo",
       "province": "Maluku Utara",
-      "image": "https://superapp.id/blog/wp-content/uploads/2022/04/1.-The-Asian-Parent.webp",
+      "image": "https://statics.indozone.news/content/2022/09/20/3eseXox/7-nama-baju-adat-maluku-perempuan-dan-laki-laki-beserta-gambar98_700.jpg",
       "description": "Pakaian kebesaran sultan Ternate dan Tidore, berupa jubah panjang yang dihiasi dengan benang emas dan perak.",
       "philosophy": "Simbol kepemimpinan, kebijaksanaan, dan kebesaran Kesultanan di Maluku Utara."
     },
@@ -250,7 +250,7 @@ const DirektoriBudaya = () => {
     {
       "name": "Pakaian Adat Suku Mee (Koteka)",
       "province": "Papua Tengah",
-      "image": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfaD0Gix02J4oRhJ5_X1j-f-5qVFQ5egW2aCjrjijtGdTCYT6RuK4350gUyt6sQ2-C_OFyOgHSrf3WmqR0veIu3eeOTd_Q8XQZNSo5b45JKLWa93G5JN2jRGvMk1vEIxDC5z6VRp-yKhPzWacXeFUS67OlY?key=-JbjMc-c07aHYvX-bsVv-Q",
+      "image": "https://www.selasar.com/wp-content/uploads/2020/08/pakaian-adat-masyarakat-Papua.jpg",
       "description": "Pria mengenakan koteka, sementara wanita menggunakan rok rumbai. Dilengkapi dengan berbagai hiasan seperti noken, taring babi, dan bulu kasuari.",
       "philosophy": "Melambangkan identitas suku, kedewasaan, dan status dalam komunitas."
     },

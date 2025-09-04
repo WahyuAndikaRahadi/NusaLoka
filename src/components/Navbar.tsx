@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: 'Direktori Budaya', href: '/direktori-budaya' },
     { name: 'Assisten AI', href: '/assisten-ai' },
     { name: 'Berita Terkini', href: '/berita-terkini' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Artikel', href: '/blog' },
     { name: 'Bahasa Daerah', href: '/bahasa-daerah' },
     { name: 'Lokasi Kebudayaan', href: '/lokasi-kebudayaan' },
   ];

@@ -1124,7 +1124,7 @@ const BahasaDaerah = () => {
                 <div className="mb-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
                     <Play className="h-5 w-5 text-red-600 mr-2" />
-                    Tutorial Video
+                    Contoh Percakapan
                   </h3>
                   <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
                     <iframe

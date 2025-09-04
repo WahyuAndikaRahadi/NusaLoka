@@ -505,7 +505,7 @@ const Blog: React.FC = () => {
               showBorder={false}
               className="custom-class mb-100 leading-normal"
             >
-              Nusaloka - Blog Budaya Indonesia
+              Nusaloka - Artikel Budaya Indonesia
             </GradientText>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -592,7 +592,7 @@ const Blog: React.FC = () => {
 
         {filteredPosts.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">Tidak ditemukan artikel untuk "{searchTerm}"</p>
+            <p className="text-gray-500 text-lg">Artikel Tidak Ditemukan</p>
           </div>
         )}
       </div>

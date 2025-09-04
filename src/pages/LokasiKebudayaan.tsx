@@ -654,7 +654,7 @@ const LokasiKebudayaan = () => {
           phone: '(061) 7360212',
           openHours: 'Selasa-Minggu: 08.00-16.00 WIB',
           rating: 4.4,
-          image: 'https://konten.usu.ac.id/storage/satker/0/statis/fasilitas/wisata_sejarah_museum_sumatera_utara_dqpg6x.webp',
+          image: 'https://tourtoba.com/wp-content/uploads/2018/02/museum-negeri.jpg',
           mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.0840294640025!2d98.69379157396274!3d3.5681368504363182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031305a51a6451f%3A0x7e6a2066d94acf8a!2sMuseum%20Negeri%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1756692187795!5m2!1sid!2sid',
           penunjukUrl: 'https://maps.app.goo.gl/mQoeWUk2jfdrN6aF7',
           highlights: ['Artefak suku Batak', 'Replika rumah adat', 'Koleksi tekstil', 'Benda bersejarah']
@@ -668,7 +668,7 @@ const LokasiKebudayaan = () => {
           phone: '(061) 4568858',
           openHours: 'Setiap hari: 09.00-17.00 WIB',
           rating: 4.6,
-          image: 'https://konten.usu.ac.id/storage/satker/0/statis/fasilitas/Rahmat-International-Wildlife-Museum-Gallery.jpg.webp',
+          image: 'https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_866,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/y72v0ur3i7baabzbt4ew/RahmatInternationalWildlifeMuseumandGalleryTicketinMedan.jpg',
           mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.03590436142!2d98.66491567396274!3d3.5792242503605065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131d0701ed0d5%3A0x789fbd3830353781!2sRahmat%20International%20Wildlife%20Museum%20%26%20Gallery!5e0!3m2!1sid!2sid!4v1756692448148!5m2!1sid!2sid',
           penunjukUrl: 'https://maps.app.goo.gl/caq1TkBBSsLDYP96A',
           highlights: ['Koleksi taksidermi', 'Hewan langka', 'Diorama alam', 'Galeri foto satwa']
