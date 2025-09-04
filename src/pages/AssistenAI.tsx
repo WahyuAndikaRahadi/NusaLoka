@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Bot, Send, User, Sparkles, MessageCircle, Brain, Upload, Image as ImageIcon, Download } from 'lucide-react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import ReactMarkdown from 'react-markdown';
+import GradientText from '../items/GradientText';
+
 
 // Define TypeScript types for the application's data structures
 interface Message {
@@ -49,10 +51,10 @@ Jawab dengan bahasa Indonesia yang sopan dan informatif. Berikan informasi yang 
 });
 
 const geminiImageModel = genAI.getGenerativeModel({
-    model: "gemini-2.0-flash-exp",
-    generationConfig: {
-      responseModalities: ["Text", "Image"]
-    }
+  model: "gemini-2.0-flash-exp",
+  generationConfig: {
+    responseModalities: ["Text", "Image"]
+  }
 
 });
 
@@ -432,7 +434,7 @@ const fileToBase64 = (file: File): Promise<string> => {
 const generateTraditionalClothingImage = async (imageFile: File, clothingType: string): Promise<string> => {
   try {
     const base64Image = await fileToBase64(imageFile);
-    
+
     const prompt = `Ubah foto orang ini menjadi mengenakan pakaian adat Indonesia ${clothingType}. Pastikan:
 1. Wajah dan postur tubuh tetap sama persis
 2. Pakaian adat yang dikenakan sesuai dengan tradisi dan detail yang akurat
@@ -453,7 +455,7 @@ Buatlah transformasi yang menghormati budaya Indonesia dengan detail yang autent
     ]);
 
     const response = await result.response;
-    
+
     // Check if response contains generated image
     const candidates = response.candidates;
     if (candidates && candidates[0] && candidates[0].content && candidates[0].content.parts) {
@@ -473,7 +475,7 @@ Buatlah transformasi yang menghormati budaya Indonesia dengan detail yang autent
         }
       }
     }
-    
+
     throw new Error('No image generated in response');
   } catch (error) {
     console.error('Error generating image:', error);
@@ -548,7 +550,7 @@ const AssistenAI = () => {
     const shuffledQuestions: QuizQuestion[] = shuffleArray([...allQuizQuestions]);
     const quizSubset = shuffledQuestions.slice(0, 5);
     setSelectedQuestions(quizSubset);
-    
+
     setQuizState('active');
     setCurrentQuestionIndex(0);
     const firstQuestion = quizSubset[0];
@@ -591,7 +593,7 @@ const AssistenAI = () => {
 
     try {
       const generatedImageUrl = await generateTraditionalClothingImage(selectedImage, clothingType);
-      
+
       const botResponse: Message = {
         id: Date.now() + 1,
         type: 'bot',
@@ -722,8 +724,15 @@ const AssistenAI = () => {
           <div className="flex justify-center mb-6">
             <Bot className="h-16 w-16 text-red-600" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Asisten AI Budaya
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <GradientText
+              colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+              animationSpeed={3}
+              showBorder={false}
+              className="custom-class"
+            >
+              Asisten AI Budaya
+            </GradientText>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Berinteraksi langsung dengan AI untuk mempelajari budaya Indonesia.
@@ -772,7 +781,7 @@ const AssistenAI = () => {
                 <ImageIcon className="h-5 w-5 text-blue-600 mr-2" />
                 Transform Foto Anda
               </h3>
-              
+
               <input
                 type="file"
                 ref={fileInputRef}
@@ -780,7 +789,7 @@ const AssistenAI = () => {
                 accept="image/*"
                 className="hidden"
               />
-              
+
               <button
                 onClick={() => fileInputRef.current?.click()}
                 className="w-full mb-4 p-4 border-2 border-dashed border-blue-300 rounded-lg hover:border-blue-500 transition-colors duration-300 flex flex-col items-center"
@@ -843,19 +852,17 @@ const AssistenAI = () => {
                     className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div className={`flex items-start space-x-2 max-w-xs lg:max-w-md ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                        message.type === 'user' ? 'bg-red-600' : 'bg-gray-100'
-                      }`}>
+                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${message.type === 'user' ? 'bg-red-600' : 'bg-gray-100'
+                        }`}>
                         {message.type === 'user' ?
                           <User className="h-4 w-4 text-white" /> :
                           <Bot className="h-4 w-4 text-gray-600" />
                         }
                       </div>
-                      <div className={`px-4 py-2 rounded-xl ${
-                        message.type === 'user'
+                      <div className={`px-4 py-2 rounded-xl ${message.type === 'user'
                           ? 'bg-red-600 text-white'
                           : 'bg-gray-100 text-gray-900'
-                      }`}>
+                        }`}>
                         {message.imageUrl && (
                           <div className="mb-2">
                             <img
@@ -895,8 +902,8 @@ const AssistenAI = () => {
                       <div className="bg-gray-100 px-4 py-2 rounded-xl">
                         <div className="flex space-x-1">
                           <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                         </div>
                       </div>
                     </div>
@@ -954,7 +961,7 @@ const AssistenAI = () => {
               <p className="text-gray-600 text-sm">Menghubungkan budaya lokal dengan perspektif dunia</p>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   );

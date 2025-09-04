@@ -3,6 +3,8 @@ import { Play, Volume2, BookOpen, Users, MapPin, ExternalLink } from 'lucide-rea
 import CountUp from '../items/CountUp';
 import GradientText from '../items/GradientText';
 
+
+
 interface Language {
   id: string;
   name: string;
@@ -1005,8 +1007,13 @@ const BahasaDaerah = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Bahasa Daerah Indonesia
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <GradientText
+              colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+              animationSpeed={3}
+              showBorder={false}
+              className="custom-class"
+            >Bahasa Daerah Indonesia</GradientText>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Pelajari kekayaan bahasa daerah Indonesia dari 38 provinsi dengan tutorial interaktif dan video pembelajaran.
@@ -1025,8 +1032,8 @@ const BahasaDaerah = () => {
                     key={language.id}
                     onClick={() => setSelectedLanguage(language.id)}
                     className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${selectedLanguage === language.id
-                        ? 'bg-red-50 text-red-600 border-l-4 border-red-600'
-                        : 'hover:bg-gray-50 text-gray-700'
+                      ? 'bg-red-50 text-red-600 border-l-4 border-red-600'
+                      : 'hover:bg-gray-50 text-gray-700'
                       }`}
                   >
                     <div className="font-semibold text-sm">{language.name}</div>

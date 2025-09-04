@@ -3582,8 +3582,15 @@ const LokasiKebudayaan = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Lokasi Kebudayaan Indonesia
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <GradientText
+              colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+              animationSpeed={3}
+              showBorder={false}
+              className="custom-class"
+            >
+              Lokasi Kebudayaan
+            </GradientText>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Jelajahi museum, situs bersejarah, dan pusat budaya di 38 provinsi Indonesia.
@@ -3757,6 +3764,7 @@ const LokasiKebudayaan = () => {
                     duration={2}
                     className="count-up-text"
                   />+
+
                 </GradientText>
               </div>
               <div className="text-sm text-gray-600">Provinsi</div>

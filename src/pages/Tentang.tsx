@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Target, Eye, Users, Award, Globe, Linkedin, Github, Instagram } from 'lucide-react';
+import GradientText from '../items/GradientText';
 
 const Tentang = () => {
   const values = [
@@ -65,8 +66,15 @@ const Tentang = () => {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Tentang <span className="text-red-600">NusaLoka</span>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <GradientText
+              colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+              animationSpeed={3}
+              showBorder={false}
+              className="custom-class"
+            >
+              Tentang NusaLoka
+            </GradientText>
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             NusaLoka lahir dari kepedulian mendalam terhadap pelestarian budaya Indonesia di era digital.

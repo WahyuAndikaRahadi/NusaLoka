@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, ExternalLink, Loader, Newspaper, Star } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import GradientText from '../items/GradientText';
+
 
 interface NewsPost {
   link: string;
@@ -68,8 +70,15 @@ const BeritaTerkini = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Berita Seni & Budaya Terkini
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <GradientText
+                                colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                                animationSpeed={3}
+                                showBorder={false}
+                                className="custom-class"
+                              >Berita Seni & Budaya Terkini</GradientText>
+
+           
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ikuti perkembangan terbaru dunia seni dan budaya Indonesia dari The Jakarta Post
