@@ -25,12 +25,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <MapPin className="h-8 w-8 text-red-600" />
+          <img src="https://res.cloudinary.com/dceylrkji/image/upload/v1756961826/download__1_-removebg-preview_x4zjyt.png" className='w-20 h-20' alt="" />
             <div>
-              <span className="text-xl font-bold text-gray-900">NusaLoka</span>
-              <p className="text-xs text-gray-600 hidden sm:block">Melestarikan Budaya Digital</p>
             </div>
-          </Link>
+          </Link> 
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
