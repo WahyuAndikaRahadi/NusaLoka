@@ -46,8 +46,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="absolute -inset-1 bg-red-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                <MapPin className="h-8 w-8 text-red-400 relative transform group-hover:scale-110 transition-transform duration-300" />
+                <img src="https://res.cloudinary.com/dceylrkji/image/upload/v1756961826/download__1_-removebg-preview_x4zjyt.png" className='w-20 h-20' alt="" />
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-400">
@@ -59,7 +58,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed transition-all duration-300 hover:text-gray-200">
-              Platform digital yang didedikasikan untuk melestarikan dan mempromosikan 
+              Platform digital yang didedikasikan untuk melestarikan dan mempromosikan
               kekayaan budaya Indonesia melalui inovasi digital.
             </p>
           </div>
@@ -78,9 +77,9 @@ const Footer = () => {
                 { name: "Blog", href: "/blog" },
                 { name: "Bahasa Daerah", href: "/bahasa-daerah" }
               ].map((link, index) => (
-                <a 
+                <a
                   key={index}
-                  href={link.href} 
+                  href={link.href}
                   className="text-gray-300 hover:text-red-400 transition-all duration-300 flex items-center group/link"
                 >
                   <span className="relative">
@@ -99,18 +98,18 @@ const Footer = () => {
               Hubungi Kami
             </h4>
             <div className="space-y-3">
-              <a 
-                href="mailto:info@nusaloka.id" 
+              <a
+                href="mailto:info@nusaloka.id"
                 className="flex items-center space-x-3 group/contact transition-all duration-300 hover:translate-x-1"
               >
                 <div className="relative">
                   <div className="absolute -inset-1 bg-red-500 rounded-full blur opacity-20 group-hover/contact:opacity-30 transition duration-300"></div>
                   <Mail className="h-4 w-4 text-red-400 relative" />
                 </div>
-                <span className="text-gray-300 group-hover/contact:text-white">info@nusaloka.id</span>
+                <span className="text-gray-300 group-hover/contact:text-white">nusalokaaja@gmail.com</span>
               </a>
-              <a 
-                href="tel:+628138872645" 
+              <a
+                href="tel:+628138872645"
                 className="flex items-center space-x-3 group/contact transition-all duration-300 hover:translate-x-1"
               >
                 <div className="relative">
@@ -126,12 +125,12 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm flex items-center">
-            © {currentYear} NusaLoka. All rights reserved. 
+            © {currentYear} NusaLoka. All rights reserved.
             <span className="flex items-center mx-1">
               Made with <Heart size={12} className="mx-1 text-red-400" /> in Indonesia
             </span>
           </p>
-          
+
           {/* Additional Links */}
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="/privacy" className="text-gray-400 hover:text-red-400 text-sm transition-colors duration-300">
