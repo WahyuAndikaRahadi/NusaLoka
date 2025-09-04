@@ -70,15 +70,15 @@ const BeritaTerkini = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
             <GradientText
-                                colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
-                                animationSpeed={3}
-                                showBorder={false}
-                                className="custom-class"
-                              >Berita Seni & Budaya Terkini</GradientText>
-
-           
+              colors={["#eab308", "#dc2626", "#7f1d1d"]}
+              animationSpeed={3}
+              showBorder={false}
+              className="custom-class mb-100 leading-normal"
+            >
+              Berita Seni & Budaya Terkini
+            </GradientText>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ikuti perkembangan terbaru dunia seni dan budaya Indonesia dari The Jakarta Post

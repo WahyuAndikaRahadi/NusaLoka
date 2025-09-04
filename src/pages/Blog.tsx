@@ -498,13 +498,15 @@ const Blog: React.FC = () => {
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
             <GradientText
-              colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+              colors={["#eab308", "#dc2626", "#7f1d1d"]}
               animationSpeed={3}
               showBorder={false}
-              className="custom-class"
-            >Nusaloka - Blog Budaya Indonesia</GradientText>
+              className="custom-class mb-100 leading-normal"
+            >
+              Nusaloka - Blog Budaya Indonesia
+            </GradientText>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Artikel mendalam tentang budaya, seni, dan tradisi Indonesia. Ditulis oleh para ahli dan praktisi budaya.

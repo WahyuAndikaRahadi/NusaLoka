@@ -45,7 +45,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3 group">
-              <div className="relative">
+              <div className="relative bg-white h-20">
                 <img src="https://res.cloudinary.com/dceylrkji/image/upload/v1756961826/download__1_-removebg-preview_x4zjyt.png" className='w-20 h-20' alt="" />
               </div>
               <div>

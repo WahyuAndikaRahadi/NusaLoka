@@ -66,12 +66,12 @@ const Tentang = () => {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
             <GradientText
               colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
               animationSpeed={3}
               showBorder={false}
-              className="custom-class"
+              className="custom-class mb-100 leading-normal"
             >
               Tentang NusaLoka
             </GradientText>
