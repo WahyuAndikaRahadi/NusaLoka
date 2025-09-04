@@ -974,7 +974,7 @@ const BahasaDaerah = () => {
         { id: '4', indonesian: 'Sampai jumpa', local: 'Sampai ketemu', pronunciation: 'sam-pai ke-te-mu' }
       ],
       videoUrl: 'https://www.youtube.com/embed/LAGsuqcVMEg',
-      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756884650/ffd96ca815b56b02a678671c43f50759_japcho.jpg',
+      image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756975553/6f8e24074e33e136704394709779007f_pi4iyo.jpg',
       description: 'Bahasa Asmat digunakan oleh suku Asmat yang terkenal dengan seni ukir kayunya dan hidup di daerah rawa-rawa Papua Selatan.'
     },
     {
