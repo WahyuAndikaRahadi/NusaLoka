@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, ExternalLink, Loader, Newspaper, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Calendar, Loader, Newspaper, Star } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import GradientText from '../items/GradientText';
-
 
 interface NewsPost {
   link: string;
@@ -25,6 +25,34 @@ const BeritaTerkini = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Varian untuk animasi stagger
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  // Varian untuk setiap item
+  const itemVariants: any = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] } },
+  };
+
+  // Varian untuk card hover
+  const cardHoverVariants = {
+    y: -8,
+    boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
+    transition: {
+      y: { duration: 0.3 },
+      boxShadow: { duration: 0.3 },
+    },
+  };
+
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -45,51 +73,74 @@ const BeritaTerkini = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="min-h-screen flex items-center justify-center bg-gray-50"
+      >
         <div className="text-center">
-          <Loader className="h-12 w-12 text-red-600 animate-spin mx-auto mb-4" />
+          <motion.div
+            initial={{ scale: 0.8, rotate: 0 }}
+            animate={{ scale: 1, rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          >
+            <Loader className="h-12 w-12 text-red-600 mx-auto mb-4" />
+          </motion.div>
           <p className="text-gray-600">Memuat berita terkini...</p>
         </div>
-      </div>
+      </motion.div>
     );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="min-h-screen flex items-center justify-center bg-gray-50"
+      >
         <div className="text-center">
           <Newspaper className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <p className="text-gray-600">{error}</p>
         </div>
-      </div>
+      </motion.div>
     );
   }
 
   return (
-    <div className="py-16">
+    <div className="py-16 bg-gray-50 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="text-center mb-12"
+        >
+          <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl font-extrabold mb-6 leading-snug">
             <GradientText
               colors={["#eab308", "#dc2626", "#7f1d1d"]}
               animationSpeed={3}
               showBorder={false}
-              className="custom-class mb-100 leading-normal"
+              className="leading-normal"
             >
               Berita Seni & Budaya Terkini
             </GradientText>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          </motion.h1>
+          <motion.p variants={itemVariants} className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ikuti perkembangan terbaru dunia seni dan budaya Indonesia dari The Jakarta Post
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {newsData && (
-          <>
+          <motion.div initial="hidden" animate="visible" variants={containerVariants}>
             {/* Featured Post */}
-            <div className="mb-16">
-              <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl overflow-hidden shadow-2xl">
+            <motion.div variants={itemVariants} className="mb-16">
+              <div
+                className="block bg-gradient-to-r from-red-600 to-red-700 rounded-2xl overflow-hidden shadow-2xl group transition-all duration-300 transform hover:scale-[1.01] hover:shadow-3xl cursor-default"
+              >
                 <div className="md:flex">
                   <div className="md:w-1/2">
                     <img
@@ -98,7 +149,7 @@ const BeritaTerkini = () => {
                       className="w-full h-64 md:h-full object-cover"
                     />
                   </div>
-                  <div className="md:w-1/2 p-8 text-white">
+                  <div className="md:w-1/2 p-8 text-white flex flex-col justify-center">
                     <div className="flex items-center mb-4">
                       <Star className="h-5 w-5 text-yellow-400 mr-2" />
                       <span className="text-yellow-300 font-semibold">Berita Utama</span>
@@ -111,28 +162,31 @@ const BeritaTerkini = () => {
                         {newsData.featured_post.headline}
                       </ReactMarkdown>
                     </div>
-                    <div className="flex items-center">
-                      <div className="flex items-center text-red-200">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        <span className="text-sm">{newsData.featured_post.pusblised_at}</span>
-                      </div>
+                    <div className="flex items-center text-red-200">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span className="text-sm">{newsData.featured_post.pusblised_at}</span>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* News Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsData.posts.map((post, index) => (
-                <article
+                <motion.div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  variants={itemVariants}
+                  whileHover={cardHoverVariants}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden cursor-default block"
                 >
-                  <img
+                  <motion.img
                     src={post.image}
                     alt={post.title}
                     className="w-full h-48 object-cover"
+                    initial={{ scale: 1 }}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
                   />
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
@@ -153,17 +207,15 @@ const BeritaTerkini = () => {
                         {post.headline}
                       </ReactMarkdown>
                     </div>
-                    <div className="flex items-center">
-                      <div className="flex items-center text-gray-500">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        <span className="text-sm">{post.pusblised_at}</span>
-                      </div>
+                    <div className="flex items-center text-gray-500">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span className="text-sm">{post.pusblised_at}</span>
                     </div>
                   </div>
-                </article>
+                </motion.div>
               ))}
             </div>
-          </>
+          </motion.div>
         )}
       </div>
     </div>

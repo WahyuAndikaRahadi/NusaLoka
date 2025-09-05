@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Play, Volume2, BookOpen, Users, MapPin, ExternalLink } from 'lucide-react';
 import CountUp from '../items/CountUp';
 import GradientText from '../items/GradientText';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 
@@ -1002,242 +1003,269 @@ const BahasaDaerah = () => {
 
   const currentLanguage = languages.find(lang => lang.id === selectedLanguage) || languages[0];
 
+  // Animation variants for staggered appearance
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
   return (
-    <div className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
-            <GradientText
-              colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
-              animationSpeed={3}
-              showBorder={false}
-              className="custom-class mb-100 leading-normal"
-            >Bahasa Daerah Indonesia </GradientText>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Pelajari kekayaan bahasa daerah Indonesia dari 38 provinsi dengan tutorial interaktif dan video pembelajaran.
-            Lestarikan bahasa leluhur untuk generasi mendatang.
-          </p>
-        </div>
+    <div className="bg-gray-50 min-h-screen font-sans antialiased text-gray-800">
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
+              <GradientText
+                colors={["#eab308", "#dc2626", "#7f1d1d"]}
+                className="custom-class mb-100 leading-normal"
+              >
+                Bahasa Daerah Indonesia
+              </GradientText>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Pelajari kekayaan bahasa daerah Indonesia dari 38 provinsi dengan tutorial interaktif dan video pembelajaran.
+              Lestarikan bahasa leluhur untuk generasi mendatang.
+            </p>
+          </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Language List */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl shadow-lg p-6 sticky top-24 max-h-[80vh] overflow-y-auto">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Pilih Bahasa ({languages.length})</h3>
-              <div className="space-y-2">
-                {languages.map((language) => (
-                  <button
-                    key={language.id}
-                    onClick={() => setSelectedLanguage(language.id)}
-                    className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${selectedLanguage === language.id
-                      ? 'bg-red-50 text-red-600 border-l-4 border-red-600'
-                      : 'hover:bg-gray-50 text-gray-700'
-                      }`}
-                  >
-                    <div className="font-semibold text-sm">{language.name}</div>
-                    <div className="text-xs text-gray-500">{language.province}</div>
-                  </button>
-                ))}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Language List */}
+            <motion.div
+              className="lg:col-span-1"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="bg-white rounded-xl shadow-lg p-6 sticky top-24 max-h-[80vh] overflow-y-auto">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Pilih Bahasa ({languages.length})</h3>
+                <motion.div
+                  className="space-y-2"
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {languages.map((language) => (
+                    <motion.button
+                      key={language.id}
+                      onClick={() => setSelectedLanguage(language.id)}
+                      className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${selectedLanguage === language.id
+                        ? 'bg-red-50 text-red-600 border-l-4 border-red-600'
+                        : 'hover:bg-gray-50 text-gray-700'
+                        }`}
+                      variants={itemVariants}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <div className="font-semibold text-sm">{language.name}</div>
+                      <div className="text-xs text-gray-500">{language.province}</div>
+                    </motion.button>
+                  ))}
+                </motion.div>
               </div>
-            </div>
-          </div>
+            </motion.div>
 
-          {/* Language Detail */}
-          <div className="lg:col-span-3">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              {/* Language Header */}
-              <div className="relative">
-                <img
-                  src={currentLanguage.image}
-                  alt={currentLanguage.name}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
-                  <div className="p-6 text-white">
-                    <h2 className="text-2xl font-bold mb-2">{currentLanguage.name}</h2>
-                    <div className="flex items-center space-x-4 text-sm">
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        {currentLanguage.province}
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="h-4 w-4 mr-1" />
-                        {currentLanguage.speakers} penutur
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6">
-                {/* Description */}
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  {currentLanguage.description}
-                </p>
-
-                {/* Characteristics */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                    <BookOpen className="h-5 w-5 text-blue-600 mr-2" />
-                    Ciri-ciri Bahasa
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {currentLanguage.characteristics.map((char, index) => (
-                      <div key={index} className="bg-blue-50 p-3 rounded-lg">
-                        <p className="text-blue-800 text-sm">{char}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Common Phrases */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                    <Volume2 className="h-5 w-5 text-green-600 mr-2" />
-                    Frasa Penting
-                  </h3>
-                  <div className="space-y-4">
-                    {currentLanguage.phrases.map((phrase) => (
-                      <div key={phrase.id} className="bg-gray-50 rounded-lg p-4">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">Bahasa Indonesia</p>
-                            <p className="font-semibold text-gray-900">{phrase.indonesian}</p>
+            {/* Language Detail */}
+            <div className="lg:col-span-3">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentLanguage.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden"
+                >
+                  {/* Language Header */}
+                  <div className="relative">
+                    <img
+                      src={currentLanguage.image}
+                      alt={currentLanguage.name}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                      <div className="p-6 text-white">
+                        <h2 className="text-2xl font-bold mb-2">{currentLanguage.name}</h2>
+                        <div className="flex items-center space-x-4 text-sm">
+                          <div className="flex items-center">
+                            <MapPin className="h-4 w-4 mr-1" />
+                            {currentLanguage.province}
                           </div>
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">Bahasa Daerah</p>
-                            <p className="font-semibold text-red-600">{phrase.local}</p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-500 mb-1">Cara Baca</p>
-                            <p className="font-medium text-gray-700">[{phrase.pronunciation}]</p>
+                          <div className="flex items-center">
+                            <Users className="h-4 w-4 mr-1" />
+                            {currentLanguage.speakers} penutur
                           </div>
                         </div>
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
 
-                {/* Video Tutorial */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                    <Play className="h-5 w-5 text-red-600 mr-2" />
-                    Contoh Percakapan
-                  </h3>
-                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-                    <iframe
-                      src={currentLanguage.videoUrl}
-                      title={`Tutorial ${currentLanguage.name}`}
-                      className="w-full h-full"
-                      allowFullScreen
-                    ></iframe>
+                  <div className="p-6">
+                    {/* Description */}
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      {currentLanguage.description}
+                    </p>
+
+                    {/* Characteristics */}
+                    <div className="mb-8">
+                      <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <BookOpen className="h-5 w-5 text-blue-600 mr-2" />
+                        Ciri-ciri Bahasa
+                      </h3>
+                      <motion.div
+                        className="grid grid-cols-1 md:grid-cols-2 gap-3"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                      >
+                        {currentLanguage.characteristics.map((char, index) => (
+                          <motion.div
+                            key={index}
+                            className="bg-blue-50 p-3 rounded-lg"
+                            variants={itemVariants}
+                          >
+                            <p className="text-blue-800 text-sm">{char}</p>
+                          </motion.div>
+                        ))}
+                      </motion.div>
+                    </div>
+
+                    {/* Common Phrases */}
+                    <div className="mb-8">
+                      <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <Volume2 className="h-5 w-5 text-green-600 mr-2" />
+                        Frasa Penting
+                      </h3>
+                      <motion.div
+                        className="space-y-4"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                      >
+                        {currentLanguage.phrases.map((phrase) => (
+                          <motion.div
+                            key={phrase.id}
+                            className="bg-gray-50 rounded-lg p-4"
+                            variants={itemVariants}
+                          >
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                              <div>
+                                <p className="text-sm text-gray-500 mb-1">Bahasa Indonesia</p>
+                                <p className="font-semibold text-gray-900">{phrase.indonesian}</p>
+                              </div>
+                              <div>
+                                <p className="text-sm text-gray-500 mb-1">Bahasa Daerah</p>
+                                <p className="font-semibold text-red-600">{phrase.local}</p>
+                              </div>
+                              <div>
+                                <p className="text-sm text-gray-500 mb-1">Cara Baca</p>
+                                <p className="font-medium text-gray-700">[{phrase.pronunciation}]</p>
+                              </div>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </motion.div>
+                    </div>
+
+                    {/* Video Tutorial */}
+                    <div className="mb-6">
+                      <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <Play className="h-5 w-5 text-red-600 mr-2" />
+                        Contoh Percakapan
+                      </h3>
+                      <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                        <iframe
+                          src={currentLanguage.videoUrl}
+                          title={`Tutorial ${currentLanguage.name}`}
+                          className="w-full h-full"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                      <div className="mt-3 flex justify-center">
+                        <a
+                          href={currentLanguage.videoUrl.replace('/embed/', '/watch?v=')}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
+                        >
+                          Tonton di YouTube
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div className="mt-3 flex justify-center">
-                    <a
-                      href={currentLanguage.videoUrl.replace('/embed/', '/watch?v=')}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
-                    >
-                      Tonton di YouTube
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
-        </div>
 
-        {/* Statistics */}
-        <div className="mt-16 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Kekayaan Bahasa Indonesia</h2>
-            <p className="text-gray-600">Indonesia memiliki keberagaman bahasa yang luar biasa dari 38 provinsi</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">
-                <GradientText
-                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
-                  animationSpeed={3}
-                  showBorder={false}
-                  className="custom-class"
-                >
-                  <CountUp
-                    from={0}
-                    to={45}
-                    separator=","
-                    direction="up"
-                    duration={2}
-                    className="count-up-text"
-                  />
-                </GradientText>
-              </div>
-              <div className="text-gray-600">Bahasa Daerah</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">
-                <GradientText
-                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
-                  animationSpeed={3}
-                  showBorder={false}
-                  className="custom-class"
-                >
-                  <CountUp
-                    from={0}
-                    to={38}
-                    separator=","
-                    direction="up"
-                    duration={2}
-                    className="count-up-text"
-                  />
-                </GradientText>
-              </div>
-              <div className="text-gray-600">Provinsi</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">
-                <GradientText
-                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
-                  animationSpeed={3}
-                  showBorder={false}
-                  className="custom-class"
-                >
-                  <CountUp
-                    from={0}
-                    to={300}
-                    separator=","
-                    direction="up"
-                    duration={2}
-                    className="count-up-text"
-                  />
-                </GradientText>
-              </div>
-              <div className="text-gray-600">Suku Bangsa</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">
-                <GradientText
-                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
-                  animationSpeed={3}
-                  showBorder={false}
-                  className="custom-class"
-                >
-                  <CountUp
-                    from={0}
-                    to={17500}
-                    separator=","
-                    direction="up"
-                    duration={2}
-                    className="count-up-text"
-                  />
-                </GradientText>
-              </div>
-              <div className="text-gray-600">Pulau</div>
-            </div>
+          {/* Statistics */}
+          <div className="mt-16 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8">
+            <motion.div
+              className="text-center mb-8"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Kekayaan Bahasa Indonesia</h2>
+              <p className="text-gray-600">Indonesia memiliki keberagaman bahasa yang luar biasa dari 38 provinsi</p>
+            </motion.div>
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-4 gap-6"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.div className="text-center" variants={itemVariants}>
+                <div className="text-3xl font-bold mb-2">
+                  <GradientText colors={["#eab308", "#dc2626", "#7f1d1d"]}>
+                    <CountUp to={45} duration={2} />
+                  </GradientText>
+                </div>
+                <div className="text-gray-600">Bahasa Daerah</div>
+              </motion.div>
+              <motion.div className="text-center" variants={itemVariants}>
+                <div className="text-3xl font-bold mb-2">
+                  <GradientText colors={["#eab308", "#dc2626", "#7f1d1d"]}>
+                    <CountUp to={38} duration={2} />
+                  </GradientText>
+                </div>
+                <div className="text-gray-600">Provinsi</div>
+              </motion.div>
+              <motion.div className="text-center" variants={itemVariants}>
+                <div className="text-3xl font-bold mb-2">
+                  <GradientText colors={["#eab308", "#dc2626", "#7f1d1d"]}>
+                    <CountUp to={300} duration={2} />
+                  </GradientText>
+                </div>
+                <div className="text-gray-600">Suku Bangsa</div>
+              </motion.div>
+              <motion.div className="text-center" variants={itemVariants}>
+                <div className="text-3xl font-bold mb-2">
+                  <GradientText colors={["#eab308", "#dc2626", "#7f1d1d"]}>
+                    <CountUp to={17500} duration={2} />
+                  </GradientText>
+                </div>
+                <div className="text-gray-600">Pulau</div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

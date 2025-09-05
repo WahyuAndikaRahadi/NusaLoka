@@ -3,6 +3,7 @@ import { Bot, Send, User, Sparkles, MessageCircle, Brain, Upload, Image as Image
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import ReactMarkdown from 'react-markdown';
 import GradientText from '../items/GradientText';
+import { motion } from 'framer-motion';
 
 
 // Define TypeScript types for the application's data structures
@@ -746,14 +747,24 @@ const AssistenAI = () => {
   }, [messages]);
   */
 
-  return (
+return (
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-6">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex justify-center mb-6"
+          >
             <Bot className="h-16 w-16 text-red-600" />
-          </div>
+          </motion.div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             <GradientText
               colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
@@ -764,28 +775,58 @@ const AssistenAI = () => {
               Asisten AI Budaya
             </GradientText>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
             Berinteraksi langsung dengan AI untuk mempelajari budaya Indonesia.
             Upload foto Anda untuk diubah menjadi mengenakan pakaian adat tradisional!
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* AI Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+        >
           {aiFeatures.map((feature, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            >
               <div className={`inline-flex p-3 rounded-lg ${feature.color} mb-4`}>
                 <feature.icon className="h-6 w-6" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+        >
           {/* Sidebar */}
-          <div className="lg:col-span-1 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="lg:col-span-1 space-y-6"
+          >
             {/* Pertanyaan cepat */}
             <div className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
@@ -856,10 +897,16 @@ const AssistenAI = () => {
                 </div>
               )}
             </div>
-          </div>
+          </motion.div>
 
           {/* Antarmuka chat */}
-          <div className="lg:col-span-2">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2"
+          >
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               {/* Header chat */}
               <div className="bg-gradient-to-r from-red-600 to-red-700 p-4">
@@ -877,8 +924,11 @@ const AssistenAI = () => {
               {/* Pesan chat */}
               <div className="h-96 overflow-y-auto p-4 space-y-4">
                 {messages.map((message: Message) => (
-                  <div
+                  <motion.div
                     key={message.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
                     className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div className={`flex items-start space-x-2 max-w-xs lg:max-w-md ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
@@ -920,7 +970,7 @@ const AssistenAI = () => {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
 
                 {isTyping && (
@@ -965,15 +1015,27 @@ const AssistenAI = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Kemampuan AI */}
-        <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
-          <div className="text-center mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Kemampuan AI Kami</h2>
             <p className="text-gray-600">Powered by Gemini AI untuk pengalaman pembelajaran yang personal</p>
-          </div>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6">
               <h3 className="font-bold text-gray-900 mb-2">🧠 Pengetahuan Mendalam</h3>
@@ -992,7 +1054,7 @@ const AssistenAI = () => {
               <p className="text-gray-600 text-sm">Menghubungkan budaya lokal dengan perspektif dunia</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

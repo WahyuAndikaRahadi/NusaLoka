@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Search, Heart, MessageCircle } from 'lucide-react';
+import { Search, Heart, MessageCircle, Loader, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import GradientText from '../items/GradientText';
-
 
 // Define the data types using TypeScript interfaces
 interface Post {
@@ -77,32 +77,51 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
-const BlogPost: React.FC<BlogPostProps> = ({ post, formatDate, onReadMore, onLike }) => (
-  <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
-    <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
-    <div className="p-6">
-      <div className="flex items-center text-sm text-gray-500 mb-2">
-        <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
-        <span className="ml-2">{formatDate(post.date)}</span>
+
+const BlogPost: React.FC<BlogPostProps> = ({ post, formatDate, onReadMore, onLike }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
+      className="bg-white rounded-lg shadow-md overflow-hidden"
+    >
+      <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+      <div className="p-6">
+        <div className="flex items-center text-sm text-gray-500 mb-2">
+          <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">{post.category}</span>
+          <span className="ml-2">{formatDate(post.date)}</span>
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h3>
+        <p className="text-gray-600 leading-relaxed mb-4">{post.excerpt}</p>
+        <div className="flex items-center text-sm text-gray-500 mb-4 gap-4">
+          <motion.button
+            onClick={onLike}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex items-center space-x-1 text-gray-500 hover:text-red-500 transition duration-300"
+          >
+            <Heart size={16} fill="currentColor" stroke="none" />
+            <span>{post.likes} Suka</span>
+          </motion.button>
+          <button className="flex items-center space-x-1 text-gray-500">
+            <MessageCircle size={16} />
+            <span>{post.comments} Komentar</span>
+          </button>
+        </div>
+        <motion.button
+          onClick={onReadMore}
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-block text-white bg-green-600 hover:bg-green-700 font-bold py-2 px-4 rounded-full transition duration-300"
+        >
+          Baca Selengkapnya
+        </motion.button>
       </div>
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h3>
-      <p className="text-gray-600 leading-relaxed mb-4">{post.excerpt}</p>
-      <div className="flex items-center text-sm text-gray-500 mb-4 gap-4">
-        <button onClick={onLike} className="flex items-center space-x-1 text-gray-500 hover:text-red-500 transition duration-300">
-          <Heart size={16} fill="currentColor" stroke="none" />
-          <span>{post.likes} Suka</span>
-        </button>
-        <button className="flex items-center space-x-1 text-gray-500">
-          <MessageCircle size={16} />
-          <span>{post.comments} Komentar</span>
-        </button>
-      </div>
-      <button onClick={onReadMore} className="inline-block text-white bg-green-600 hover:bg-green-700 font-bold py-2 px-4 rounded-full transition duration-300">
-        Baca Selengkapnya
-      </button>
-    </div>
-  </div>
-);
+    </motion.div>
+  );
+};
 
 const ArticleForm: React.FC<ArticleFormProps> = ({ article, setArticle, onSubmit, onCancel, isSubmitting, categories }) => {
   const availableTags = [
@@ -125,7 +144,12 @@ const ArticleForm: React.FC<ArticleFormProps> = ({ article, setArticle, onSubmit
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg mb-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white p-8 rounded-lg shadow-lg mb-8"
+    >
       <h2 className="text-2xl font-bold mb-4">Tambah Artikel Baru</h2>
       <form onSubmit={(e) => { e.preventDefault(); onSubmit(article); }}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -207,28 +231,37 @@ const ArticleForm: React.FC<ArticleFormProps> = ({ article, setArticle, onSubmit
           </div>
         </div>
         <div className="flex gap-4">
-          <button
+          <motion.button
             type="submit"
             disabled={isSubmitting}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             className="bg-green-600 text-white font-bold py-2 px-4 rounded-full hover:bg-green-700 transition duration-300 disabled:opacity-50"
           >
             {isSubmitting ? 'Mengirim...' : 'Kirim Artikel'}
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             type="button"
             onClick={onCancel}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             className="bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full hover:bg-gray-400 transition duration-300"
           >
             Batal
-          </button>
+          </motion.button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 };
 
 const CommentForm: React.FC<CommentFormProps> = ({ comment, setComment, onSubmit, onCancel, isSubmitting }) => (
-  <div className="bg-white p-8 rounded-lg shadow-lg mb-8">
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="bg-white p-8 rounded-lg shadow-lg mb-8"
+  >
     <h2 className="text-2xl font-bold mb-4">Tambahkan Komentar</h2>
     <form onSubmit={(e) => { e.preventDefault(); onSubmit(comment); }}>
       <div className="mb-4">
@@ -251,48 +284,71 @@ const CommentForm: React.FC<CommentFormProps> = ({ comment, setComment, onSubmit
         ></textarea>
       </div>
       <div className="flex gap-4">
-        <button
+        <motion.button
           type="submit"
           disabled={isSubmitting}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           className="bg-green-600 text-white font-bold py-2 px-4 rounded-full hover:bg-green-700 transition duration-300 disabled:opacity-50"
         >
           {isSubmitting ? 'Mengirim...' : 'Kirim Komentar'}
-        </button>
-        <button
+        </motion.button>
+        <motion.button
           type="button"
           onClick={onCancel}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           className="bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full hover:bg-gray-400 transition duration-300"
         >
           Batal
-        </button>
+        </motion.button>
       </div>
     </form>
-  </div>
+  </motion.div>
 );
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-      <div className="flex items-end justify-center min-h-screen px-4 pb-20 text-center sm:block sm:p-0">
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-        <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-        <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-          <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            {children}
-          </div>
-          <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-            <button
-              type="button"
-              className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-              onClick={onClose}
-            >
-              Tutup
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className="fixed inset-0 z-50 overflow-y-auto"
+          aria-labelledby="modal-title"
+          role="dialog"
+          aria-modal="true"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="flex items-end justify-center min-h-screen px-4 pb-20 text-center sm:block sm:p-0"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.3, type: "spring", damping: 25, stiffness: 500 }}
+          >
+            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+            <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                {children}
+              </div>
+              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <motion.button
+                  type="button"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  onClick={onClose}
+                >
+                  Tutup
+                </motion.button>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
@@ -485,17 +541,33 @@ const Blog: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="min-h-screen flex items-center justify-center bg-gray-50"
+      >
         <div className="text-center">
-          <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4 mx-auto border-t-red-500 animate-spin"></div>
-          <h3 className="text-xl font-medium">Memuat Artikel</h3>
+          <motion.div
+            initial={{ scale: 0.8, rotate: 0 }}
+            animate={{ scale: 1, rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          >
+            <Loader className="h-12 w-12 text-red-600 mx-auto mb-4" />
+          </motion.div>
+          <p className="text-gray-600">Memuat Artikel...</p>
         </div>
-      </div>
+      </motion.div>
     );
   }
 
   return (
-    <div className="py-16">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="py-16"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
@@ -508,22 +580,46 @@ const Blog: React.FC = () => {
               Nusaloka - Artikel Budaya Indonesia
             </GradientText>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
             Artikel mendalam tentang budaya, seni, dan tradisi Indonesia. Ditulis oleh para ahli dan praktisi budaya.
-          </p>
+          </motion.p>
         </div>
 
-        {message && (
-          <div className={`bg-${message.type === 'success' ? 'green' : 'red'}-50 border-l-4 border-${message.type === 'success' ? 'green' : 'red'}-400 p-4 mb-6`}>
-            <p className={`text-sm text-${message.type === 'success' ? 'green' : 'red'}-700`}>{message.text}</p>
-          </div>
-        )}
-
-        {error && (
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-            <p className="text-sm text-yellow-700">{error}</p>
-          </div>
-        )}
+        <AnimatePresence>
+          {message && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className={`bg-${message.type === 'success' ? 'green' : 'red'}-50 border-l-4 border-${message.type === 'success' ? 'green' : 'red'}-400 p-4 mb-6 relative rounded-md`}
+            >
+              <p className={`text-sm text-${message.type === 'success' ? 'green' : 'red'}-700`}>{message.text}</p>
+              <button onClick={() => setMessage(null)} className="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+                <X size={16} />
+              </button>
+            </motion.div>
+          )}
+          {error && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-red-50 border-l-4 border-red-400 p-4 mb-6 relative rounded-md"
+            >
+              <p className="text-sm text-red-700">{error}</p>
+              <button onClick={() => setError(null)} className="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+                <X size={16} />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <div className="mb-12">
           <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -548,52 +644,78 @@ const Blog: React.FC = () => {
                 </option>
               ))}
             </select>
-            <button
+            <motion.button
               onClick={() => setShowAddArticleForm(true)}
+              whileHover={{ scale: 1.02, backgroundColor: "#15803d" }}
+              whileTap={{ scale: 0.98 }}
               className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
             >
               Tulis Artikel
-            </button>
+            </motion.button>
           </div>
         </div>
 
-        {showAddArticleForm && (
-          <ArticleForm
-            article={newArticle}
-            setArticle={setNewArticle}
-            onSubmit={handleArticleSubmit}
-            onCancel={() => setShowAddArticleForm(false)}
-            isSubmitting={isSubmittingArticle}
-            categories={categories.slice(1)}
-          />
-        )}
-
-        {showAddCommentForm && (
-          <CommentForm
-            comment={newComment}
-            setComment={setNewComment}
-            onSubmit={handleCommentSubmit}
-            onCancel={() => setShowAddCommentForm(false)}
-            isSubmitting={isSubmittingComment}
-          />
-        )}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPosts.map(post => (
-            <BlogPost
-              key={post.id}
-              post={post}
-              formatDate={formatDate}
-              onReadMore={() => handleReadMore(post)}
-              onLike={() => handleLike(post.id)}
+        <AnimatePresence>
+          {showAddArticleForm && (
+            <ArticleForm
+              article={newArticle}
+              setArticle={setNewArticle}
+              onSubmit={handleArticleSubmit}
+              onCancel={() => setShowAddArticleForm(false)}
+              isSubmitting={isSubmittingArticle}
+              categories={categories.slice(1)}
             />
-          ))}
-        </div>
+          )}
+          {showAddCommentForm && (
+            <CommentForm
+              comment={newComment}
+              setComment={setNewComment}
+              onSubmit={handleCommentSubmit}
+              onCancel={() => setShowAddCommentForm(false)}
+              isSubmitting={isSubmittingComment}
+            />
+          )}
+        </AnimatePresence>
+
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } },
+            hidden: {}
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <AnimatePresence>
+            {filteredPosts.map(post => (
+              <motion.div
+                key={post.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.5 }}
+                layout
+              >
+                <BlogPost
+                  post={post}
+                  formatDate={formatDate}
+                  onReadMore={() => handleReadMore(post)}
+                  onLike={() => handleLike(post.id)}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
 
         {filteredPosts.length === 0 && (
-          <div className="text-center py-12">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center py-12"
+          >
             <p className="text-gray-500 text-lg">Artikel Tidak Ditemukan</p>
-          </div>
+          </motion.div>
         )}
       </div>
 
@@ -603,7 +725,7 @@ const Blog: React.FC = () => {
             <h2 className="text-3xl font-bold mb-4">{selectedPost.title}</h2>
             <div className="flex items-center text-sm text-gray-500 mb-4">
               <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">{selectedPost.category}</span>
-              <span className="ml-2">Oleh {selectedPost.author}</span>
+              <span className="ml-2">Dibuat Oleh {selectedPost.author}</span>
               <span className="ml-2">| {formatDate(selectedPost.date)}</span>
             </div>
             <img src={selectedPost.image} alt={selectedPost.title} className="w-full h-auto rounded-lg mb-6" />
@@ -639,17 +761,19 @@ const Blog: React.FC = () => {
                   <p className="text-gray-500 italic">Belum ada komentar.</p>
                 )}
               </div>
-              <button
+              <motion.button
                 onClick={() => openCommentFormFromModal(selectedPost.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="py-2 px-4 bg-green-600 text-white rounded-lg hover:bg-green-700 mt-4"
               >
                 Tambah Komentar
-              </button>
+              </motion.button>
             </div>
           </div>
         )}
       </Modal>
-    </div>
+    </motion.div>
   );
 };
 

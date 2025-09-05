@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, Target, Eye, Users, Award, Globe, Linkedin, Github, Instagram } from 'lucide-react';
 import GradientText from '../items/GradientText';
+import { motion } from 'framer-motion';
 
 const Tentang = () => {
   const values = [
@@ -64,8 +65,18 @@ const Tentang = () => {
   return (
     <div className="py-16">
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-center mb-16"
+        >
            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
             <GradientText
               colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
@@ -76,16 +87,33 @@ const Tentang = () => {
               Tentang NusaLoka
             </GradientText>
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
+          >
             NusaLoka lahir dari kepedulian mendalam terhadap pelestarian budaya Indonesia di era digital.
             Kami percaya bahwa teknologi dapat menjadi jembatan yang menghubungkan generasi muda dengan
             kekayaan warisan budaya Nusantara.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Vision & Mission */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          <div className="bg-red-50 rounded-xl p-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
+        >
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-red-50 rounded-xl p-8"
+          >
             <div className="flex items-center mb-6">
               <Eye className="h-8 w-8 text-red-600 mr-3" />
               <h2 className="text-2xl font-bold text-gray-900">Visi</h2>
@@ -95,9 +123,15 @@ const Tentang = () => {
               menginspirasi generasi muda untuk mencintai dan menjaga warisan leluhur, serta memperkenalkan
               kekayaan Nusantara kepada dunia.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-green-50 rounded-xl p-8">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-green-50 rounded-xl p-8"
+          >
             <div className="flex items-center mb-6">
               <Target className="h-8 w-8 text-green-600 mr-3" />
               <h2 className="text-2xl font-bold text-gray-900">Misi</h2>
@@ -108,36 +142,68 @@ const Tentang = () => {
               <li>• Menggunakan AI untuk memberikan pengalaman pembelajaran yang personal</li>
               <li>• Membangun komunitas pelestari budaya</li>
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Values */}
-        <div className="mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Nilai-Nilai Kami</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center group hover:transform hover:scale-105 transition-all duration-300"
+              >
                 <div className="bg-gradient-to-br from-red-500 to-red-600 rounded-full p-4 w-16 h-16 mx-auto mb-6 group-hover:shadow-lg transition-shadow duration-300">
                   <value.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Team Section */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Tim Kami</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Didedikasikan untuk melestarikan budaya Indonesia melalui teknologi dan inovasi
             </p>
-          </div>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <div key={index} className="relative bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 1 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="relative bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2"
+              >
                 {/* Background Design */}
                 <div className="absolute inset-0 bg-gradient-to-br from-red-500 via-red-400 to-orange-400">
                   {/* Animated floating shapes */}
@@ -227,29 +293,62 @@ const Tentang = () => {
 
                 {/* Hover overlay effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none"></div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Story Section */}
-        <div className="bg-gradient-to-r from-yellow-50 to-red-50 rounded-2xl p-8 md:p-12">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-yellow-50 to-red-50 rounded-2xl p-8 md:p-12"
+        >
           <div className="max-w-4xl mx-auto text-center">
-            <Users className="h-12 w-12 text-yellow-600 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Cerita Kami</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Users className="h-12 w-12 text-yellow-600 mx-auto mb-6" />
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold text-gray-900 mb-6"
+            >
+              Cerita Kami
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-lg text-gray-700 leading-relaxed mb-8"
+            >
               NusaLoka dimulai dari keprihatinan melihat generasi muda yang semakin terputus dari akar budayanya.
               Dengan memanfaatkan kekuatan teknologi dan kecerdasan buatan, kami menciptakan pengalaman yang
               menyenangkan dan mudah diakses untuk mempelajari budaya Indonesia.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-lg text-gray-700 leading-relaxed"
+            >
               Setiap fitur dirancang dengan cermat untuk memastikan informasi budaya yang akurat,
               autentik, dan mudah dipahami. Kami berkolaborasi dengan ahli budaya, seniman, dan
               komunitas lokal untuk memastikan kualitas konten yang terbaik.
-            </p>
+            </motion.p>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </div>
   );
 };

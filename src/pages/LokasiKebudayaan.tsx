@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { MapPin, Clock, Star, Phone, Navigation } from 'lucide-react';
 import CountUp from '../items/CountUp';
 import GradientText from '../items/GradientText';
+import { motion } from 'framer-motion';
+
 
 
 interface CulturalLocation {
@@ -3577,14 +3579,57 @@ const LokasiKebudayaan = () => {
 
   const currentProvince = provinces.find(prov => prov.id === selectedProvince) || provinces[0];
 
+// Variants untuk animasi
+  const containerVariants: any = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, // Efek tunda antar anak
+      },
+    },
+  };
+
+  const itemVariants: any = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10
+      },
+    },
+  };
+
+  const headerVariants: any = {
+    hidden: { y: -50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 120,
+        damping: 15
+      },
+    },
+  };
+
   return (
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Header */}
-        <div className="text-center mb-12">
+        <motion.div
+          className="text-center mb-12"
+          initial="hidden"
+          animate="visible"
+          variants={headerVariants}
+        >
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
             <GradientText
-              colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+              colors={["#eab308", "#dc2626", "#7f1d1d"]}
               animationSpeed={3}
               showBorder={false}
               className="custom-class mb-100 leading-normal"
@@ -3592,50 +3637,76 @@ const LokasiKebudayaan = () => {
               Lokasi Kebudayaan
             </GradientText>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <motion.p
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
             Jelajahi museum, situs bersejarah, dan pusat budaya di 38 provinsi Indonesia.
             Temukan lokasi-lokasi yang menyimpan kekayaan warisan budaya Nusantara.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
           {/* Province List */}
-          <div className="lg:col-span-1">
+          <motion.div
+            className="lg:col-span-1"
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 100, delay: 0.8 }}
+          >
             <div className="bg-white rounded-xl shadow-lg p-6 sticky top-24">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Pilih Provinsi</h3>
-              <div className="space-y-2 max-h-96 overflow-y-auto">
+              <motion.div
+                className="space-y-2 max-h-96 overflow-y-auto"
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+              >
                 {provinces.map((province) => (
-                  <button
+                  <motion.button
                     key={province.id}
                     onClick={() => setSelectedProvince(province.id)}
                     className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${selectedProvince === province.id
                       ? 'bg-red-50 text-red-600 border-l-4 border-red-600'
                       : 'hover:bg-gray-50 text-gray-700'
                       }`}
+                    variants={itemVariants}
                   >
                     <div className="font-semibold">{province.name}</div>
                     <div className="text-sm text-gray-500">{province.locations.length} lokasi</div>
-                  </button>
+                  </motion.button>
                 ))}
-              </div>
-
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Locations */}
           <div className="lg:col-span-3">
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                Lokasi Budaya di {currentProvince.name}
-              </h2>
-              <p className="text-gray-600">
-                {currentProvince.locations.length} lokasi kebudayaan ditemukan
-              </p>
-            </div>
+            <motion.div
+              key={selectedProvince} // Key unik untuk re-trigger animasi saat provinsi berubah
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className="space-y-8"
+            >
+              <motion.div variants={itemVariants} className="mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  Lokasi Budaya di {currentProvince.name}
+                </h2>
+                <p className="text-gray-600">
+                  {currentProvince.locations.length} lokasi kebudayaan ditemukan
+                </p>
+              </motion.div>
 
-            <div className="space-y-8">
               {currentProvince.locations.map((location) => (
-                <div key={location.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <motion.div
+                  key={location.id}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  variants={itemVariants}
+                >
                   <div className="md:flex">
                     {/* Image */}
                     <div className="md:w-1/3">
@@ -3645,7 +3716,6 @@ const LokasiKebudayaan = () => {
                         className="w-full h-48 md:h-full object-cover"
                       />
                     </div>
-
                     {/* Content */}
                     <div className="md:w-2/3 p-6">
                       <div className="flex items-center justify-between mb-3">
@@ -3657,15 +3727,12 @@ const LokasiKebudayaan = () => {
                           <span className="text-sm text-gray-600">{location.rating}/5</span>
                         </div>
                       </div>
-
                       <h3 className="text-xl font-bold text-gray-900 mb-3">
                         {location.name}
                       </h3>
-
                       <p className="text-gray-600 leading-relaxed mb-4">
                         {location.description}
                       </p>
-
                       {/* Highlights */}
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Koleksi Unggulan:</h4>
@@ -3677,7 +3744,6 @@ const LokasiKebudayaan = () => {
                           ))}
                         </div>
                       </div>
-
                       {/* Info */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 text-sm">
                         <div className="flex items-start">
@@ -3694,15 +3760,7 @@ const LokasiKebudayaan = () => {
                             <p className="text-gray-600">{location.openHours}</p>
                           </div>
                         </div>
-                        <div className="flex items-start">
-                          <Phone className="h-4 w-4 text-blue-600 mr-2 mt-0.5" />
-                          <div>
-                            <p className="font-medium text-gray-900">Telepon</p>
-                            <p className="text-gray-600">{location.phone}</p>
-                          </div>
-                        </div>
                       </div>
-
                       {/* Actions */}
                       <div className="flex flex-col sm:flex-row gap-3">
                         <a
@@ -3717,7 +3775,6 @@ const LokasiKebudayaan = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Map */}
                   <div className="h-64 w-full">
                     <iframe
@@ -3731,14 +3788,19 @@ const LokasiKebudayaan = () => {
                       title={`Peta ${location.name}`}
                     ></iframe>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 text-center">
+        <motion.div
+          className="mt-16 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 text-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+        >
           <MapPin className="h-12 w-12 text-green-600 mx-auto mb-6" />
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Jelajahi Seluruh Indonesia
@@ -3751,7 +3813,7 @@ const LokasiKebudayaan = () => {
             <div className="text-center">
               <div className="text-2xl font-bol">
                 <GradientText
-                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                  colors={["#eab308", "#dc2626", "#7f1d1d"]}
                   animationSpeed={3}
                   showBorder={false}
                   className="custom-class"
@@ -3764,7 +3826,6 @@ const LokasiKebudayaan = () => {
                     duration={2}
                     className="count-up-text"
                   />+
-
                 </GradientText>
               </div>
               <div className="text-sm text-gray-600">Provinsi</div>
@@ -3772,7 +3833,7 @@ const LokasiKebudayaan = () => {
             <div className="text-center">
               <div className="text-2xl font-bold">
                 <GradientText
-                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                  colors={["#eab308", "#dc2626", "#7f1d1d"]}
                   animationSpeed={3}
                   showBorder={false}
                   className="custom-class"
@@ -3792,7 +3853,7 @@ const LokasiKebudayaan = () => {
             <div className="text-center">
               <div className="text-2xl font-bold">
                 <GradientText
-                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                  colors={["#eab308", "#dc2626", "#7f1d1d"]}
                   animationSpeed={3}
                   showBorder={false}
                   className="custom-class"
@@ -3812,7 +3873,7 @@ const LokasiKebudayaan = () => {
             <div className="text-center">
               <div className="text-2xl font-bold">
                 <GradientText
-                  colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
+                  colors={["#eab308", "#dc2626", "#7f1d1d"]}
                   animationSpeed={3}
                   showBorder={false}
                   className="custom-class"
@@ -3830,10 +3891,17 @@ const LokasiKebudayaan = () => {
               <div className="text-sm text-gray-600">Pusat Budaya</div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
 
 export default LokasiKebudayaan;
+
+
+
+
+
+
+
