@@ -55,7 +55,7 @@ const Tentang = () => {
       image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756946510/bintang_aja-removebg-preview_zkbnjt.png',
       number: '03',
       social: [
-        { platform: 'LinkedIn', url: 'https://linkedin.com/in/', icon: Linkedin },
+        { platform: 'LinkedIn', url: 'https://linkedin.com/in/muhammad-bintang-a38558382', icon: Linkedin },
         { platform: 'GitHub', url: 'https://github.com/Ktune-kpop', icon: Github },
         { platform: 'Instagram', url: 'https://www.instagram.com/bintanggg_20/', icon: Instagram },
       ]

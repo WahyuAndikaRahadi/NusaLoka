@@ -1038,19 +1038,19 @@ return (
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6">
-              <h3 className="font-bold text-gray-900 mb-2">🧠 Pengetahuan Mendalam</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Pengetahuan Mendalam</h3>
               <p className="text-gray-600 text-sm">Memahami konteks sejarah, filosofi, dan makna budaya</p>
             </div>
             <div className="bg-white rounded-lg p-6">
-              <h3 className="font-bold text-gray-900 mb-2">🎯 Transformasi Foto AI</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Transformasi Foto AI</h3>
               <p className="text-gray-600 text-sm">Mengubah foto Anda menjadi mengenakan pakaian adat Indonesia</p>
             </div>
             <div className="bg-white rounded-lg p-6">
-              <h3 className="font-bold text-gray-900 mb-2">📚 Pembelajaran Interaktif</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Pembelajaran Interaktif</h3>
               <p className="text-gray-600 text-sm">Menjelaskan dengan cara yang mudah dipahami</p>
             </div>
             <div className="bg-white rounded-lg p-6">
-              <h3 className="font-bold text-gray-900 mb-2">🌍 Konteks Global</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Konteks Global</h3>
               <p className="text-gray-600 text-sm">Menghubungkan budaya lokal dengan perspektif dunia</p>
             </div>
           </div>
