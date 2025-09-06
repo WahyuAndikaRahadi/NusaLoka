@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search, MapPin, Clock, Users } from 'lucide-react';
 import GradientText from '../items/GradientText';
-import {motion, AnimatePresence} from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 const DirektoriBudaya = () => {
@@ -860,7 +860,7 @@ const DirektoriBudaya = () => {
     item.province.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-const containerVariants: any = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -927,12 +927,12 @@ const containerVariants: any = {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex justify-center mb-12"
         >
-          <div className="bg-gray-100 rounded-full p-1.5 shadow-inner">
+          <div className="bg-gray-100 rounded-full p-1.5 shadow-inner flex flex-col sm:flex-row">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-2.5 rounded-full font-semibold text-lg transition-all duration-300 ${activeTab === tab.id
+                className={`px-6 py-2.5 rounded-full font-semibold text-lg transition-all duration-300 w-full sm:w-auto ${activeTab === tab.id
                   ? 'bg-white text-red-600 shadow-md'
                   : 'text-gray-600 hover:text-red-600'
                   }`}
@@ -974,7 +974,7 @@ const containerVariants: any = {
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{item.name}</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">{item.description}</p>
-                    
+
                     {/* Unique Content for each tab */}
                     {activeTab === 'pakaian-adat' && (
                       <motion.div
