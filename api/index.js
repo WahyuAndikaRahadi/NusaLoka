@@ -2,10 +2,8 @@ import express from 'express';
 import pg from 'pg';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { VercelRequest, VercelResponse } from '@vercel/node';
 
-// Load environment variables from .env file if not in production
-// Vercel handles this automatically via its environment variables
+// Vercel handles environment variables automatically, but this is good practice for local development
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
 }
@@ -13,8 +11,6 @@ if (process.env.NODE_ENV !== 'production') {
 const { Pool } = pg;
 const app = express();
 
-// Configure PostgreSQL connection using environment variable for security
-// It's highly recommended to use Vercel's environment variables for this.
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
@@ -24,7 +20,7 @@ const pool = new Pool({
 
 // Middleware
 app.use(cors({
-  origin: '*', // Set to a specific domain in production for security
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type']
 }));
