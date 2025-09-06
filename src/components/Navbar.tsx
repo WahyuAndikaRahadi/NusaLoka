@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 // Create a motion-enabled Link component for cleaner syntax
 const MotionLink = motion(Link);
@@ -21,7 +21,7 @@ const Navbar = () => {
     { name: 'Lokasi Kebudayaan', href: '/lokasi-kebudayaan' },
   ];
 
-  const isActive = (href) => location.pathname === href;
+  const isActive = (href: string) => location.pathname === href;
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -29,13 +29,13 @@ const Navbar = () => {
   }, [location.pathname]);
 
   // Function to handle mobile menu item click
-  const handleMobileMenuClick = (e) => {
+  const handleMobileMenuClick = () => {
     // Force close the menu immediately
     setIsOpen(false);
   };
 
   // Animation variants for the mobile menu container
-  const mobileMenuVariants = {
+  const mobileMenuVariants: Variants = {
     open: {
       opacity: 1,
       y: 0,
@@ -49,13 +49,13 @@ const Navbar = () => {
     },
     closed: {
       opacity: 0,
-      y: "-20px",
+      y: -20,
       transition: { duration: 0.2 },
     },
   };
 
   // Animation variants for individual mobile menu items
-  const menuItemVariants = {
+  const menuItemVariants: Variants = {
     open: {
       y: 0,
       opacity: 1,
