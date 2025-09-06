@@ -8,43 +8,34 @@ Proyek ini bertujuan untuk menciptakan ruang interaktif yang menjembatani **trad
 
 ## 🚀 Fitur Utama
 
-### 1. Beranda Dinamis  
-- Menampilkan sambutan singkat, highlight konten budaya, statistik (provinsi, bahasa, lokasi, direktori), serta slider informasi interaktif.  
-
-### 2. Pencarian Budaya Interaktif  
-- Menelusuri budaya berdasarkan **kategori, wilayah, atau kata kunci** dengan cepat dan mudah.  
-
-### 3. Halaman Detail Budaya  
-- Menyediakan informasi lengkap berupa deskripsi, gambar, video, serta cerita di balik budaya yang ditampilkan.  
-
-### 4. Direktori Budaya  
+### 1. Direktori Budaya  
 - Kumpulan data budaya Indonesia, meliputi:  
   - 👘 **Pakaian Adat** (daerah asal & filosofi)  
   - 🎭 **Seni Pertunjukan** (asal usul & sejarah)  
   - 🍲 **Kuliner Khas Daerah** (beserta bahan utama)  
 
-### 5. Asisten AI Budaya — **BoetDaya**  
+### 2. Asisten AI Budaya — **BoetDaya**  
 - 💬 Chat interaktif seputar budaya Indonesia  
 - 🖼️ **AI Photo Transform**: ubah foto jadi pakaian adat  
 - 🧩 **Kuis Interaktif**: AI bertanya, user menjawab (ABCD). Jika salah, AI memberi koreksi & penjelasan.  
 
-### 6. Berita Terkini  
+### 3. Berita Terkini  
 - Menampilkan berita terbaru seni & budaya Indonesia.  
 - Konten masih full **bahasa Inggris**, tapi user bisa memberikan **insight** untuk memperkaya informasi.  
 
-### 7. Artikel Publik  
+### 4. Artikel Publik  
 - User dapat menulis artikel sendiri dengan **judul, kutipan, isi, dan tag**.  
 - Tersedia fitur pencarian artikel berdasarkan input teks atau kategori.  
 - User lain bisa memberi **komentar dan like** pada artikel.  
 
-### 8. Bahasa Daerah Indonesia  
+### 5. Bahasa Daerah Indonesia  
 - Menyediakan daftar bahasa daerah dari **38 provinsi Indonesia**.  
 - Tiap bahasa dilengkapi:  
   - Ciri khas & deskripsi singkat  
   - Frasa penting sehari-hari  
   - 🎥 **Video tutorial/percakapan**  
 
-### 9. Lokasi Kebudayaan  
+### 6. Lokasi Kebudayaan  
 - Eksplorasi lokasi budaya di seluruh **38 provinsi**.  
 - Informasi mencakup:  
   - Nama tempat & deskripsi  
