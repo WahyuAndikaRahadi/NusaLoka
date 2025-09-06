@@ -166,17 +166,17 @@ const Footer = () => {
         </motion.div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-600 mt-10 pt-6 flex flex-col items-center space-y-4 md:flex-row md:justify-between md:items-center md:space-y-0 text-center md:text-left">
+        <div className="border-t border-gray-600 mt-10 pt-6 flex flex-col items-center space-y-4 md:flex-col md:items-center md:space-y-4 text-center">
           <motion.p
-            className="text-gray-400 text-sm flex items-center justify-center md:justify-start"
+            className="text-gray-400 text-sm flex flex-col items-center md:flex-row md:items-center md:justify-center"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
           >
             © {currentYear} NusaLoka. All rights reserved.
-            <span className="ml-2 flex items-center">
-              Made with <Heart size={12} className="mx-1 text-red-400 animate-pulse" /> in Indonesia
+            <span className="ml-2 flex items-center mt-2 md:mt-0">
+              Made by Tim Alert('menang'); with <Heart size={12} className="mx-1 text-red-400 animate-pulse" /> untuk Indonesia
             </span>
           </motion.p>
         </div>

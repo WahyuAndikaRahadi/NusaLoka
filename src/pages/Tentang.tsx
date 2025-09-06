@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Heart, Target, Eye, Users, Award, Globe, Linkedin, Github, Instagram } from 'lucide-react';
 import GradientText from '../items/GradientText';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Tentang = () => {
   const values = [
@@ -23,7 +25,6 @@ const Tentang = () => {
   ];
 
   const team = [
-
     {
       name: 'Basysyaar Al Yassaar Nuur Qodaar',
       role: 'Full Stack Developer',
@@ -62,6 +63,42 @@ const Tentang = () => {
     }
   ];
 
+  const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const serviceId = 'service_02cw964';
+    const templateId = 'template_8yowgie';
+    const publicKey = '_37aqk0Clr44HG8fO';
+
+    emailjs.sendForm(serviceId, templateId, form.current, { publicKey })
+      .then(
+        () => {
+          Swal.fire({
+            icon: 'success',
+            title: 'Terima Kasih!',
+            text: 'Saran Anda telah berhasil dikirim.',
+            confirmButtonColor: '#dc2626',
+          });
+          setIsSubmitting(false);
+          form.current.reset();
+        },
+        (error) => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: 'Terjadi kesalahan saat mengirim saran. Silakan coba lagi.',
+            confirmButtonColor: '#dc2626',
+          });
+          console.error('FAILED_TO_SEND:', error);
+          setIsSubmitting(false);
+        }
+      );
+  };
+
   return (
     <div className="py-16">
       {/* Hero Section */}
@@ -77,7 +114,7 @@ const Tentang = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mb-16"
         >
-           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
             <GradientText
               colors={["#eab308", "#dc2626 ", "#7f1d1d "]}
               animationSpeed={3}
@@ -204,17 +241,13 @@ const Tentang = () => {
                 viewport={{ once: true }}
                 className="relative bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2"
               >
-                {/* Background Design */}
                 <div className="absolute inset-0 bg-gradient-to-br from-red-500 via-red-400 to-orange-400">
-                  {/* Animated floating shapes */}
                   <div className="absolute inset-0 opacity-20">
                     <div className="absolute top-8 left-8 w-16 h-16 bg-white rounded-full animate-pulse"></div>
                     <div className="absolute top-12 right-12 w-8 h-8 bg-white rounded-full opacity-60 animate-bounce" style={{ animationDelay: '0.5s' }}></div>
                     <div className="absolute bottom-20 left-12 w-12 h-12 bg-white rounded-full opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
                     <div className="absolute bottom-8 right-8 w-6 h-6 bg-white rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
                   </div>
-
-                  {/* Decorative pattern */}
                   <div className="absolute inset-0">
                     <svg viewBox="0 0 200 400" className="w-full h-full opacity-10">
                       <defs>
@@ -225,23 +258,16 @@ const Tentang = () => {
                       <rect width="100%" height="100%" fill={`url(#pattern-${index})`} />
                     </svg>
                   </div>
-
-                  {/* Number badge with improved design */}
                   <div className="absolute top-6 left-6 bg-white bg-opacity-20 backdrop-blur-sm rounded-full w-14 h-14 flex items-center justify-center">
                     <span className="text-2xl font-black text-white">
                       {member.number}
                     </span>
                   </div>
-
-                  {/* Brand mark */}
                   <div className="absolute top-6 right-6 text-white font-bold text-sm opacity-30 bg-white bg-opacity-10 rounded-lg px-3 py-1 backdrop-blur-sm">
                     NusaLoka
                   </div>
                 </div>
-
-                {/* Main content with improved spacing */}
                 <div className="relative z-10 px-8 py-10 h-full flex flex-col">
-                  {/* Profile Image with enhanced styling */}
                   <div className="mb-8 flex justify-center">
                     <div className="relative">
                       <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-orange-400 rounded-full blur-lg opacity-30 scale-110 animate-pulse"></div>
@@ -252,12 +278,9 @@ const Tentang = () => {
                           className="w-full h-full rounded-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      {/* Decorative ring */}
                       <div className="absolute inset-0 rounded-full ring-2 ring-red-300 ring-opacity-40 scale-110 animate-ping"></div>
                     </div>
                   </div>
-
-                  {/* Member Info with improved typography */}
                   <div className="text-center flex-grow">
                     <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-gray-800 transition-colors duration-200">
                       {member.name}
@@ -269,8 +292,6 @@ const Tentang = () => {
                       {member.description}
                     </p>
                   </div>
-
-                  {/* Enhanced Social Links */}
                   <div className="flex justify-center space-x-3 mt-auto">
                     {member.social.map((social, socialIndex) => (
                       <a
@@ -286,12 +307,8 @@ const Tentang = () => {
                       </a>
                     ))}
                   </div>
-
-                  {/* Decorative bottom element */}
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-orange-400 to-red-500 opacity-60"></div>
                 </div>
-
-                {/* Hover overlay effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none"></div>
               </motion.div>
             ))}
@@ -304,7 +321,7 @@ const Tentang = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-yellow-50 to-red-50 rounded-2xl p-8 md:p-12"
+          className="bg-gradient-to-r from-yellow-50 to-red-50 rounded-2xl p-8 md:p-12 mb-20"
         >
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -346,6 +363,90 @@ const Tentang = () => {
               autentik, dan mudah dipahami. Kami berkolaborasi dengan ahli budaya, seniman, dan
               komunitas lokal untuk memastikan kualitas konten yang terbaik.
             </motion.p>
+          </div>
+        </motion.div>
+
+        {/* Form Saran dan Masukan */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-2xl p-8 md:p-12 shadow-xl relative"
+        >
+          {/* Subtle background pattern with low z-index */}
+          <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-orange-50 opacity-10 pointer-events-none">
+            <svg viewBox="0 0 200 200" className="w-full h-full opacity-10">
+              <defs>
+                <pattern id="form-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <circle cx="20" cy="20" r="2" fill="white" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#form-pattern)" />
+            </svg>
+          </div>
+
+          <div className="max-w-xl mx-auto text-center relative z-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Saran & Masukan</h2>
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+              Kami sangat menghargai saran dan masukan Anda. Bantu kami menjadi lebih baik! ✨
+            </p>
+            <form ref={form} onSubmit={sendEmail} className="space-y-6 text-left">
+              <div className="relative">
+                <label
+                  htmlFor="user_name"
+                  className="block text-sm font-semibold text-gray-800 mb-2"
+                >
+                  Nama
+                </label>
+                <input
+                  type="text"
+                  id="user_name"
+                  name="user_name"
+                  required
+                  className="w-full px-5 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 shadow-sm hover:shadow-md text-gray-800 placeholder-gray-400 focus:outline-none"
+                  placeholder="Masukkan nama Anda"
+                  aria-required="true"
+                  aria-describedby="user_name_error"
+                />
+                {/* Error message placeholder for accessibility */}
+                <span id="user_name_error" className="sr-only">
+                  Nama wajib diisi
+                </span>
+              </div>
+              <div className="relative">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold text-gray-800 mb-2"
+                >
+                  Pesan
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  className="w-full px-5 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 shadow-sm hover:shadow-md text-gray-800 placeholder-gray-400 focus:outline-none resize-none"
+                  placeholder="Tuliskan saran atau masukan Anda di sini..."
+                  aria-required="true"
+                  aria-describedby="message_error"
+                ></textarea>
+                {/* Error message placeholder for accessibility */}
+                <span id="message_error" className="sr-only">
+                  Pesan wajib diisi
+                </span>
+              </div>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:from-red-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
+              >
+                <span className="relative z-10">
+                  {isSubmitting ? 'Mengirim...' : 'Kirim Saran'}
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </button>
+            </form>
           </div>
         </motion.div>
       </motion.section>
