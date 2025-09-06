@@ -2,6 +2,7 @@ import express from 'express';
 import pg from 'pg';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
 // Vercel handles environment variables automatically, but this is good practice for local development
 if (process.env.NODE_ENV !== 'production') {
@@ -28,7 +29,7 @@ app.use(express.json());
 
 // Routes
 // Route for getting all posts
-app.get('/posts', async (req, res) => {
+app.get('/api/posts', async (req, res) => {
   console.log("Fetching all posts...");
   try {
     const result = await pool.query('SELECT * FROM blog_posts ORDER BY id DESC');
@@ -40,7 +41,7 @@ app.get('/posts', async (req, res) => {
 });
 
 // Route for adding a new post
-app.post('/posts', async (req, res) => {
+app.post('/api/posts', async (req, res) => {
   const { title, excerpt, content, author, category, image, tags } = req.body;
   if (!title || !excerpt || !content || !author || !category || !image) {
     return res.status(400).json({ error: 'All fields are required' });
@@ -58,7 +59,7 @@ app.post('/posts', async (req, res) => {
 });
 
 // Route for liking a post
-app.post('/posts/:postId/like', async (req, res) => {
+app.post('/api/posts/:postId/like', async (req, res) => {
   const { postId } = req.params;
   console.log(`Received like request for postId: ${postId}`);
   try {
@@ -77,7 +78,7 @@ app.post('/posts/:postId/like', async (req, res) => {
 });
 
 // Route for getting all comments
-app.get('/comments', async (req, res) => {
+app.get('/api/comments', async (req, res) => {
   console.log("Fetching all comments...");
   try {
     const result = await pool.query('SELECT * FROM blog_comments ORDER BY created_at ASC');
@@ -89,7 +90,7 @@ app.get('/comments', async (req, res) => {
 });
 
 // Route for adding a new comment to a post
-app.post('/posts/:postId/comments', async (req, res) => {
+app.post('/api/posts/:postId/comments', async (req, res) => {
   const { postId } = req.params;
   const { commenter_name, comment_text } = req.body;
   if (!commenter_name || !comment_text) {
