@@ -27,7 +27,7 @@ const Tentang = () => {
     {
       name: 'Basysyaar Al Yassaar Nuur Qodaar',
       role: 'Full Stack Developer',
-      description: 'Saya Basysyaar Al Yassaar Nuur Qodaar, siswa SMK Negeri 69 Jakarta jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya tertarik mengembangkan website yang tidak hanya berfungsi dengan baik, tetapi juga nyaman dipakai.',
+      description: 'Saya Basysyaar Al Yassaar Nuur Qodaar, siswa SMK Negeri 69 Jakarta Jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya tertarik mengembangkan website yang tidak hanya berfungsi dengan baik, tetapi juga nyaman dipakai.',
       image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756946510/Gambar_WhatsApp_2025-08-19_pukul_22.20.08_abf3bcf0-removebg-preview_qsrrps.png',
       number: '01',
       social: [
@@ -39,7 +39,7 @@ const Tentang = () => {
     {
       name: 'Wahyu Andika Rahadi',
       role: 'Full Stack Developer',
-      description: 'Saya Wahyu Andika Rahadi, siswa SMK Negeri 69 Jakarta jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya fokus pada pembuatan website, mulai dari sistem hingga tampilan agar bermanfaat dan mudah digunakan.',
+      description: 'Saya Wahyu Andika Rahadi, siswa SMK Negeri 69 Jakarta Jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya fokus pada pembuatan website, mulai dari sistem hingga tampilan agar bermanfaat dan mudah digunakan.',
       image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756946510/wahyu_aja-removebg-preview_ozl2j6.png',
       number: '02',
       social: [
@@ -51,7 +51,7 @@ const Tentang = () => {
     {
       name: 'Muhammad Bintang',
       role: 'Front end Developer',
-      description: 'Saya Muhammad Bintang, siswa SMK Negeri 69 Jakarta jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya fokus pada pengembangan tampilan Website untuk menciptakan pengalaman pengguna yang menarik dan mudah digunakan.',
+      description: 'Saya Muhammad Bintang, siswa SMK Negeri 69 Jakarta Jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya fokus pada pengembangan tampilan Website untuk menciptakan pengalaman pengguna yang menarik dan mudah digunakan.',
       image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756946510/bintang_aja-removebg-preview_zkbnjt.png',
       number: '03',
       social: [
