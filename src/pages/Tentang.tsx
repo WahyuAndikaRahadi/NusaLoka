@@ -27,7 +27,7 @@ const Tentang = () => {
     {
       name: 'Basysyaar Al Yassaar Nuur Qodaar',
       role: 'Full Stack Developer',
-      description: 'Saya Basysyaar Al Yassaar Nuur Qodaar, siswa SMKN 69 Jakarta jurusan SIJA. Saya tertarik mengembangkan website yang tidak hanya berfungsi dengan baik, tetapi juga nyaman dipakai.',
+      description: 'Saya Basysyaar Al Yassaar Nuur Qodaar, siswa SMK Negeri 69 Jakarta jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya tertarik mengembangkan website yang tidak hanya berfungsi dengan baik, tetapi juga nyaman dipakai.',
       image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756946510/Gambar_WhatsApp_2025-08-19_pukul_22.20.08_abf3bcf0-removebg-preview_qsrrps.png',
       number: '01',
       social: [
@@ -39,7 +39,7 @@ const Tentang = () => {
     {
       name: 'Wahyu Andika Rahadi',
       role: 'Full Stack Developer',
-      description: 'Wahyu Andika Rahadi, siswa SMKN 69 Jakarta jurusan SIJA. Saya fokus pada pembuatan website, mulai dari sistem hingga tampilan agar bermanfaat dan mudah digunakan.',
+      description: 'Saya Wahyu Andika Rahadi, siswa SMK Negeri 69 Jakarta jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya fokus pada pembuatan website, mulai dari sistem hingga tampilan agar bermanfaat dan mudah digunakan.',
       image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756946510/wahyu_aja-removebg-preview_ozl2j6.png',
       number: '02',
       social: [
@@ -51,7 +51,7 @@ const Tentang = () => {
     {
       name: 'Muhammad Bintang',
       role: 'Front end Developer',
-      description: 'Saya Muhammad Bintang, siswa SMKN 69 Jakarta jurusan SIJA. Saya fokus pada pengembangan tampilan untuk menciptakan pengalaman pengguna yang menarik dan mudah digunakan.',
+      description: 'Saya Muhammad Bintang, SMK Negeri 69 Jakarta jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya fokus pada pengembangan tampilan untuk menciptakan pengalaman pengguna yang menarik dan mudah digunakan.',
       image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756946510/bintang_aja-removebg-preview_zkbnjt.png',
       number: '03',
       social: [
@@ -259,13 +259,13 @@ const Tentang = () => {
 
                   {/* Member Info with improved typography */}
                   <div className="text-center flex-grow">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors duration-200">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-gray-800 transition-colors duration-200">
                       {member.name}
                     </h3>
                     <div className="inline-block bg-gradient-to-r from-teal-500 to-blue-500 text-white font-semibold px-4 py-2 rounded-full text-sm mb-5 shadow-lg">
                       {member.role}
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-6 px-2">
+                    <p className="text-gray-800 text-sm leading-relaxed mb-6 px-2">
                       {member.description}
                     </p>
                   </div>
