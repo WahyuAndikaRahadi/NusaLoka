@@ -99,4 +99,4 @@ Proyek ini menggunakan lisensi **MIT License** — silakan gunakan dan kembangka
 ---
 
 ## ✨ Tagline  
-> *"NusaLoka — Menyatukan Tradisi dengan Teknologi untuk Masa Depan Nusantara"*
+> *"NusaLoka — Menghubungkan Tradisi dengan Inovasi"*
