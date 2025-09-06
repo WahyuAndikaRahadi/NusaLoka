@@ -1,4 +1,4 @@
-# <img src="https://res.cloudinary.com/dr5pehdsw/image/upload/v1756970240/download__1_-removebg-preview_ayynew.png" alt="NusaLoka Logo" width="100"/> NusaLoka
+# <img src="https://res.cloudinary.com/dr5pehdsw/image/upload/v1756970240/download__1_-removebg-preview_ayynew.png" alt="NusaLoka Logo" width="150"/>
 **Melestarikan Budaya Melalui Inovasi Digital**
 
 NusaLoka adalah platform digital yang menghubungkan warisan budaya Indonesia dengan dunia modern.  
