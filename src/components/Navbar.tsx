@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom'; // Tambah useNavigate
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Create a motion-enabled Link component for cleaner syntax
 const MotionLink = motion(Link);
@@ -9,6 +9,7 @@ const MotionLink = motion(Link);
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate(); // Hook baru untuk navigasi manual
 
   const navigation = [
     { name: 'Beranda', href: '/' },
@@ -21,23 +22,13 @@ const Navbar = () => {
     { name: 'Lokasi Kebudayaan', href: '/lokasi-kebudayaan' },
   ];
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: any) => location.pathname === href;
 
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
-
-  // Function to handle mobile menu item click
-  const handleMobileMenuClick = () => {
-    // Force close the menu immediately
-    setIsOpen(false);
-  };
-
-  // Animation variants for the mobile menu container
-  const mobileMenuVariants: Variants = {
+  // Animation variants for the mobile menu container – tambah height untuk collapse
+  const mobileMenuVariants: any = {
     open: {
       opacity: 1,
+      height: 'auto', // Animasi ke height penuh
       y: 0,
       transition: { 
         type: "spring",
@@ -49,13 +40,14 @@ const Navbar = () => {
     },
     closed: {
       opacity: 0,
-      y: -20,
+      height: 0, // Collapse ke 0, hilangkan ruang putih
+      y: "-20px",
       transition: { duration: 0.2 },
     },
   };
 
   // Animation variants for individual mobile menu items
-  const menuItemVariants: Variants = {
+  const menuItemVariants: any = {
     open: {
       y: 0,
       opacity: 1,
@@ -70,6 +62,15 @@ const Navbar = () => {
         y: { stiffness: 1000 },
       },
     },
+  };
+
+  // Fungsi handle click item: tutup menu, delay navigasi biar animasi selesai
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault(); // Cegah navigasi langsung dari <Link>
+    setIsOpen(false); // Mulai animasi tutup
+    setTimeout(() => {
+      navigate(href); // Navigasi setelah delay
+    }, 250); // 250ms > durasi exit (0.2s), sesuaikan kalau perlu
   };
 
   return (
@@ -127,7 +128,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="lg:hidden"
+            className="lg:hidden overflow-hidden" // Tambah overflow-hidden biar nggak ada bleed
             initial="closed"
             animate="open"
             exit="closed"
@@ -135,20 +136,20 @@ const Navbar = () => {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               {navigation.map((item) => (
-                <Link
+                <MotionLink
                   key={item.name}
-                  to={item.href}
-                  onClick={handleMobileMenuClick}
+                  to={item.href} // Tetap pakai to= untuk accessibility (href asli)
+                  onClick={(e) => handleNavClick(e, item.href)} // Ganti onClick biasa ke handleNavClick
                   className={`block px-3 py-2 rounded-md text-base font-medium ${
                     isActive(item.href)
                       ? 'bg-red-50 text-red-600'
                       : 'text-gray-700 hover:bg-red-50 hover:text-red-600'
                   }`}
+                  // Animate each item
+                  variants={menuItemVariants}
                 >
-                  <motion.div variants={menuItemVariants}>
-                    {item.name}
-                  </motion.div>
-                </Link>
+                  {item.name}
+                </MotionLink>
               ))}
             </div>
           </motion.div>

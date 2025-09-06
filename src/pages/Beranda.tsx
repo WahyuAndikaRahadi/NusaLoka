@@ -80,7 +80,7 @@ const Beranda = () => {
               />
               {/* Slogan dengan SplitText */}
               <SplitText
-                text="Melestarikan Budaya Melalui Inovasi Digital"
+                text="Menghubungkan Tradisi dengan Inovasi"
                 className="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto leading-normal"
                 delay={50} // Mulai setelah judul
                 duration={0.6}
