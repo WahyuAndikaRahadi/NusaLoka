@@ -2,7 +2,6 @@ import express from 'express';
 import pg from 'pg';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { VercelRequest, VercelResponse } from '@vercel/node';
 
 // Vercel handles environment variables automatically, but this is good practice for local development
 if (process.env.NODE_ENV !== 'production') {
