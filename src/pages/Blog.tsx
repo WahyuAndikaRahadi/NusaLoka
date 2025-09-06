@@ -352,7 +352,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   );
 };
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = '/api';
 
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);

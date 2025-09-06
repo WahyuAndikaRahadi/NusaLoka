@@ -2,8 +2,10 @@ import express from 'express';
 import pg from 'pg';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
 // Load environment variables from .env file if not in production
+// Vercel handles this automatically via its environment variables
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
 }
@@ -11,22 +13,26 @@ if (process.env.NODE_ENV !== 'production') {
 const { Pool } = pg;
 const app = express();
 
-// Configure PostgreSQL connection using Neon DB connection string
+// Configure PostgreSQL connection using environment variable for security
+// It's highly recommended to use Vercel's environment variables for this.
 const pool = new Pool({
-  connectionString: "postgresql://neondb_owner:npg_T5eti2yERPnK@ep-plain-block-adunlwuy-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require",
-  ssl: false
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // Ganti dengan URL frontend Anda jika berbeda
+  origin: '*', // Set to a specific domain in production for security
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type']
 }));
 app.use(express.json());
 
+// Routes
 // Route for getting all posts
-app.get('/api/posts', async (req, res) => {
+app.get('/posts', async (req, res) => {
   console.log("Fetching all posts...");
   try {
     const result = await pool.query('SELECT * FROM blog_posts ORDER BY id DESC');
@@ -38,7 +44,7 @@ app.get('/api/posts', async (req, res) => {
 });
 
 // Route for adding a new post
-app.post('/api/posts', async (req, res) => {
+app.post('/posts', async (req, res) => {
   const { title, excerpt, content, author, category, image, tags } = req.body;
   if (!title || !excerpt || !content || !author || !category || !image) {
     return res.status(400).json({ error: 'All fields are required' });
@@ -56,7 +62,7 @@ app.post('/api/posts', async (req, res) => {
 });
 
 // Route for liking a post
-app.post('/api/posts/:postId/like', async (req, res) => {
+app.post('/posts/:postId/like', async (req, res) => {
   const { postId } = req.params;
   console.log(`Received like request for postId: ${postId}`);
   try {
@@ -75,7 +81,7 @@ app.post('/api/posts/:postId/like', async (req, res) => {
 });
 
 // Route for getting all comments
-app.get('/api/comments', async (req, res) => {
+app.get('/comments', async (req, res) => {
   console.log("Fetching all comments...");
   try {
     const result = await pool.query('SELECT * FROM blog_comments ORDER BY created_at ASC');
@@ -87,7 +93,7 @@ app.get('/api/comments', async (req, res) => {
 });
 
 // Route for adding a new comment to a post
-app.post('/api/posts/:postId/comments', async (req, res) => {
+app.post('/posts/:postId/comments', async (req, res) => {
   const { postId } = req.params;
   const { commenter_name, comment_text } = req.body;
   if (!commenter_name || !comment_text) {
@@ -98,7 +104,6 @@ app.post('/api/posts/:postId/comments', async (req, res) => {
       'INSERT INTO blog_comments (post_id, commenter_name, comment_text, created_at) VALUES ($1, $2, $3, NOW()) RETURNING *',
       [postId, commenter_name, comment_text]
     );
-    // Update comment count in blog_posts
     await pool.query(
       'UPDATE blog_posts SET comments = comments + 1 WHERE id = $1',
       [postId]
@@ -110,19 +115,5 @@ app.post('/api/posts/:postId/comments', async (req, res) => {
   }
 });
 
-// 404 Handler
-app.use((req, res) => {
-  console.warn(`404 Not Found: ${req.method} ${req.url}`);
-  res.status(404).send('404: Not Found');
-});
-
-// Error Handler
-app.use((err, req, res, next) => {
-  console.error('Unhandled error:', err.stack);
-  res.status(500).send('500: Internal Server Error');
-});
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Export the Express app as a serverless function
+export default app;
