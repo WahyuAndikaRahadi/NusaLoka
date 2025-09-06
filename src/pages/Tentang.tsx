@@ -51,7 +51,7 @@ const Tentang = () => {
     {
       name: 'Muhammad Bintang',
       role: 'Front end Developer',
-      description: 'Saya Muhammad Bintang, SMK Negeri 69 Jakarta jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya fokus pada pengembangan tampilan untuk menciptakan pengalaman pengguna yang menarik dan mudah digunakan.',
+      description: 'Saya Muhammad Bintang, siswa SMK Negeri 69 Jakarta jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi). Saya fokus pada pengembangan tampilan untuk menciptakan pengalaman pengguna yang menarik dan mudah digunakan.',
       image: 'https://res.cloudinary.com/dr5pehdsw/image/upload/v1756946510/bintang_aja-removebg-preview_zkbnjt.png',
       number: '03',
       social: [
