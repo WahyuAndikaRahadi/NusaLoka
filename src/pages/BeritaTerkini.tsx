@@ -191,7 +191,7 @@ const BeritaTerkini = () => {
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs font-semibold">
-                        {post.category}
+                        Seni & Budaya
                       </span>
                       {post.premium_badge === 'premium' && (
                         <span className="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-xs font-semibold">

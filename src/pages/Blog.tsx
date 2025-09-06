@@ -586,7 +586,7 @@ const Blog: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
-            Artikel mendalam tentang budaya, seni, dan tradisi Indonesia. Ditulis oleh para ahli dan praktisi budaya.
+            Artikel Publik tentang budaya, seni, dan tradisi Indonesia. Ayo Membangun Relasi Disini.
           </motion.p>
         </div>
 
