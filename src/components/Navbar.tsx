@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -21,10 +21,21 @@ const Navbar = () => {
     { name: 'Lokasi Kebudayaan', href: '/lokasi-kebudayaan' },
   ];
 
-  const isActive = (href: any) => location.pathname === href;
+  const isActive = (href) => location.pathname === href;
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  // Function to handle mobile menu item click
+  const handleMobileMenuClick = (e) => {
+    // Force close the menu immediately
+    setIsOpen(false);
+  };
 
   // Animation variants for the mobile menu container
-  const mobileMenuVariants: any = {
+  const mobileMenuVariants = {
     open: {
       opacity: 1,
       y: 0,
@@ -44,7 +55,7 @@ const Navbar = () => {
   };
 
   // Animation variants for individual mobile menu items
-  const menuItemVariants: any = {
+  const menuItemVariants = {
     open: {
       y: 0,
       opacity: 1,
@@ -60,7 +71,6 @@ const Navbar = () => {
       },
     },
   };
-
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -125,20 +135,20 @@ const Navbar = () => {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               {navigation.map((item) => (
-                <MotionLink
+                <Link
                   key={item.name}
                   to={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleMobileMenuClick}
                   className={`block px-3 py-2 rounded-md text-base font-medium ${
                     isActive(item.href)
                       ? 'bg-red-50 text-red-600'
                       : 'text-gray-700 hover:bg-red-50 hover:text-red-600'
                   }`}
-                  // Animate each item
-                  variants={menuItemVariants}
                 >
-                  {item.name}
-                </MotionLink>
+                  <motion.div variants={menuItemVariants}>
+                    {item.name}
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </motion.div>
